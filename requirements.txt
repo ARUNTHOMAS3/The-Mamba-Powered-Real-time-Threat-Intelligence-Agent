@@ -1,0 +1,17 @@
+torch>=2.0
+torchvision
+numpy
+pandas
+scikit-learn
+transformers
+sentence-transformers
+mamba-ssm-cpu
+faiss-cpu-windows
+streamlit
+kafka-python
+requests
+mlflow
+ray[rllib]
+plotly
+pyyaml
+ 
