@@ -6,7 +6,14 @@ import sys
 from scapy.all import sniff, IP, TCP, UDP, ICMP, conf
 
 # --- 1. CONFIGURATION ---
-# conf.L3socket = conf.L3socket # DISABLED: Using Npcap Layer 2
+try:
+    from scapy.all import conf
+    conf.use_pcap = True # Force Npcap usage
+    # conf.L3socket = conf.L3socket # Optional: Uncomment if Layer 3 injection is needed
+    print(f"[INFO] Scapy Configuration: use_pcap={conf.use_pcap}")
+except ImportError:
+    pass
+
 from scapy.arch import get_if_list
 
 
@@ -16,41 +23,15 @@ LATEST_DATA = {
     "network": "Listening for traffic...",
     "threat_match": False,
     "source_ip": "0.0.0.0",
-    "threat_timestamp": 0
+    "threat_timestamp": 0,
+    "packet_count": 0,
+    "threat_ip": None
 }
 
-# --- 2. DOWNLOAD THREAT FEED (FIXED HEADER ISSUE) ---
-print("Downloading Feodo Tracker IPs...")
-try:
-    url = "https://feodotracker.abuse.ch/downloads/ipblocklist.csv"
-    response = requests.get(url, timeout=5)
-    content = response.content.decode('utf-8')
-    lines = [l for l in content.splitlines() if not l.startswith('#')]
-    
-    BAD_IPS = set()
-    for l in lines:
-        parts = l.split(',')
-        if len(parts) > 1:
-            # Clean up the IP string
-            ip = parts[1].replace('"', '').strip()
-            # SKIP THE HEADER "dst_ip"
-            if ip and ip != 'dst_ip': 
-                BAD_IPS.add(ip)
-    
-    print(f"[OK] LOADED {len(BAD_IPS)} MALICIOUS IPs.")
-    print("TARGET IP (Attack this IP to test):")
-    
-    if len(BAD_IPS) > 0:
-        # Get a reliable target
-        TARGET_IP = list(BAD_IPS)[-1] 
-        print(f"   -> {TARGET_IP}")
-    else:
-        print("   [WARN] No IPs loaded. Check internet.")
-        TARGET_IP = "8.8.8.8"
-except Exception as e:
-    print(f"[ERROR] Feed Error: {e}")
-    BAD_IPS = set()
-    TARGET_IP = "1.1.1.1"
+# --- 2. THREAT FEED (DISABLED - AI ONLY MODE) ---
+print("AI-ONLY MODE: Ignoring Static Threat Lists.")
+BAD_IPS = set() 
+TARGET_IP = "8.8.8.8" # Default verify target since we have no bad list
 
 # --- 3. SNIFFER ---
 def packet_callback(packet):
@@ -58,21 +39,17 @@ def packet_callback(packet):
         src = packet[IP].src
         dst = packet[IP].dst
         
-        # Check Threat
-        is_threat = (src in BAD_IPS) or (dst in BAD_IPS)
+        # In AI-only mode, the bridge does NOT decide what is a threat.
+        # It just passes data to the App (Mamba Model).
+        is_threat = False 
         
         protocol = "TCP" if TCP in packet else "UDP" if UDP in packet else "ICMP"
         LATEST_DATA["network"] = f"[{protocol}] {src} -> {dst}"
-        LATEST_DATA["source_ip"] = src  # Always show latest active IP
+        LATEST_DATA["source_ip"] = src 
+        LATEST_DATA["packet_count"] += 1
         
-        if is_threat:
-            print(f"\n[ALERT] TRAFFIC MATCH: {dst} is in BAD_IPS!")
-            LATEST_DATA["threat_match"] = True
-            LATEST_DATA["source_ip"] = dst if dst in BAD_IPS else src
-            LATEST_DATA["threat_timestamp"] = time.time()
-        else:
-            if time.time() - LATEST_DATA["threat_timestamp"] > 5:
-                LATEST_DATA["threat_match"] = False
+        # We leave threat_match False here. The APP decides.
+        LATEST_DATA["threat_match"] = False
 
 def start_sniffing():
     print("Sniffer Started...")
@@ -100,6 +77,7 @@ def start_sniffing():
             # Update global state
             LATEST_DATA["network"] = f"[{protocol}] {fake_src} -> {fake_dst}"
             LATEST_DATA["source_ip"] = fake_src # Just show activity
+            LATEST_DATA["packet_count"] += 1
             
             if is_threat:
                 LATEST_DATA["threat_match"] = True
@@ -127,8 +105,39 @@ def monitor_windows_logs():
             pass
         time.sleep(2)
 
+# --- 5. ACTIVE DEFENSE (FIREWALL BLOCKING) ---
+def block_ip(ip_address):
+    """
+    Executes a Windows Firewall rule to block the malicious IP.
+    Requires Admin privileges to work fully, but we try anyway.
+    """
+    rule_name = f"BLOCK_MALICIOUS_{ip_address}"
+    # Check if rule exists first (simple check to avoid duplicate error spam)
+    check_cmd = f"Get-NetFirewallRule -DisplayName '{rule_name}'"
+    
+    # Command to create block rule
+    block_cmd = (
+        f"New-NetFirewallRule -DisplayName '{rule_name}' "
+        f"-Direction Inbound -RemoteAddress {ip_address} "
+        f"-Action Block -Protocol Any"
+    )
+    
+    try:
+        # Check if already blocked
+        subprocess.run(["powershell", "-Command", check_cmd], capture_output=True, check=True)
+        # If success, it exists, so do nothing
+    except subprocess.CalledProcessError:
+        # Rule doesn't exist, create it
+        try:
+            print(f"⚡ [ACTIVE DEFENSE] ENGAGING FIREWALL: BLOCKING {ip_address}...")
+            subprocess.run(["powershell", "-Command", block_cmd], capture_output=True)
+            LATEST_DATA["log"] = f"ACTIVE DEFENSE: BLOCKED {ip_address}"
+        except Exception as e:
+            print(f"[!] Block Failed: {e}")
+
 # Start Threads
 t1 = threading.Thread(target=start_sniffing, daemon=True)
 t2 = threading.Thread(target=monitor_windows_logs, daemon=True)
 t1.start()
 t2.start()
+
