@@ -1,25 +1,20 @@
 torch>=2.0
-torchvision
 numpy
 pandas
 scikit-learn
-transformers
-sentence-transformers
-# mamba-ssm-cpu
-faiss-cpu
-streamlit
-kafka-python
-requests
-mlflow
-ray[rllib]
-plotly
 pyyaml
-scapy
+joblib
 
 # Statistical validation
 scipy>=1.9.0
 
-# Evaluation and metrics
+# Visualization
 matplotlib>=3.5.0
 seaborn>=0.12.0
 
+# Table formatting
+tabulate
+
+# Dashboard (optional)
+streamlit
+plotly

@@ -1,48 +1,42 @@
-# Mamba-Powered Real-Time Threat Intelligence System
+# Efficient Real-Time Intrusion Detection via State Space Models: A Comprehensive Benchmark
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **Publication-Ready Research Implementation**
-> 
-> State-space models (Mamba) for multimodal cybersecurity threat detection with rigorous academic evaluation.
+> **Comprehensive benchmark study comparing State Space Models (Mamba), Transformers, and Recurrent Neural Networks for network intrusion detection across multiple datasets.**
 
 ---
 
 ## 🎯 Overview
 
-This repository implements a **novel multimodal threat intelligence system** using Mamba state-space models for real-time cyber threat detection. The system combines:
+This repository provides a **rigorous, fair, and reproducible** benchmark comparing **6 sequence-modeling architectures** for Network Intrusion Detection Systems (NIDS), evaluated across **3 standard datasets** with **5 random seeds** and full statistical significance testing.
 
-- **🧠 Mamba Backbone**: Efficient long-range sequence modeling for temporal patterns
-- **🔀 Multimodal Fusion**: Integrates log data, text intelligence, and CVE information
-- **📊 Rigorous Evaluation**: Publication-ready experiments with statistical validation
-- **🏆 Competitive Baselines**: Comparison with Transformer, GRU, CNN-LSTM architectures
+### Models Compared
+
+| Model | Type | Key Mechanism |
+|-------|------|---------------|
+| **Mamba (SSM)** | State Space Model | Selective scan, linear-time sequence modeling |
+| **LSTM** | Recurrent | Gated memory cells |
+| **GRU** | Recurrent | Gated recurrent unit (simplified LSTM) |
+| **Transformer** | Attention-based | Multi-head self-attention |
+| **CNN-LSTM** | Hybrid | 1D-CNN local features + LSTM temporal |
+| **TCN** | Convolutional | Dilated causal convolutions |
+
+### Datasets
+
+| Dataset | Year | Samples | Features | Attack Types |
+|---------|------|---------|----------|--------------|
+| CICIDS2017 | 2017 | ~2.8M | 77 | DDoS, PortScan, Bot, etc. |
+| UNSW-NB15 | 2015 | ~2.5M | 49 | Fuzzers, Exploits, DoS, etc. |
+| CIC-IDS2018 | 2018 | ~16M | 80 | Brute Force, DoS, Botnet, etc. |
 
 ### Key Contributions
 
-1. **Novel Application**: First application of Mamba SSM to multimodal threat intelligence
-2. **Architectural Innovation**: Efficient fusion architecture for heterogeneous security data
-3. **Comprehensive Evaluation**: Validated on synthetic stress-tests and real-world benchmarks
-4. **Production-Ready**: Real-time inference with <50ms latency
-
----
-
-## 📊 Performance Summary
-
-| Model | F1-Score | Precision | Recall | Inference Time |
-|-------|----------|-----------|--------|----------------|
-| **Proposed Mamba** | **89.3% ± 2.1%** | **91.2% ± 1.8%** | **87.5% ± 2.4%** | **32ms** |
-| Transformer | 84.7% ± 2.5% | 86.3% ± 2.2% | 83.1% ± 2.8% | 48ms |
-| GRU | 82.1% ± 2.8% | 84.5% ± 2.5% | 79.8% ± 3.1% | 28ms |
-| CNN-LSTM | 83.4% ± 2.3% | 85.7% ± 2.1% | 81.2% ± 2.6% | 35ms |
-| LSTM | 78.9% ± 3.2% | 81.2% ± 2.9% | 76.5% ± 3.5% | 26ms |
-
-*Results on synthetic stress-test dataset (5 runs × 5-fold cross-validation)*
-
-**Real-World Validation:**
-- CICIDS2017: F1 = 87.2% ± 1.9%
-- UNSW-NB15: F1 = 85.6% ± 2.3%
+1. **First comprehensive SSM benchmark for IDS** — Systematic comparison of Mamba vs attention-based and recurrent models
+2. **Fair evaluation framework** — All models use identical hyperparameters, matched parameter counts (within ±15%), and the same data pipeline
+3. **Multi-dimensional analysis** — Classification accuracy, computational efficiency (latency, throughput, memory), and per-attack-type breakdown
+4. **Statistical rigor** — 5-seed evaluation with Wilcoxon signed-rank tests and 95% confidence intervals
 
 ---
 
@@ -51,33 +45,43 @@ This repository implements a **novel multimodal threat intelligence system** usi
 ### Installation
 
 ```bash
-# Clone repository
 git clone https://github.com/yourusername/mamba-threat-intel.git
 cd mamba-threat-intel
 
-# Create virtual environment
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1  # Windows
 # source .venv/bin/activate    # Linux/Mac
 
-# Install dependencies
 pip install -r requirements.txt
 ```
 
-### Basic Usage
+### Dataset Setup
 
-```python
-# Train model
-python train/train_supervised.py --max_epochs 10
+Download datasets into `data/raw/`:
 
-# Run comprehensive evaluation
-python evaluate_rigorous.py
+| Dataset | Download |
+|---------|----------|
+| CICIDS2017 | [UNB Website](https://www.unb.ca/cic/datasets/ids-2017.html) → `data/raw/CICIDS2017/` |
+| UNSW-NB15 | [UNSW Website](https://research.unsw.edu.au/projects/unsw-nb15-dataset) → `data/raw/UNSW-NB15/` |
+| CIC-IDS2018 | `aws s3 sync --no-sign-request --region ap-south-1 "s3://cse-cic-ids2018/Processed Traffic Data for ML Algorithms/" data/raw/CIC-IDS2018/ --exclude "*" --include "*.csv"` |
 
-# Ablation studies
-python ablation_study.py
+### Run Benchmark
 
-# Dashboard (demo)
-python dashboard/app.py
+```bash
+# Full benchmark (all datasets, all models, 5 seeds)
+python run_benchmark.py
+
+# Quick test (single dataset, 2 models, 1 seed)
+python run_benchmark.py --datasets CICIDS2017 --models Mamba LSTM --seeds 42 --quick
+
+# Specific configuration
+python run_benchmark.py --datasets CICIDS2017 UNSW-NB15 --models Mamba LSTM GRU Transformer --seeds 42 123 456
+```
+
+### Generate Publication Tables
+
+```bash
+python generate_tables.py
 ```
 
 ---
@@ -87,211 +91,92 @@ python dashboard/app.py
 ```
 mamba-threat-intel/
 ├── models/
-│   ├── mamba_backbone.py       # Mamba SSM implementation
-│   ├── classifier.py            # Full multimodal model
-│   ├── transformer_baseline.py  # Attention-based baseline
-│   ├── gru_baseline.py         # GRU baseline
-│   └── cnn_lstm_baseline.py    # CNN-LSTM hybrid
+│   ├── mamba_backbone.py       # Mamba SSM (pure PyTorch S6 implementation)
+│   ├── tabular_models.py       # MambaClassifier + LSTMClassifier
+│   └── benchmark_models.py     # GRU, Transformer, CNN-LSTM, TCN + model registry
 │
 ├── datasets/
-│   ├── multimodal_dataset.py   # Synthetic dataset loader
-│   ├── cicids2017_loader.py    # CICIDS2017 benchmark
-│   └── unswnb15_loader.py      # UNSW-NB15 benchmark
+│   ├── cicids2017_loader.py    # CICIDS2017 loader (lazy windowing, temporal split)
+│   ├── unswnb15_loader.py      # UNSW-NB15 loader
+│   ├── cicids2018_loader.py    # CIC-IDS2018 loader
+│   └── dataset_factory.py     # Unified dataset factory
 │
-├── train/
-│   ├── train_supervised.py     # Supervised training
-│   ├── pretrain_ssl.py         # Self-supervised pretraining
-│   └── finetune_rl.py          # RL fine-tuning
+├── configs/
+│   └── experiment.yaml         # Single source of truth for all hyperparameters
 │
-├── evaluate_rigorous.py        # Publication-ready evaluation
-├── ablation_study.py           # Component contribution analysis
+├── run_benchmark.py            # Main benchmark runner (single entry point)
+├── evaluate.py                 # Evaluation metrics, efficiency, statistical tests
+├── generate_tables.py          # Publication table generator
+├── verify_benchmark.py         # Verification script
 │
-├── PUBLICATION_GUIDE.md        # Academic writing guide
-└── DATASET_GUIDE.md            # Dataset download instructions
+├── utils/
+│   ├── reproducibility.py      # Seed setting, system info logging
+│   ├── config_loader.py        # YAML config loader
+│   └── metrics.py              # Classification metrics
+│
+└── outputs/
+    └── benchmark_results/      # All experiment results (JSON)
 ```
 
 ---
 
-## 🔬 Research Methodology
+## 🔬 Experimental Protocol
 
-### Datasets
+### Fair Comparison Guarantees
 
-**Synthetic Stress-Test Dataset**
-- High-fidelity simulated threat scenarios
-- Controlled ablation studies
-- Architectural validation
+All models are compared under **strictly identical conditions**:
 
-**Real-World Benchmarks**
-- **CICIDS2017**: Network intrusion detection (2.8M samples, 78 features)
-- **UNSW-NB15**: Modern attack patterns (257K samples, 49 features)
+- ✅ **Same data pipeline**: Identical preprocessing, windowing, and temporal splits (70/10/20)
+- ✅ **Same hyperparameters**: Learning rate, batch size, optimizer, loss function
+- ✅ **Matched capacity**: All models are within ±15% parameter count
+- ✅ **No data leakage**: Scaler fitted on training set only, strict temporal ordering
+- ✅ **No shuffling**: Preserves temporal causality
+- ✅ **Early stopping**: Patience=5 on validation F1
 
-See [DATASET_GUIDE.md](DATASET_GUIDE.md) for download instructions.
+### Evaluation Metrics
 
-### Evaluation Protocol
+**Classification**: Accuracy, Precision, Recall, F1-Score, AUC-ROC
 
-All experiments follow rigorous academic standards:
-- ✅ **5-fold cross-validation**
-- ✅ **5 independent runs** with different random seeds
-- ✅ **Mean ± standard deviation** reporting
-- ✅ **95% confidence intervals**
-- ✅ **Statistical significance testing** (paired t-tests, p < 0.01)
+**Efficiency**: Inference latency (ms), throughput (samples/sec), memory footprint (MB), parameter count
 
-### Baselines
+**Analysis**: Per-attack-type F1 breakdown, statistical significance (Wilcoxon signed-rank, p<0.05)
 
-We compare against **state-of-the-art** architectures:
-- Transformer (2017): Multi-head attention
-- GRU (2014): Gated recurrent unit
-- CNN-LSTM (2016): Convolutional + recurrent hybrid
-- LSTM (1997): Long short-term memory
+### Reproducibility
+
+- 5 fixed random seeds (42, 123, 456, 789, 1024)
+- Deterministic PyTorch operations enabled
+- System info and config hash logged for every run
+- All results saved as JSON for independent verification
 
 ---
 
-## 📈 Ablation Studies
+## 📊 Configuration
 
-Component contribution analysis:
+All hyperparameters are controlled from a single file: [`configs/experiment.yaml`](configs/experiment.yaml)
 
-| Configuration | F1-Score | Drop from Full Model |
-|---------------|----------|----------------------|
-| **Full Model** | **89.3%** | **-** |
-| Without Mamba | 85.3% | **-4.5%** ✅ proves Mamba helps |
-| Without Fusion | 82.1% | **-8.1%** ✅ proves fusion helps |
-| Log only | 78.4% | **-12.2%** ✅ proves multimodal helps |
-| Text only | 76.2% | -14.7% |
-| CVE only | 68.9% | -22.9% |
+```yaml
+datasets: [CICIDS2017, UNSW-NB15, CIC-IDS2018]
+models: [Mamba, LSTM, GRU, Transformer, CNN-LSTM, TCN]
+seeds: [42, 123, 456, 789, 1024]
 
-**Conclusion**: Each component contributes significantly (p < 0.01)
-
----
-
-## 📊 Running Experiments
-
-### 1. Quick Synthetic Evaluation
-
-```bash
-# Train on synthetic data
-python train/train_supervised.py --max_epochs 5
-
-# Comprehensive evaluation
-python evaluate_rigorous.py
+dataset:
+  seq_len: 50
+model:
+  d_model: 128
+  n_layers: 2
+training:
+  batch_size: 128
+  epochs: 30
+  learning_rate: 0.001
+  early_stopping:
+    patience: 5
 ```
-
-**Output:**
-```
-⚡ Evaluating Proposed Mamba (5 runs)...
-  Run 1: F1=0.912, AUC=0.948
-  Run 2: F1=0.887, AUC=0.935
-  ...
-  
-✓ Mean F1: 89.3% ± 2.1%
-✓ 95% CI: [87.2%, 91.4%]
-```
-
-### 2. Real-World Benchmark Evaluation
-
-```bash
-# Download datasets first (see DATASET_GUIDE.md)
-python evaluate_rigorous.py --dataset cicids2017
-
-# Compare all models
-python evaluate_rigorous.py --dataset unswnb15 --all-baselines
-```
-
-### 3. Ablation Studies
-
-```bash
-python ablation_study.py
-
-# Output shows contribution of each component
-```
-
----
-
-## 🎓 For Publication
-
-### Required Steps
-
-1. ✅ **Run on synthetic data** (stress-test validation)
-2. ✅ **Run on ≥1 real dataset** (CICIDS2017 or UNSW-NB15)
-3. ✅ **Run ablation studies** (prove components matter)
-4. ✅ **Include confidence intervals** (statistical rigor)
-5. ✅ **Compare modern baselines** (not just LSTM)
-
-### Paper Sections
-
-See [PUBLICATION_GUIDE.md](PUBLICATION_GUIDE.md) for:
-- ✅ Required tables and figures
-- ✅ Recommended text for each section
-- ✅ Target venues (journals/conferences)
-- ✅ Reviewer response templates
-- ✅ Statistical reporting guidelines
-
-### Citation
-
-```bibtex
-@article{yourname2026mamba,
-  title={Mamba-Powered Multimodal Threat Intelligence: 
-         Efficient State-Space Models for Real-Time Cybersecurity},
-  author={Your Name and Co-authors},
-  journal={IEEE Transactions on Information Forensics and Security},
-  year={2026}
-}
-```
-
----
-
-## 🏆 Key Features
-
-### ✅ Academic Rigor
-- Cross-validation
-- Multiple runs
-- Statistical significance
-- Confidence intervals
-- Proper train/test splits
-
-### ✅ Real Datasets
-- CICIDS2017 support
-- UNSW-NB15 support
-- Extensible to other benchmarks
-
-### ✅ Modern Baselines
-- Transformer
-- GRU
-- CNN-LSTM
-- Not just LSTM!
-
-### ✅ Ablation Studies
-- Component-wise analysis
-- Proves architectural choices
-- Statistical validation
-
-### ✅ Production-Ready
-- Real-time inference (<50ms)
-- Streamlit dashboard
-- Modular architecture
-
----
-
-## 📚 Documentation
-
-- **[PUBLICATION_GUIDE.md](PUBLICATION_GUIDE.md)**: Academic writing guide
-- **[DATASET_GUIDE.md](DATASET_GUIDE.md)**: Dataset download and setup
-- **[configs/default.yaml](configs/default.yaml)**: Hyperparameter settings
-
----
-
-## 🤝 Contributing
-
-Contributions welcome! Areas of interest:
-- Additional benchmark datasets
-- More baseline models
-- Improved training strategies
-- Real-world deployment optimizations
 
 ---
 
 ## 📄 License
 
-MIT License - see [LICENSE](LICENSE) for details
+MIT License
 
 ---
 
@@ -300,16 +185,4 @@ MIT License - see [LICENSE](LICENSE) for details
 - Mamba SSM: [Gu & Dao, 2023](https://arxiv.org/abs/2312.00752)
 - CICIDS2017: [Sharafaldin et al., 2018](https://www.unb.ca/cic/datasets/ids-2017.html)
 - UNSW-NB15: [Moustafa & Slay, 2015](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
-
----
-
-## 📧 Contact
-
-For questions about publication or implementation:
-- Open an issue on GitHub
-- Email: [your-email@domain.com]
-
----
-
-**Ready for journal submission with proper experimental validation! 🚀**
-
+- CIC-IDS2018: [CSE-CIC-IDS2018](https://www.unb.ca/cic/datasets/ids-2018.html)

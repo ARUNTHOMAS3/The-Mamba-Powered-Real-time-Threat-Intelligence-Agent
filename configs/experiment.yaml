@@ -1,0 +1,64 @@
+# =============================================================
+# Unified Experiment Configuration
+# Single source of truth for all hyperparameters
+# All models and datasets are controlled from this file
+# =============================================================
+
+# Datasets to benchmark
+datasets:
+  - CICIDS2017
+  - UNSW-NB15
+  - CIC-IDS2018
+
+# Models to compare
+models:
+  - Mamba
+  - LSTM
+  - GRU
+  - Transformer
+  - CNN-LSTM
+  - TCN
+
+# Random seeds for statistical significance (5 runs)
+seeds: [42, 123, 456, 789, 1024]
+
+# Dataset Configuration
+dataset:
+  seq_len: 50
+  binary_classification: true
+  temporal_split:
+    train: 0.7
+    val: 0.1
+    test: 0.2
+  shuffle: false  # Strict temporal order
+
+# Model Architecture (shared across all models)
+model:
+  d_model: 128
+  n_layers: 2
+
+# Training Hyperparameters (identical for all models)
+training:
+  batch_size: 128
+  epochs: 30
+  learning_rate: 0.001
+  optimizer: Adam
+  loss: BCEWithLogitsLoss
+  early_stopping:
+    patience: 5
+    metric: val_f1
+    mode: max
+
+# Fair Comparison
+fair_comparison:
+  enforce_capacity_parity: true
+  max_param_diff_percent: 15.0  # Maximum ±15% difference allowed
+
+# Device
+device: auto  # cuda if available, else cpu
+
+# Paths
+paths:
+  data_dir: data/raw
+  output_dir: outputs/benchmark_results
+  model_dir: outputs/checkpoints

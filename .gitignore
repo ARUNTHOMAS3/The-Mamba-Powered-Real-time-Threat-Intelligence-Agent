@@ -1,8 +1,43 @@
+# Virtual environments
+.venv/
+.venv312/
 venv/
+env/
+
+# Python cache
 __pycache__/
+*.py[cod]
 *.pyc
+*.pyo
+
+# Data files (too large for GitHub)
+data/raw/
+data/processed/
+*.csv
+
+# Model outputs & checkpoints
 outputs/
+*.pt
+*.pkl
+*.npz
+*.joblib
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
 .DS_Store
-live_logs.txt
-data/
-*.json
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Gemini agent artifacts
+.gemini/

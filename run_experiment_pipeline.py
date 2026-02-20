@@ -18,6 +18,13 @@ import numpy as np
 from datetime import datetime
 from pathlib import Path
 
+# Add project root for imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from utils.reproducibility import set_seeds
+
+# Initialize seeds for reproducibility
+set_seeds(42)
+
 
 def run_command(cmd: str, description: str) -> bool:
     """Run a shell command and report results"""

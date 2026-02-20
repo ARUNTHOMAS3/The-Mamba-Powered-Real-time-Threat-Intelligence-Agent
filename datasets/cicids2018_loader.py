@@ -1,12 +1,18 @@
 """
-UNSW-NB15 Dataset Loader (Memory-Efficient Lazy Windowing)
-Reference: https://research.unsw.edu.au/projects/unsw-nb15-dataset
+CIC-IDS2018 Dataset Loader (Memory-Efficient Lazy Windowing)
+Reference: https://www.unb.ca/cic/datasets/ids-2018.html
 
-Follows the same interface as CICIDS2017 loader:
+Follows the same interface as CICIDS2017/UNSW-NB15 loaders:
 - Lazy windowing (windows generated on-the-fly)
 - Strict temporal split (70/10/20)
 - Leakage-free scaling (scaler fitted on train only)
 - Binary + multi-class label support
+
+Expected data: Processed CSV files from the "Processed Traffic Data for ML Algorithms" folder.
+Download command:
+    aws s3 sync --no-sign-request --region ap-south-1 \
+        "s3://cse-cic-ids2018/Processed Traffic Data for ML Algorithms/" \
+        data/raw/CIC-IDS2018/ --exclude "*" --include "*.csv"
 """
 
 import pandas as pd
@@ -19,27 +25,29 @@ import joblib
 import gc
 
 
-class UNSWNB15Dataset(Dataset):
+class CICIDS2018Dataset(Dataset):
     """
-    Memory-efficient UNSW-NB15 loader with lazy windowing.
+    Memory-efficient CIC-IDS2018 loader with lazy windowing.
     
-    Expected files in root_dir:
-        UNSW-NB15_1.csv, UNSW-NB15_2.csv, UNSW-NB15_3.csv, UNSW-NB15_4.csv
-        OR
-        UNSW_NB15_training-set.csv, UNSW_NB15_testing-set.csv
+    Expected CSV files in root_dir (processed traffic data):
+        Friday-02-03-2018_TrafficForML_CICFlowMeter.csv
+        Friday-16-02-2018_TrafficForML_CICFlowMeter.csv
+        Friday-23-02-2018_TrafficForML_CICFlowMeter.csv
+        Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv
+        Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv
+        Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv
+        Tuesday-20-02-2018_TrafficForML_CICFlowMeter.csv
+        Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv
+        Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv
+        Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv
     """
     
-    ATTACK_CATEGORIES = [
-        'Normal', 'Fuzzers', 'Analysis', 'Backdoor', 'DoS',
-        'Exploits', 'Generic', 'Reconnaissance', 'Shellcode', 'Worms'
-    ]
-    
-    def __init__(self, root_dir="data/raw/UNSW-NB15", split="train", binary=True, seq_len=50):
+    def __init__(self, root_dir="data/raw/CIC-IDS2018", split="train", binary=True, seq_len=50):
         self.root_dir = root_dir
         self.split = split
         self.binary = binary
         self.seq_len = seq_len
-        self.scaler_path = "outputs/scaler_unswnb15.pkl"
+        self.scaler_path = "outputs/scaler_cicids2018.pkl"
         
         self.X_raw, self.y_raw, self.attack_labels = self._load_process_split()
         
@@ -52,33 +60,27 @@ class UNSWNB15Dataset(Dataset):
         if not os.path.exists(self.root_dir):
             os.makedirs(self.root_dir, exist_ok=True)
         
-        # Try different file naming conventions
-        possible_files = [
-            # Standard 4-part split
-            [f"UNSW-NB15_{i}.csv" for i in range(1, 5)],
-            # Training/testing split
-            ["UNSW_NB15_training-set.csv", "UNSW_NB15_testing-set.csv"],
-            # Alternative names
-            ["UNSW-NB15_features.csv"],
-        ]
+        # Find all CSV files in the directory
+        csv_files = sorted([
+            f for f in os.listdir(self.root_dir)
+            if f.endswith('.csv')
+        ])
         
-        available_files = []
-        for file_set in possible_files:
-            found = [f for f in file_set if os.path.exists(os.path.join(self.root_dir, f))]
-            if found:
-                available_files = found
-                break
-        
-        if not available_files:
-            print(f"⚠ No UNSW-NB15 files found in {self.root_dir}.")
-            print(f"  Expected files like: UNSW-NB15_1.csv or UNSW_NB15_training-set.csv")
+        if not csv_files:
+            print(f"⚠ No CIC-IDS2018 CSV files found in {self.root_dir}.")
+            print(f"  Download with:")
+            print(f'  aws s3 sync --no-sign-request --region ap-south-1 '
+                  f'"s3://cse-cic-ids2018/Processed Traffic Data for ML Algorithms/" '
+                  f'{self.root_dir}/ --exclude "*" --include "*.csv"')
             return np.array([]), np.array([]), np.array([])
         
-        print(f"[{self.split.upper()}] Loading UNSW-NB15...")
-        print(f"Files: {available_files}")
+        print(f"[{self.split.upper()}] Loading CIC-IDS2018...")
+        print(f"Found {len(csv_files)} CSV files")
         
         dfs = []
-        for f in available_files:
+        drop_cols_set = {'flow id', 'src ip', 'src port', 'dst ip', 'dst port', 'protocol'}
+        
+        for f in csv_files:
             print(f"  -> Processing {f}...")
             try:
                 chunk_iter = pd.read_csv(
@@ -87,9 +89,20 @@ class UNSWNB15Dataset(Dataset):
                     chunksize=100000,
                     low_memory=False
                 )
+                
                 for chunk in chunk_iter:
                     chunk.columns = [c.strip() for c in chunk.columns]
+                    
+                    # Drop metadata columns
+                    cols_to_drop = [c for c in chunk.columns if c.strip().lower() in drop_cols_set]
+                    chunk.drop(columns=cols_to_drop, inplace=True, errors='ignore')
+                    
+                    # Downcast numeric
+                    numeric_cols = chunk.select_dtypes(include=[np.number]).columns
+                    chunk[numeric_cols] = chunk[numeric_cols].astype(np.float32)
+                    
                     dfs.append(chunk)
+                
                 gc.collect()
             except Exception as e:
                 print(f"Error loading {f}: {e}")
@@ -97,50 +110,60 @@ class UNSWNB15Dataset(Dataset):
         if not dfs:
             return np.array([]), np.array([]), np.array([])
         
+        print("Concatenating chunks...")
         full_df = pd.concat(dfs, ignore_index=True)
         del dfs
         gc.collect()
         
         print(f"Loaded {len(full_df)} total rows.")
         
-        # Label processing
-        # UNSW-NB15 has 'attack_cat' (category) and 'label' (binary) columns
-        attack_cat_col = None
-        label_col = None
-        
+        # Sort by Timestamp if available
+        ts_col = None
         for c in full_df.columns:
-            cl = c.strip().lower()
-            if cl == 'attack_cat':
-                attack_cat_col = c
-            elif cl == 'label':
+            if 'timestamp' in c.lower():
+                ts_col = c
+                break
+        
+        if ts_col:
+            print("Sorting by Timestamp...")
+            try:
+                full_df[ts_col] = pd.to_datetime(full_df[ts_col], dayfirst=True, errors='coerce')
+                full_df = full_df.sort_values(ts_col)
+            except Exception as e:
+                print(f"Timestamp sort failed ({e}), using file order.")
+        
+        # Label processing
+        label_col = None
+        for c in full_df.columns:
+            if 'label' in c.lower():
                 label_col = c
+                break
         
-        # Extract attack category labels for per-attack analysis
-        if attack_cat_col and attack_cat_col in full_df.columns:
-            attack_labels = full_df[attack_cat_col].fillna('Normal').astype(str).str.strip().values
-        else:
-            attack_labels = np.array(['Unknown'] * len(full_df))
+        if label_col is None:
+            print("⚠ No label column found! Using last column as label.")
+            label_col = full_df.columns[-1]
         
-        # Binary labels
-        if label_col and label_col in full_df.columns:
-            if self.binary:
-                y_all = full_df[label_col].values.astype(np.int64)
-            else:
-                le = LabelEncoder()
-                y_all = le.fit_transform(attack_labels)
+        attack_labels = full_df[label_col].astype(str).str.strip().values
+        
+        if self.binary:
+            y_all = np.where(
+                np.isin(np.char.lower(attack_labels.astype('<U100')), ['benign', 'normal']),
+                0, 1
+            )
         else:
-            # Fallback: derive from attack_cat
-            y_all = np.where(np.char.lower(attack_labels.astype(str)) == 'normal', 0, 1)
+            le = LabelEncoder()
+            y_all = le.fit_transform(attack_labels)
         
         print(f"Class Distribution: Benign={np.sum(y_all == 0)}, Attack={np.sum(y_all == 1)}")
         
         # Drop non-feature columns
-        drop_cols = {'id', 'label', 'attack_cat', 'attack_category'}
-        cols_to_drop = [c for c in full_df.columns if c.strip().lower() in drop_cols]
+        cols_to_drop = [label_col]
+        if ts_col:
+            cols_to_drop.append(ts_col)
         full_df.drop(columns=cols_to_drop, inplace=True, errors='ignore')
         
-        # Convert categorical columns to numeric
-        for col in full_df.select_dtypes(include=['object']).columns:
+        # Convert remaining object columns
+        for col in full_df.select_dtypes(include=['object', 'datetime64']).columns:
             try:
                 full_df[col] = pd.to_numeric(full_df[col], errors='coerce')
             except:

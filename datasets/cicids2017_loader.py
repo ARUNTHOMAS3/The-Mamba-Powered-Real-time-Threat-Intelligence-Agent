@@ -1,9 +1,20 @@
 """
-CICIDS2017 Dataset Loader
+CICIDS2017 Dataset Loader (Memory-Efficient Lazy Windowing)
 Reference: https://www.unb.ca/cic/datasets/ids-2017.html
 
-This dataset contains benign and the most up-to-date common attacks, 
-which resembles the true real-world data (PCAPs).
+MEMORY-SAFE SUBSET APPROACH:
+- Load only Monday and Friday CSVs (hardware memory constraint)
+- Maintains temporal order, attack diversity, and benign traffic
+- Publication-safe: explicitly documented as subset evaluation
+
+LAZY WINDOWING:
+- Windows generated on-the-fly in __getitem__ (no pre-allocation)
+- Drastically reduces memory footprint
+
+Strict Compliance:
+- No Data Leakage: Scaler fitted ONLY on Train split
+- Temporal Order: Sorted by Timestamp
+- No Shuffling
 """
 
 import pandas as pd
@@ -12,137 +23,245 @@ import torch
 from torch.utils.data import Dataset
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 import os
-
+import joblib
+import gc
 
 class CICIDS2017Dataset(Dataset):
     """
-    Loader for CICIDS2017 Network Intrusion Detection Dataset
+    Memory-Efficient CICIDS2017 Loader (Monday + Friday Subset)
     
-    Download from: https://www.unb.ca/cic/datasets/ids-2017.html
-    Place CSV files in: data/raw/CICIDS2017/
-    
-    Features: 78 network flow features
-    Labels: Multi-class (Benign, DoS, DDoS, Web Attack, etc.)
+    CRITICAL: Uses lazy windowing to avoid OOM errors.
+    Windows are created on-demand during __getitem__, not pre-allocated.
     """
     
-    def __init__(self, root_dir="data/raw/CICIDS2017", train=True, binary=True, max_samples=None):
-        """
-        Args:
-            root_dir: Path to CICIDS2017 CSV files
-            train: If True, load training set (70%), else test set (30%)
-            binary: If True, convert to binary (benign/attack), else multi-class
-            max_samples: Limit dataset size for quick experiments
-        """
+    def __init__(self, root_dir="data/raw/CICIDS2017", split="train", binary=True, seq_len=50):
         self.root_dir = root_dir
-        self.train = train
+        self.split = split
         self.binary = binary
+        self.seq_len = seq_len  # Window length for temporal sequences
+        self.scaler_path = "outputs/scaler_cicids.pkl"
         
-        # Load all CSV files
-        self.data = self._load_data()
+        # Load raw data (NOT windowed)
+        self.X_raw, self.y_raw, self.attack_labels = self._load_process_split()
         
-        if max_samples:
-            self.data = self.data.sample(n=min(max_samples, len(self.data)), random_state=42)
-        
-        # Preprocess
-        self.X, self.y = self._preprocess()
-        
-        # Train/Test Split (70/30)
-        split_idx = int(0.7 * len(self.X))
-        if train:
-            self.X = self.X[:split_idx]
-            self.y = self.y[:split_idx]
+        # Calculate number of valid windows
+        if len(self.X_raw) >= self.seq_len:
+            self.num_windows = len(self.X_raw) - self.seq_len + 1
         else:
-            self.X = self.X[split_idx:]
-            self.y = self.y[split_idx:]
-    
-    def _load_data(self):
-        """Load and concatenate all CSV files"""
+            self.num_windows = 0
+            
+    def _load_process_split(self):
+        # === DISK CACHE: Load from .npz if available (skips all CSV parsing) ===
+        cache_dir = os.path.join("outputs", "cache")
+        os.makedirs(cache_dir, exist_ok=True)
+        cache_file = os.path.join(cache_dir, f"cicids2017_{self.split}.npz")
+        
+        if os.path.exists(cache_file):
+            print(f"[{self.split.upper()}] Loading from cache: {cache_file}")
+            cached = np.load(cache_file, allow_pickle=True)
+            X_part = cached['X']
+            y_part = cached['y']
+            atk_part = cached['atk']
+            print(f"  Cached shape: {X_part.shape}, labels: {len(y_part)}")
+            return self._apply_scaling(X_part, y_part, atk_part)
+        
+        print(f"[{self.split.upper()}] No cache found, parsing CSVs (this only happens once)...")
+        
         if not os.path.exists(self.root_dir):
-            raise FileNotFoundError(
-                f"\n❌ CICIDS2017 not found at: {self.root_dir}\n"
-                f"📥 Download from: https://www.unb.ca/cic/datasets/ids-2017.html\n"
-                f"📁 Extract CSVs to: {self.root_dir}/"
-            )
+            os.makedirs(self.root_dir, exist_ok=True)
         
-        csv_files = [f for f in os.listdir(self.root_dir) if f.endswith('.csv')]
+        # SUBSET SELECTION (Memory-safe)
+        subset_files = [
+            "Monday-WorkingHours.pcap_ISCX.csv",
+            "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+            "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+            "Friday-WorkingHours-Morning.pcap_ISCX.csv"
+        ]
         
-        if not csv_files:
-            raise FileNotFoundError(f"No CSV files found in {self.root_dir}")
+        available_files = [f for f in subset_files if os.path.exists(os.path.join(self.root_dir, f))]
+        
+        if not available_files:
+            print(f"⚠ No CICIDS2017 subset files found in {self.root_dir}.")
+            return np.array([]), np.array([]), np.array([])
+            
+        print(f"[{self.split.upper()}] Loading CICIDS2017 Subset (Monday+Friday)...")
+        print(f"Files: {available_files}")
         
         dfs = []
-        for csv_file in csv_files:
+        drop_cols_set = {'Flow ID', 'Source IP', 'Source Port', 'Destination IP', 'Destination Port', 'Protocol'}
+        
+        for f in available_files: 
+            print(f" -> Processing {f}...")
             try:
-                df = pd.read_csv(os.path.join(self.root_dir, csv_file), encoding='latin1')
-                dfs.append(df)
-                print(f"✓ Loaded {csv_file}: {len(df)} samples")
+                # Read in chunks to avoid pandas' peak memory usage during read
+                chunk_iter = pd.read_csv(
+                    os.path.join(self.root_dir, f), 
+                    encoding='latin1', 
+                    chunksize=100000,
+                    low_memory=False
+                )
+                
+                for chunk in chunk_iter:
+                    chunk.columns = [c.strip() for c in chunk.columns]
+                    
+                    # Drop metadata columns immediately
+                    cols_to_drop = [c for c in chunk.columns if c in drop_cols_set]
+                    chunk.drop(columns=cols_to_drop, inplace=True, errors='ignore')
+                    
+                    # Downcast numeric to float32
+                    numeric_cols = chunk.select_dtypes(include=[np.number]).columns
+                    chunk[numeric_cols] = chunk[numeric_cols].astype(np.float32)
+                    
+                    dfs.append(chunk)
+                    
+                gc.collect()
             except Exception as e:
-                print(f"⚠ Skipping {csv_file}: {e}")
+                print(f"Error loading {f}: {e}")
+                
+        if not dfs:
+            return np.array([]), np.array([]), np.array([])
         
-        data = pd.concat(dfs, ignore_index=True)
-        print(f"📊 Total CICIDS2017 samples: {len(data)}")
-        return data
-    
-    def _preprocess(self):
-        """Clean and normalize features"""
-        df = self.data.copy()
+        print("Concatenating chunks...")
+        full_df = pd.concat(dfs, ignore_index=True)
+        del dfs
+        gc.collect()
         
-        # Typical label column name in CICIDS2017
+        print(f"Loaded {len(full_df)} total rows.")
+        
+        # Sort by Timestamp
+        if 'Timestamp' in full_df.columns:
+            print("Sorting by Timestamp...")
+            try:
+                full_df['Timestamp'] = pd.to_datetime(full_df['Timestamp'], dayfirst=True, errors='coerce')
+                full_df = full_df.sort_values('Timestamp')
+            except Exception as e:
+                print(f"Timestamp sort failed ({e}), using file order.")
+        
+        # Label Processing
+        print("Processing Labels...")
         label_col = 'Label'
-        if label_col not in df.columns:
-            label_col = [col for col in df.columns if 'label' in col.lower()][0]
-        
-        # Extract labels
-        labels = df[label_col].values
-        
-        # Convert to binary if needed
+        if potential := [c for c in full_df.columns if 'label' in c.lower()]:
+             label_col = potential[0]
+             
+        y_raw = full_df[label_col].astype(str).str.strip().values
+        attack_labels_all = y_raw.copy()  # Keep original labels for per-attack analysis
         if self.binary:
-            y = np.array([0 if 'BENIGN' in str(l).upper() else 1 for l in labels])
+            y_all = np.where(pd.Series(y_raw).str.upper() == 'BENIGN', 0, 1)
         else:
             le = LabelEncoder()
-            y = le.fit_transform(labels)
+            y_all = le.fit_transform(y_raw)
+            
+        print(f"Class Distribution: Benign={np.sum(y_all==0)}, Attack={np.sum(y_all==1)}")
         
-        # Drop non-numeric columns
-        X = df.drop(columns=[label_col], errors='ignore')
-        X = X.select_dtypes(include=[np.number])
+        # Drop non-features
+        full_df.drop(columns=[label_col, 'Timestamp'], inplace=True, errors='ignore')
         
-        # Handle inf/nan
-        X = X.replace([np.inf, -np.inf], np.nan)
-        X = X.fillna(0)
+        # Convert to Numpy - use float32 directly
+        print("Converting to numpy arrays...")
+        X_all = full_df.values.astype(np.float32)
         
-        # Normalize
-        scaler = StandardScaler()
-        X = scaler.fit_transform(X)
+        # Clean NaN/Inf WITHOUT allocating huge boolean masks
+        print("Cleaning NaN/Inf values...")
+        for i in range(X_all.shape[1]):
+            col = X_all[:, i]
+            col[np.isnan(col)] = 0.0
+            col[np.isinf(col)] = 0.0
         
-        return torch.FloatTensor(X), torch.LongTensor(y)
+        del full_df
+        gc.collect()
+        
+        # Strict Temporal Split (on RAW data, before windowing)
+        total_len = len(X_all)
+        train_end = int(total_len * 0.70)
+        val_end = int(total_len * 0.80)
+        
+        print(f"Total samples: {total_len}")
+        print(f"Train: 0-{train_end}, Val: {train_end}-{val_end}, Test: {val_end}-{total_len}")
+        
+        if self.split == 'train':
+            X_part = X_all[:train_end]
+            y_part = y_all[:train_end]
+            atk_part = attack_labels_all[:train_end]
+        elif self.split == 'val':
+            X_part = X_all[train_end:val_end]
+            y_part = y_all[train_end:val_end]
+            atk_part = attack_labels_all[train_end:val_end]
+        elif self.split == 'test':
+            X_part = X_all[val_end:]
+            y_part = y_all[val_end:]
+            atk_part = attack_labels_all[val_end:]
+        else:
+            raise ValueError(f"Unknown split: {self.split}")
+            
+        del X_all, y_all, attack_labels_all
+        gc.collect()
+        
+        # Save to cache for next time
+        print(f"Saving cache to {cache_file}...")
+        np.savez_compressed(cache_file, X=X_part, y=y_part, atk=atk_part)
+        
+        print(f"[{self.split.upper()}] Raw shape (before windowing): {X_part.shape}")
+        
+        return self._apply_scaling(X_part, y_part, atk_part)
     
+    def _apply_scaling(self, X_part, y_part, atk_part):
+        """Apply leakage-free scaling. Train fits scaler, val/test load it."""
+        print(f"[{self.split.upper()}] Raw shape (before windowing): {X_part.shape}")
+        # Scaling (Leakage-Free)
+        if self.split == 'train':
+            print("Fitting StandardScaler on Train split...")
+            scaler = StandardScaler()
+            X_part = scaler.fit_transform(X_part)
+            os.makedirs("outputs", exist_ok=True)
+            joblib.dump(scaler, self.scaler_path)
+            print(f"Saved scaler to {self.scaler_path}")
+        else:
+            if os.path.exists(self.scaler_path):
+                print(f"Loading scaler from {self.scaler_path}...")
+                scaler = joblib.load(self.scaler_path)
+                X_part = scaler.transform(X_part)
+            else:
+                print("⚠ Scaler not found! Training must run first.")
+                raise FileNotFoundError("Scaler not found. Run training first.")
+        
+        # Return raw data - windowing will happen in __getitem__
+        print(f"[OK] Will generate {len(X_part) - self.seq_len + 1} windows lazily during training")
+        
+        return X_part, y_part, atk_part
+
     def __len__(self):
-        return len(self.X)
+        # Return number of valid windows
+        return self.num_windows
     
     def __getitem__(self, idx):
-        return {
-            'x': self.X[idx],
-            'label': self.y[idx].float()
-        }
-
-
-def get_cicids_stats():
-    """Print dataset statistics"""
-    try:
-        train_ds = CICIDS2017Dataset(train=True, binary=True, max_samples=10000)
-        test_ds = CICIDS2017Dataset(train=False, binary=True, max_samples=10000)
+        """
+        Generate window on-the-fly (lazy evaluation).
+        This avoids pre-allocating all windows in memory.
+        """
+        if idx >= self.num_windows:
+            raise IndexError(f"Index {idx} out of range for {self.num_windows} windows")
         
-        print("\n" + "="*60)
-        print("CICIDS2017 Dataset Statistics")
-        print("="*60)
-        print(f"Train samples: {len(train_ds)}")
-        print(f"Test samples: {len(test_ds)}")
-        print(f"Feature dimension: {train_ds.X.shape[1]}")
-        print(f"Attack ratio (train): {train_ds.y.float().mean():.1%}")
-        print(f"Attack ratio (test): {test_ds.y.float().mean():.1%}")
-        print("="*60)
-    except Exception as e:
-        print(f"❌ Could not load CICIDS2017: {e}")
-
-
-if __name__ == "__main__":
-    get_cicids_stats()
+        # Extract window from raw data
+        window = self.X_raw[idx:idx + self.seq_len]  # (seq_len, features)
+        label = self.y_raw[idx + self.seq_len - 1]  # Label from last timestep
+        
+        # Convert to tensors
+        return torch.FloatTensor(window), torch.tensor(label, dtype=torch.float32)
+    
+    def get_attack_types(self):
+        """Return unique attack types in this split."""
+        if len(self.attack_labels) == 0:
+            return []
+        return list(set(self.attack_labels))
+    
+    def get_attack_label(self, idx):
+        """Get the attack category label for a specific window."""
+        if idx >= self.num_windows:
+            raise IndexError
+        return self.attack_labels[idx + self.seq_len - 1]
+    
+    def get_feature_count(self):
+        """Return number of features."""
+        if len(self.X_raw) == 0:
+            return 0
+        return self.X_raw.shape[1]
