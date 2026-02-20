@@ -35,6 +35,8 @@ def main():
     print("   GPU 1: Seeds [789, 1024]")
     print("=" * 60)
     
+    import threading
+    
     start = time.time()
     
     env0 = os.environ.copy()
@@ -43,14 +45,19 @@ def main():
     env1 = os.environ.copy()
     env1["CUDA_VISIBLE_DEVICES"] = "1"
     
-    # Start both processes
+    def stream_output(proc, gpu_id):
+        """Read process output line by line and print with GPU prefix."""
+        for line in iter(proc.stdout.readline, ''):
+            print(f"[GPU {gpu_id}] {line}", end='', flush=True)
+    
+    # Start both processes with live output
     p0 = subprocess.Popen(
         [sys.executable, "-u", "run_benchmark.py",
          "--datasets", "CICIDS2017",
          "--seeds", "42", "123", "456"],
         env=env0,
-        stdout=open("gpu0_log.txt", "w"),
-        stderr=subprocess.STDOUT
+        stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+        text=True, bufsize=1
     )
     print(f"✅ GPU 0 started (PID {p0.pid}) — seeds [42, 123, 456]")
     
@@ -59,23 +66,29 @@ def main():
          "--datasets", "CICIDS2017",
          "--seeds", "789", "1024"],
         env=env1,
-        stdout=open("gpu1_log.txt", "w"),
-        stderr=subprocess.STDOUT
+        stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+        text=True, bufsize=1
     )
     print(f"✅ GPU 1 started (PID {p1.pid}) — seeds [789, 1024]")
     
-    print("\n⏳ Both GPUs training in parallel...")
-    print("   Monitor progress: !tail -f gpu0_log.txt")
-    print("   Monitor progress: !tail -f gpu1_log.txt")
+    print("\n⏳ Both GPUs training in parallel — live output below:\n")
+    
+    # Stream output from both GPUs in parallel threads
+    t0 = threading.Thread(target=stream_output, args=(p0, 0), daemon=True)
+    t1 = threading.Thread(target=stream_output, args=(p1, 1), daemon=True)
+    t0.start()
+    t1.start()
     
     # Wait for both
     r0 = p0.wait()
-    elapsed0 = time.time() - start
-    print(f"\n✅ GPU 0 finished (exit={r0}, time={elapsed0/60:.0f}min)")
-    
     r1 = p1.wait()
-    elapsed1 = time.time() - start
-    print(f"✅ GPU 1 finished (exit={r1}, time={elapsed1/60:.0f}min)")
+    t0.join()
+    t1.join()
+    
+    elapsed = time.time() - start
+    print(f"\n✅ GPU 0 finished (exit={r0})")
+    print(f"✅ GPU 1 finished (exit={r1})")
+    print(f"⏱️  Total time: {int(elapsed//3600)}h {int((elapsed%3600)//60)}m")
     
     total = time.time() - start
     hours = int(total // 3600)
