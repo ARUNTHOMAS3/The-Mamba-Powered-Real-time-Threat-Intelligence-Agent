@@ -81,10 +81,16 @@ class CICIDS2017Dataset(Dataset):
         available_files = [f for f in subset_files if os.path.exists(os.path.join(self.root_dir, f))]
         
         if not available_files:
-            print(f"⚠ No CICIDS2017 subset files found in {self.root_dir}.")
-            return np.array([]), np.array([]), np.array([])
+            # Fallback: try loading ANY csv files in the directory
+            all_csvs = [f for f in os.listdir(self.root_dir) if f.endswith('.csv')]
+            if all_csvs:
+                print(f"[{self.split.upper()}] Original CICIDS2017 files not found, using available CSVs: {all_csvs}")
+                available_files = all_csvs
+            else:
+                print(f"⚠ No CSV files found in {self.root_dir}.")
+                return np.array([]), np.array([]), np.array([])
             
-        print(f"[{self.split.upper()}] Loading CICIDS2017 Subset (Monday+Friday)...")
+        print(f"[{self.split.upper()}] Loading CICIDS2017 ({len(available_files)} files)...")
         print(f"Files: {available_files}")
         
         dfs = []
