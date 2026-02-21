@@ -108,16 +108,33 @@ def main():
 
 
 def merge_results():
-    """Merge evaluation_results.json from both GPU runs."""
+    """Merge individual JSON result files from both GPU runs into all_results.json."""
     import json
+    import glob
     
-    results_path = "outputs/benchmark_results/evaluation_results.json"
-    if os.path.exists(results_path):
-        with open(results_path, 'r') as f:
-            results = json.load(f)
-        print(f"   Found {len(results)} experiment results")
-    else:
-        print("   ⚠ No results file found — check gpu0_log.txt and gpu1_log.txt for errors")
+    results_dir = "outputs/benchmark_results"
+    pattern = os.path.join(results_dir, "*_seed*.json")
+    result_files = sorted(glob.glob(pattern))
+    
+    if not result_files:
+        print("   ⚠ No individual result files found in outputs/benchmark_results/")
+        return
+    
+    all_results = []
+    for f in result_files:
+        try:
+            with open(f, 'r') as fh:
+                result = json.load(fh)
+                all_results.append(result)
+        except Exception as e:
+            print(f"   ⚠ Could not load {f}: {e}")
+    
+    # Save combined results
+    combined_path = os.path.join(results_dir, "all_results.json")
+    with open(combined_path, 'w') as fh:
+        json.dump(all_results, fh, indent=2)
+    
+    print(f"   ✅ Merged {len(all_results)} experiments from {len(result_files)} files into all_results.json")
 
 
 if __name__ == '__main__':

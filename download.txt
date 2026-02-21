@@ -1,0 +1,1729 @@
+6.0s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.0s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.0s 3 0.00s - to python to disable frozen modules.
+6.0s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+6.6s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.6s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.6s 7 0.00s - to python to disable frozen modules.
+6.6s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.2s 9 /kaggle/input/datasets/kk0105/cicids2017/Week_filtered.csv
+8.2s 10 /kaggle/input/datasets/kk0105/cicids2017/MachineLearningCSV/MachineLearningCSV/MachineLearningCVE/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+8.2s 11 /kaggle/input/datasets/kk0105/cicids2017/MachineLearningCSV/MachineLearningCSV/MachineLearningCVE/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv
+8.2s 12 /kaggle/input/datasets/kk0105/cicids2017/MachineLearningCSV/MachineLearningCSV/MachineLearningCVE/Tuesday-WorkingHours.pcap_ISCX.csv
+8.2s 13 /kaggle/input/datasets/kk0105/cicids2017/MachineLearningCSV/MachineLearningCSV/MachineLearningCVE/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+8.2s 14 /kaggle/input/datasets/kk0105/cicids2017/MachineLearningCSV/MachineLearningCSV/MachineLearningCVE/Monday-WorkingHours.pcap_ISCX.csv
+8.2s 15 /kaggle/input/datasets/kk0105/cicids2017/MachineLearningCSV/MachineLearningCSV/MachineLearningCVE/Friday-WorkingHours-Morning.pcap_ISCX.csv
+8.2s 16 /kaggle/input/datasets/kk0105/cicids2017/MachineLearningCSV/MachineLearningCSV/MachineLearningCVE/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv
+8.2s 17 /kaggle/input/datasets/kk0105/cicids2017/MachineLearningCSV/MachineLearningCSV/MachineLearningCVE/Wednesday-workingHours.pcap_ISCX.csv
+8.3s 18 Cloning into '/kaggle/working/mamba'...
+8.7s 19 remote: Enumerating objects: 119, done.[K
+8.7s 20 remote: Counting objects:   0% (1/119)[Kremote: Counting objects:   1% (2/119)[Kremote: Counting objects:   2% (3/119)[Kremote: Counting objects:   3% (4/119)[Kremote: Counting objects:   4% (5/119)[Kremote: Counting objects:   5% (6/119)[Kremote: Counting objects:   6% (8/119)[Kremote: Counting objects:   7% (9/119)[Kremote: Counting objects:   8% (10/119)[Kremote: Counting objects:   9% (11/119)[Kremote: Counting objects:  10% (12/119)[Kremote: Counting objects:  11% (14/119)[Kremote: Counting objects:  12% (15/119)[Kremote: Counting objects:  13% (16/119)[Kremote: Counting objects:  14% (17/119)[Kremote: Counting objects:  15% (18/119)[Kremote: Counting objects:  16% (20/119)[Kremote: Counting objects:  17% (21/119)[Kremote: Counting objects:  18% (22/119)[Kremote: Counting objects:  19% (23/119)[Kremote: Counting objects:  20% (24/119)[Kremote: Counting objects:  21% (25/119)[Kremote: Counting objects:  22% (27/119)[Kremote: Counting objects:  23% (28/119)[Kremote: Counting objects:  24% (29/119)[Kremote: Counting objects:  25% (30/119)[Kremote: Counting objects:  26% (31/119)[Kremote: Counting objects:  27% (33/119)[Kremote: Counting objects:  28% (34/119)[Kremote: Counting objects:  29% (35/119)[Kremote: Counting objects:  30% (36/119)[Kremote: Counting objects:  31% (37/119)[Kremote: Counting objects:  32% (39/119)[Kremote: Counting objects:  33% (40/119)[Kremote: Counting objects:  34% (41/119)[Kremote: Counting objects:  35% (42/119)[Kremote: Counting objects:  36% (43/119)[Kremote: Counting objects:  37% (45/119)[Kremote: Counting objects:  38% (46/119)[Kremote: Counting objects:  39% (47/119)[Kremote: Counting objects:  40% (48/119)[Kremote: Counting objects:  41% (49/119)[Kremote: Counting objects:  42% (50/119)[Kremote: Counting objects:  43% (52/119)[Kremote: Counting objects:  44% (53/119)[Kremote: Counting objects:  45% (54/119)[Kremote: Counting objects:  46% (55/119)[Kremote: Counting objects:  47% (56/119)[Kremote: Counting objects:  48% (58/119)[Kremote: Counting objects:  49% (59/119)[Kremote: Counting objects:  50% (60/119)[Kremote: Counting objects:  51% (61/119)[Kremote: Counting objects:  52% (62/119)[Kremote: Counting objects:  53% (64/119)[Kremote: Counting objects:  54% (65/119)[Kremote: Counting objects:  55% (66/119)[Kremote: Counting objects:  56% (67/119)[Kremote: Counting objects:  57% (68/119)[Kremote: Counting objects:  58% (70/119)[Kremote: Counting objects:  59% (71/119)[Kremote: Counting objects:  60% (72/119)[Kremote: Counting objects:  61% (73/119)[Kremote: Counting objects:  62% (74/119)[Kremote: Counting objects:  63% (75/119)[Kremote: Counting objects:  64% (77/119)[Kremote: Counting objects:  65% (78/119)[Kremote: Counting objects:  66% (79/119)[Kremote: Counting objects:  67% (80/119)[Kremote: Counting objects:  68% (81/119)[Kremote: Counting objects:  69% (83/119)[Kremote: Counting objects:  70% (84/119)[Kremote: Counting objects:  71% (85/119)[Kremote: Counting objects:  72% (86/119)[Kremote: Counting objects:  73% (87/119)[Kremote: Counting objects:  74% (89/119)[Kremote: Counting objects:  75% (90/119)[Kremote: Counting objects:  76% (91/119)[Kremote: Counting objects:  77% (92/119)[Kremote: Counting objects:  78% (93/119)[Kremote: Counting objects:  79% (95/119)[Kremote: Counting objects:  80% (96/119)[Kremote: Counting objects:  81% (97/119)[Kremote: Counting objects:  82% (98/119)[Kremote: Counting objects:  83% (99/119)[Kremote: Counting objects:  84% (100/119)[Kremote: Counting objects:  85% (102/119)[Kremote: Counting objects:  86% (103/119)[Kremote: Counting objects:  87% (104/119)[Kremote: Counting objects:  88% (105/119)[Kremote: Counting objects:  89% (106/119)[Kremote: Counting objects:  90% (108/119)[Kremote: Counting objects:  91% (109/119)[Kremote: Counting objects:  92% (110/119)[Kremote: Counting objects:  93% (111/119)[Kremote: Counting objects:  94% (112/119)[Kremote: Counting objects:  95% (114/119)[Kremote: Counting objects:  96% (115/119)[Kremote: Counting objects:  97% (116/119)[Kremote: Counting objects:  98% (117/119)[Kremote: Counting objects:  99% (118/119)[Kremote: Counting objects: 100% (119/119)[Kremote: Counting objects: 100% (119/119), done.[K
+8.7s 21 remote: Compressing objects:   1% (1/90)[Kremote: Compressing objects:   2% (2/90)[Kremote: Compressing objects:   3% (3/90)[Kremote: Compressing objects:   4% (4/90)[Kremote: Compressing objects:   5% (5/90)[Kremote: Compressing objects:   6% (6/90)[Kremote: Compressing objects:   7% (7/90)[Kremote: Compressing objects:   8% (8/90)[Kremote: Compressing objects:  10% (9/90)[Kremote: Compressing objects:  11% (10/90)[Kremote: Compressing objects:  12% (11/90)[Kremote: Compressing objects:  13% (12/90)[Kremote: Compressing objects:  14% (13/90)[Kremote: Compressing objects:  15% (14/90)[Kremote: Compressing objects:  16% (15/90)[Kremote: Compressing objects:  17% (16/90)[Kremote: Compressing objects:  18% (17/90)[Kremote: Compressing objects:  20% (18/90)[Kremote: Compressing objects:  21% (19/90)[Kremote: Compressing objects:  22% (20/90)[Kremote: Compressing objects:  23% (21/90)[Kremote: Compressing objects:  24% (22/90)[Kremote: Compressing objects:  25% (23/90)[Kremote: Compressing objects:  26% (24/90)[Kremote: Compressing objects:  27% (25/90)[Kremote: Compressing objects:  28% (26/90)[Kremote: Compressing objects:  30% (27/90)[Kremote: Compressing objects:  31% (28/90)[Kremote: Compressing objects:  32% (29/90)[Kremote: Compressing objects:  33% (30/90)[Kremote: Compressing objects:  34% (31/90)[Kremote: Compressing objects:  35% (32/90)[Kremote: Compressing objects:  36% (33/90)[Kremote: Compressing objects:  37% (34/90)[Kremote: Compressing objects:  38% (35/90)[Kremote: Compressing objects:  40% (36/90)[Kremote: Compressing objects:  41% (37/90)[Kremote: Compressing objects:  42% (38/90)[Kremote: Compressing objects:  43% (39/90)[Kremote: Compressing objects:  44% (40/90)[Kremote: Compressing objects:  45% (41/90)[Kremote: Compressing objects:  46% (42/90)[Kremote: Compressing objects:  47% (43/90)[Kremote: Compressing objects:  48% (44/90)[Kremote: Compressing objects:  50% (45/90)[Kremote: Compressing objects:  51% (46/90)[Kremote: Compressing objects:  52% (47/90)[Kremote: Compressing objects:  53% (48/90)[Kremote: Compressing objects:  54% (49/90)[Kremote: Compressing objects:  55% (50/90)[Kremote: Compressing objects:  56% (51/90)[Kremote: Compressing objects:  57% (52/90)[Kremote: Compressing objects:  58% (53/90)[Kremote: Compressing objects:  60% (54/90)[Kremote: Compressing objects:  61% (55/90)[Kremote: Compressing objects:  62% (56/90)[Kremote: Compressing objects:  63% (57/90)[Kremote: Compressing objects:  64% (58/90)[Kremote: Compressing objects:  65% (59/90)[Kremote: Compressing objects:  66% (60/90)[Kremote: Compressing objects:  67% (61/90)[Kremote: Compressing objects:  68% (62/90)[Kremote: Compressing objects:  70% (63/90)[Kremote: Compressing objects:  71% (64/90)[Kremote: Compressing objects:  72% (65/90)[Kremote: Compressing objects:  73% (66/90)[Kremote: Compressing objects:  74% (67/90)[Kremote: Compressing objects:  75% (68/90)[Kremote: Compressing objects:  76% (69/90)[Kremote: Compressing objects:  77% (70/90)[Kremote: Compressing objects:  78% (71/90)[Kremote: Compressing objects:  80% (72/90)[Kremote: Compressing objects:  81% (73/90)[Kremote: Compressing objects:  82% (74/90)[Kremote: Compressing objects:  83% (75/90)[Kremote: Compressing objects:  84% (76/90)[Kremote: Compressing objects:  85% (77/90)[Kremote: Compressing objects:  86% (78/90)[Kremote: Compressing objects:  87% (79/90)[Kremote: Compressing objects:  88% (80/90)[Kremote: Compressing objects:  90% (81/90)[Kremote: Compressing objects:  91% (82/90)[Kremote: Compressing objects:  92% (83/90)[Kremote: Compressing objects:  93% (84/90)[Kremote: Compressing objects:  94% (85/90)[Kremote: Compressing objects:  95% (86/90)[Kremote: Compressing objects:  96% (87/90)[Kremote: Compressing objects:  97% (88/90)[Kremote: Compressing objects:  98% (89/90)[Kremote: Compressing objects: 100% (90/90)[Kremote: Compressing objects: 100% (90/90), done.[K
+8.7s 22 Receiving objects:   0% (1/119)Receiving objects:   1% (2/119)Receiving objects:   2% (3/119)Receiving objects:   3% (4/119)Receiving objects:   4% (5/119)Receiving objects:   5% (6/119)Receiving objects:   6% (8/119)Receiving objects:   7% (9/119)Receiving objects:   8% (10/119)Receiving objects:   9% (11/119)Receiving objects:  10% (12/119)Receiving objects:  11% (14/119)Receiving objects:  12% (15/119)Receiving objects:  13% (16/119)Receiving objects:  14% (17/119)Receiving objects:  15% (18/119)Receiving objects:  16% (20/119)Receiving objects:  17% (21/119)Receiving objects:  18% (22/119)Receiving objects:  19% (23/119)Receiving objects:  20% (24/119)Receiving objects:  21% (25/119)Receiving objects:  22% (27/119)Receiving objects:  23% (28/119)Receiving objects:  24% (29/119)Receiving objects:  25% (30/119)Receiving objects:  26% (31/119)Receiving objects:  27% (33/119)Receiving objects:  28% (34/119)Receiving objects:  29% (35/119)Receiving objects:  30% (36/119)Receiving objects:  31% (37/119)Receiving objects:  32% (39/119)Receiving objects:  33% (40/119)Receiving objects:  34% (41/119)Receiving objects:  35% (42/119)Receiving objects:  36% (43/119)Receiving objects:  37% (45/119)Receiving objects:  38% (46/119)Receiving objects:  39% (47/119)Receiving objects:  40% (48/119)Receiving objects:  41% (49/119)Receiving objects:  42% (50/119)Receiving objects:  43% (52/119)Receiving objects:  44% (53/119)Receiving objects:  45% (54/119)Receiving objects:  46% (55/119)Receiving objects:  47% (56/119)Receiving objects:  48% (58/119)Receiving objects:  49% (59/119)Receiving objects:  50% (60/119)Receiving objects:  51% (61/119)Receiving objects:  52% (62/119)Receiving objects:  53% (64/119)Receiving objects:  54% (65/119)Receiving objects:  55% (66/119)Receiving objects:  56% (67/119)Receiving objects:  57% (68/119)Receiving objects:  58% (70/119)Receiving objects:  59% (71/119)Receiving objects:  60% (72/119)Receiving objects:  61% (73/119)Receiving objects:  62% (74/119)Receiving objects:  63% (75/119)Receiving objects:  64% (77/119)Receiving objects:  65% (78/119)Receiving objects:  66% (79/119)Receiving objects:  67% (80/119)Receiving objects:  68% (81/119)Receiving objects:  69% (83/119)Receiving objects:  70% (84/119)Receiving objects:  71% (85/119)Receiving objects:  72% (86/119)Receiving objects:  73% (87/119)Receiving objects:  74% (89/119)Receiving objects:  75% (90/119)Receiving objects:  76% (91/119)Receiving objects:  77% (92/119)Receiving objects:  78% (93/119)Receiving objects:  79% (95/119)Receiving objects:  80% (96/119)Receiving objects:  81% (97/119)Receiving objects:  82% (98/119)Receiving objects:  83% (99/119)Receiving objects:  84% (100/119)Receiving objects:  85% (102/119)Receiving objects:  86% (103/119)Receiving objects:  87% (104/119)Receiving objects:  88% (105/119)remote: Total 119 (delta 23), reused 116 (delta 20), pack-reused 0 (from 0)[K
+8.7s 23 Receiving objects:  89% (106/119)Receiving objects:  90% (108/119)Receiving objects:  91% (109/119)Receiving objects:  92% (110/119)Receiving objects:  93% (111/119)Receiving objects:  94% (112/119)Receiving objects:  95% (114/119)Receiving objects:  96% (115/119)Receiving objects:  97% (116/119)Receiving objects:  98% (117/119)Receiving objects:  99% (118/119)Receiving objects: 100% (119/119)Receiving objects: 100% (119/119), 124.32 KiB | 2.49 MiB/s, done.
+8.7s 24 Resolving deltas:   0% (0/23)Resolving deltas:   4% (1/23)Resolving deltas:   8% (2/23)Resolving deltas:  13% (3/23)Resolving deltas:  17% (4/23)Resolving deltas:  21% (5/23)Resolving deltas:  26% (6/23)Resolving deltas:  30% (7/23)Resolving deltas:  34% (8/23)Resolving deltas:  39% (9/23)Resolving deltas:  43% (10/23)Resolving deltas:  47% (11/23)Resolving deltas:  52% (12/23)Resolving deltas:  56% (13/23)Resolving deltas:  60% (14/23)Resolving deltas:  65% (15/23)Resolving deltas:  69% (16/23)Resolving deltas:  73% (17/23)Resolving deltas:  78% (18/23)Resolving deltas:  82% (19/23)Resolving deltas:  86% (20/23)Resolving deltas:  91% (21/23)Resolving deltas:  95% (22/23)Resolving deltas: 100% (23/23)Resolving deltas: 100% (23/23), done.
+8.9s 25 /kaggle/working/mamba
+9.0s 26 Already up to date.
+21.5s 27 🔍 Detected 2 GPU(s):
+21.7s 28 GPU 0: Tesla T4 (15.6 GB)
+21.7s 29 GPU 1: Tesla T4 (15.6 GB)
+21.7s 30 
+21.7s 31 🚀 Running on 2 GPUs in parallel!
+21.7s 32 GPU 0: Seeds [42, 123, 456]
+21.7s 33 GPU 1: Seeds [789, 1024]
+21.7s 34 ============================================================
+21.7s 35 ✅ GPU 0 started (PID 76) — seeds [42, 123, 456]
+21.7s 36 ✅ GPU 1 started (PID 77) — seeds [789, 1024]
+21.7s 37 
+21.7s 38 ⏳ Both GPUs training in parallel — live output below:
+21.7s 39 
+25.2s 40 [GPU 0] ======================================================================
+25.2s 41 [GPU 0] COMPREHENSIVE IDS BENCHMARK
+25.2s 42 [GPU 0] ======================================================================
+25.2s 43 [GPU 0] Datasets:  ['CICIDS2017']
+25.2s 44 [GPU 0] Models:    ['Mamba', 'LSTM', 'GRU', 'Transformer', 'CNN-LSTM', 'TCN']
+25.2s 45 [GPU 0] Seeds:     [42, 123, 456]
+25.2s 46 [GPU 0] Device:    cuda
+25.2s 47 [GPU 0] Epochs:    30
+25.2s 48 [GPU 0] Batch:     128
+25.2s 49 [GPU 0] Seq Len:   50
+25.2s 50 [GPU 0] d_model:   128
+25.2s 51 [GPU 0] n_layers:  2
+25.2s 52 [GPU 0] ======================================================================
+25.2s 53 [GPU 0]
+25.2s 54 [GPU 0] [1/18] Running experiment...
+25.2s 55 [GPU 0]
+25.2s 56 [GPU 0] ======================================================================
+25.2s 57 [GPU 0]   Dataset: CICIDS2017 | Model: Mamba | Seed: 42
+25.2s 58 [GPU 0] ======================================================================
+25.2s 59 [GPU 0] [Reproducibility] Setting all random seeds to 42
+25.2s 60 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+25.2s 61 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+25.2s 62 [GPU 1] ======================================================================
+25.2s 63 [GPU 1] COMPREHENSIVE IDS BENCHMARK
+25.2s 64 [GPU 1] ======================================================================
+25.2s 65 [GPU 1] Datasets:  ['CICIDS2017']
+25.2s 66 [GPU 1] Models:    ['Mamba', 'LSTM', 'GRU', 'Transformer', 'CNN-LSTM', 'TCN']
+25.2s 67 [GPU 1] Seeds:     [789, 1024]
+25.2s 68 [GPU 1] Device:    cuda
+25.2s 69 [GPU 1] Epochs:    30
+25.2s 70 [GPU 1] Batch:     128
+25.2s 71 [GPU 1] Seq Len:   50
+25.2s 72 [GPU 1] d_model:   128
+25.2s 73 [GPU 1] n_layers:  2
+25.2s 74 [GPU 0] [TRAIN] No cache found, parsing CSVs (this only happens once)...
+25.2s 75 [GPU 1] ======================================================================
+25.2s 76 [GPU 0] [TRAIN] Loading CICIDS2017 (4 files)...
+25.2s 77 [GPU 1]
+25.2s 78 [GPU 1] [1/12] Running experiment...
+25.2s 79 [GPU 0] Files: ['Monday-WorkingHours.pcap_ISCX.csv', 'Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv', 'Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv', 'Friday-WorkingHours-Morning.pcap_ISCX.csv']
+25.2s 80 [GPU 1]
+25.2s 81 [GPU 1] ======================================================================
+25.2s 82 [GPU 1]   Dataset: CICIDS2017 | Model: Mamba | Seed: 789
+25.2s 83 [GPU 1] ======================================================================
+25.2s 84 [GPU 1] [Reproducibility] Setting all random seeds to 789
+25.2s 85 [GPU 0]  -> Processing Monday-WorkingHours.pcap_ISCX.csv...
+25.2s 86 [GPU 1] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+25.2s 87 [GPU 1] [1/5] Loading CICIDS2017 dataset...
+25.2s 88 [GPU 1] [TRAIN] No cache found, parsing CSVs (this only happens once)...
+25.2s 89 [GPU 1] [TRAIN] Loading CICIDS2017 (4 files)...
+25.2s 90 [GPU 1] Files: ['Monday-WorkingHours.pcap_ISCX.csv', 'Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv', 'Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv', 'Friday-WorkingHours-Morning.pcap_ISCX.csv']
+25.2s 91 [GPU 1]  -> Processing Monday-WorkingHours.pcap_ISCX.csv...
+30.5s 92 [GPU 1]  -> Processing Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv...
+30.6s 93 [GPU 0]  -> Processing Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv...
+32.8s 94 [GPU 1]  -> Processing Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv...
+33.1s 95 [GPU 0]  -> Processing Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv...
+35.3s 96 [GPU 1]  -> Processing Friday-WorkingHours-Morning.pcap_ISCX.csv...
+35.6s 97 [GPU 0]  -> Processing Friday-WorkingHours-Morning.pcap_ISCX.csv...
+37.2s 98 [GPU 1] Concatenating chunks...
+37.5s 99 [GPU 1] Loaded 1233163 total rows.
+37.5s 100 [GPU 1] Processing Labels...
+37.5s 101 [GPU 0] Concatenating chunks...
+37.8s 102 [GPU 0] Loaded 1233163 total rows.
+37.8s 103 [GPU 0] Processing Labels...
+38.0s 104 [GPU 1] Class Distribution: Benign=944240, Attack=288923
+38.3s 105 [GPU 1] Converting to numpy arrays...
+38.3s 106 [GPU 0] Class Distribution: Benign=944240, Attack=288923
+38.5s 107 [GPU 1] Cleaning NaN/Inf values...
+38.6s 108 [GPU 0] Converting to numpy arrays...
+38.7s 109 [GPU 1] Total samples: 1233163
+38.7s 110 [GPU 1] Train: 0-863214, Val: 863214-986530, Test: 986530-1233163
+38.8s 111 [GPU 1] Saving cache to outputs/cache/cicids2017_train.npz...
+38.8s 112 [GPU 0] Cleaning NaN/Inf values...
+39.0s 113 [GPU 0] Total samples: 1233163
+39.0s 114 [GPU 0] Train: 0-863214, Val: 863214-986530, Test: 986530-1233163
+39.1s 115 [GPU 0] Saving cache to outputs/cache/cicids2017_train.npz...
+48.9s 116 [GPU 1] [TRAIN] Raw shape (before windowing): (863214, 77)
+48.9s 117 [GPU 1] [TRAIN] Raw shape (before windowing): (863214, 77)
+48.9s 118 [GPU 1] Fitting StandardScaler on Train split...
+49.1s 119 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+49.1s 120 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+49.1s 121 [GPU 0] Fitting StandardScaler on Train split...
+49.6s 122 [GPU 1] Saved scaler to outputs/scaler_cicids.pkl
+49.6s 123 [GPU 1] [OK] Will generate 863165 windows lazily during training
+49.6s 124 [GPU 1] [VAL] No cache found, parsing CSVs (this only happens once)...
+49.6s 125 [GPU 1] [VAL] Loading CICIDS2017 (4 files)...
+49.6s 126 [GPU 1] Files: ['Monday-WorkingHours.pcap_ISCX.csv', 'Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv', 'Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv', 'Friday-WorkingHours-Morning.pcap_ISCX.csv']
+49.6s 127 [GPU 1]  -> Processing Monday-WorkingHours.pcap_ISCX.csv...
+49.8s 128 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+49.8s 129 [GPU 0] [OK] Will generate 863165 windows lazily during training
+49.8s 130 [GPU 0] [VAL] No cache found, parsing CSVs (this only happens once)...
+49.8s 131 [GPU 0] [VAL] Loading CICIDS2017 (4 files)...
+49.8s 132 [GPU 0] Files: ['Monday-WorkingHours.pcap_ISCX.csv', 'Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv', 'Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv', 'Friday-WorkingHours-Morning.pcap_ISCX.csv']
+49.8s 133 [GPU 0]  -> Processing Monday-WorkingHours.pcap_ISCX.csv...
+54.5s 134 [GPU 1]  -> Processing Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv...
+55.0s 135 [GPU 0]  -> Processing Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv...
+56.6s 136 [GPU 1]  -> Processing Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv...
+57.3s 137 [GPU 0]  -> Processing Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv...
+59.1s 138 [GPU 1]  -> Processing Friday-WorkingHours-Morning.pcap_ISCX.csv...
+59.8s 139 [GPU 0]  -> Processing Friday-WorkingHours-Morning.pcap_ISCX.csv...
+61.0s 140 [GPU 1] Concatenating chunks...
+61.3s 141 [GPU 1] Loaded 1233163 total rows.
+61.3s 142 [GPU 1] Processing Labels...
+61.7s 143 [GPU 0] Concatenating chunks...
+61.8s 144 [GPU 1] Class Distribution: Benign=944240, Attack=288923
+62.0s 145 [GPU 0] Loaded 1233163 total rows.
+62.0s 146 [GPU 0] Processing Labels...
+62.1s 147 [GPU 1] Converting to numpy arrays...
+62.4s 148 [GPU 1] Cleaning NaN/Inf values...
+62.5s 149 [GPU 0] Class Distribution: Benign=944240, Attack=288923
+62.5s 150 [GPU 1] Total samples: 1233163
+62.5s 151 [GPU 1] Train: 0-863214, Val: 863214-986530, Test: 986530-1233163
+62.7s 152 [GPU 1] Saving cache to outputs/cache/cicids2017_val.npz...
+62.8s 153 [GPU 0] Converting to numpy arrays...
+63.1s 154 [GPU 0] Cleaning NaN/Inf values...
+63.1s 155 [GPU 1] [VAL] Raw shape (before windowing): (123316, 77)
+63.1s 156 [GPU 1] [VAL] Raw shape (before windowing): (123316, 77)
+63.1s 157 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+63.2s 158 [GPU 1] [OK] Will generate 123267 windows lazily during training
+63.2s 159 [GPU 1] [TEST] No cache found, parsing CSVs (this only happens once)...
+63.2s 160 [GPU 1] [TEST] Loading CICIDS2017 (4 files)...
+63.2s 161 [GPU 1] Files: ['Monday-WorkingHours.pcap_ISCX.csv', 'Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv', 'Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv', 'Friday-WorkingHours-Morning.pcap_ISCX.csv']
+63.2s 162 [GPU 1]  -> Processing Monday-WorkingHours.pcap_ISCX.csv...
+63.3s 163 [GPU 0] Total samples: 1233163
+63.3s 164 [GPU 0] Train: 0-863214, Val: 863214-986530, Test: 986530-1233163
+63.3s 165 [GPU 0] Saving cache to outputs/cache/cicids2017_val.npz...
+63.8s 166 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+63.8s 167 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+63.8s 168 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+63.8s 169 [GPU 0] [OK] Will generate 123267 windows lazily during training
+63.8s 170 [GPU 0] [TEST] No cache found, parsing CSVs (this only happens once)...
+63.8s 171 [GPU 0] [TEST] Loading CICIDS2017 (4 files)...
+63.8s 172 [GPU 0] Files: ['Monday-WorkingHours.pcap_ISCX.csv', 'Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv', 'Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv', 'Friday-WorkingHours-Morning.pcap_ISCX.csv']
+63.8s 173 [GPU 0]  -> Processing Monday-WorkingHours.pcap_ISCX.csv...
+68.1s 174 [GPU 1]  -> Processing Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv...
+68.9s 175 [GPU 0]  -> Processing Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv...
+70.4s 176 [GPU 1]  -> Processing Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv...
+71.1s 177 [GPU 0]  -> Processing Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv...
+73.1s 178 [GPU 1]  -> Processing Friday-WorkingHours-Morning.pcap_ISCX.csv...
+73.6s 179 [GPU 0]  -> Processing Friday-WorkingHours-Morning.pcap_ISCX.csv...
+75.0s 180 [GPU 1] Concatenating chunks...
+75.3s 181 [GPU 1] Loaded 1233163 total rows.
+75.3s 182 [GPU 1] Processing Labels...
+75.5s 183 [GPU 0] Concatenating chunks...
+75.7s 184 [GPU 0] Loaded 1233163 total rows.
+75.7s 185 [GPU 0] Processing Labels...
+75.8s 186 [GPU 1] Class Distribution: Benign=944240, Attack=288923
+76.1s 187 [GPU 1] Converting to numpy arrays...
+76.2s 188 [GPU 0] Class Distribution: Benign=944240, Attack=288923
+76.3s 189 [GPU 1] Cleaning NaN/Inf values...
+76.5s 190 [GPU 1] Total samples: 1233163
+76.5s 191 [GPU 1] Train: 0-863214, Val: 863214-986530, Test: 986530-1233163
+76.5s 192 [GPU 0] Converting to numpy arrays...
+76.6s 193 [GPU 1] Saving cache to outputs/cache/cicids2017_test.npz...
+76.8s 194 [GPU 0] Cleaning NaN/Inf values...
+76.9s 195 [GPU 0] Total samples: 1233163
+76.9s 196 [GPU 0] Train: 0-863214, Val: 863214-986530, Test: 986530-1233163
+77.0s 197 [GPU 0] Saving cache to outputs/cache/cicids2017_test.npz...
+79.4s 198 [GPU 1] [TEST] Raw shape (before windowing): (246633, 77)
+79.4s 199 [GPU 1] [TEST] Raw shape (before windowing): (246633, 77)
+79.4s 200 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+79.4s 201 [GPU 1] [OK] Will generate 246584 windows lazily during training
+79.4s 202 [GPU 1]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+79.4s 203 [GPU 1] [2/5] Initializing Mamba (d_model=128, n_layers=2)...
+79.8s 204 [GPU 1]   Parameters: 387,073
+79.8s 205 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+79.8s 206 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+79.8s 207 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+79.8s 208 [GPU 1] [3/5] Training Mamba...
+79.8s 209 [GPU 0] [OK] Will generate 246584 windows lazily during training
+79.8s 210 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+79.8s 211 [GPU 0] [2/5] Initializing Mamba (d_model=128, n_layers=2)...
+80.1s 212 [GPU 0]   Parameters: 387,073
+80.1s 213 [GPU 0] [3/5] Training Mamba...
+84.3s 214 [GPU 1]   Using class-weighted loss (pos_weight=1.00)
+84.3s 215 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+741.7s 216 [GPU 1]   Epoch   1/30 | TrLoss: 0.1562 | VlLoss: 0.1865 | VlAcc: 0.9642 | VlF1: 0.9818 *
+743.2s 217 [GPU 0]   Epoch   1/30 | TrLoss: 0.0624 | VlLoss: 0.1726 | VlAcc: 0.9649 | VlF1: 0.9821 *
+1399.7s 218 [GPU 1]   Epoch   2/30 | TrLoss: 0.0381 | VlLoss: 0.1742 | VlAcc: 0.9642 | VlF1: 0.9818 *
+1402.1s 219 [GPU 0]   Epoch   2/30 | TrLoss: 0.0466 | VlLoss: 0.0287 | VlAcc: 0.9943 | VlF1: 0.9971 *
+2059.4s 220 [GPU 1]   Epoch   3/30 | TrLoss: 0.1098 | VlLoss: 0.1818 | VlAcc: 0.9643 | VlF1: 0.9818 *
+2061.8s 221 [GPU 0]   Epoch   3/30 | TrLoss: 0.0316 | VlLoss: 0.0329 | VlAcc: 0.9926 | VlF1: 0.9961
+2719.1s 222 [GPU 1]   Epoch   4/30 | TrLoss: 0.0477 | VlLoss: 0.1715 | VlAcc: 0.9660 | VlF1: 0.9826 *
+2720.5s 223 [GPU 0]   Epoch   4/30 | TrLoss: 0.0092 | VlLoss: 0.0151 | VlAcc: 0.9960 | VlF1: 0.9979 *
+3382.3s 224 [GPU 1]   Epoch   5/30 | TrLoss: 0.0368 | VlLoss: 0.1361 | VlAcc: 0.9641 | VlF1: 0.9817
+3382.7s 225 [GPU 0]   Epoch   5/30 | TrLoss: 0.0058 | VlLoss: 0.0971 | VlAcc: 0.9715 | VlF1: 0.9853
+4047.6s 226 [GPU 0]   Epoch   6/30 | TrLoss: nan | VlLoss: nan | VlAcc: 0.0358 | VlF1: 0.0000
+4048.8s 227 [GPU 1]   Epoch   6/30 | TrLoss: 0.0368 | VlLoss: 0.1752 | VlAcc: 0.9642 | VlF1: 0.9818
+4707.0s 228 [GPU 0]   Epoch   7/30 | TrLoss: nan | VlLoss: nan | VlAcc: 0.0358 | VlF1: 0.0000
+4710.6s 229 [GPU 1]   Epoch   7/30 | TrLoss: 0.1821 | VlLoss: 0.1727 | VlAcc: 0.9645 | VlF1: 0.9819
+5365.2s 230 [GPU 0]   Epoch   8/30 | TrLoss: nan | VlLoss: nan | VlAcc: 0.0358 | VlF1: 0.0000
+5368.5s 231 [GPU 1]   Epoch   8/30 | TrLoss: nan | VlLoss: nan | VlAcc: 0.0358 | VlF1: 0.0000
+6022.4s 232 [GPU 0]   Epoch   9/30 | TrLoss: nan | VlLoss: nan | VlAcc: 0.0358 | VlF1: 0.0000
+6022.4s 233 [GPU 0]   Early stopping at epoch 9 (patience=5)
+6022.4s 234 [GPU 0]   Best Val F1: 0.9979 (9 epochs, 5938.1s)
+6022.4s 235 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_Mamba_seed42.pt
+6022.4s 236 [GPU 0] [4/5] Evaluating on test set...
+6024.8s 237 [GPU 1]   Epoch   9/30 | TrLoss: nan | VlLoss: nan | VlAcc: 0.0358 | VlF1: 0.0000
+6024.8s 238 [GPU 1]   Early stopping at epoch 9 (patience=5)
+6024.8s 239 [GPU 1]   Best Val F1: 0.9826 (9 epochs, 5940.6s)
+6024.8s 240 [GPU 1]   💾 Model saved to: outputs/checkpoints/CICIDS2017_Mamba_seed789.pt
+6024.8s 241 [GPU 1] [4/5] Evaluating on test set...
+6065.6s 242 [GPU 0]   Test Acc: 0.9877 | Prec: 0.9472 | Rec: 0.9136 | F1: 0.9301 | AUC: 0.9823
+6065.6s 243 [GPU 0] [5/5] Measuring efficiency...
+6067.6s 244 [GPU 1]   Test Acc: 0.1711 | Prec: 0.0969 | Rec: 0.9953 | F1: 0.1767 | AUC: 0.3791
+6067.6s 245 [GPU 1] [5/5] Measuring efficiency...
+6068.6s 246 [GPU 0]   Latency: 14.00ms | Throughput: 2246/s | Memory: 1.48MB
+6070.7s 247 [GPU 1]   Latency: 14.78ms | Throughput: 2143/s | Memory: 1.48MB
+6111.6s 248 [GPU 0]   Attack types analyzed: 3
+6111.6s 249 [GPU 0]
+6111.6s 250 [GPU 0] [2/18] Running experiment...
+6111.6s 251 [GPU 0]
+6111.6s 252 [GPU 0] ======================================================================
+6111.6s 253 [GPU 0]   Dataset: CICIDS2017 | Model: LSTM | Seed: 42
+6111.6s 254 [GPU 0] ======================================================================
+6111.6s 255 [GPU 0] [Reproducibility] Setting all random seeds to 42
+6111.6s 256 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+6111.6s 257 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+6111.6s 258 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+6112.8s 259 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+6112.8s 260 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+6112.8s 261 [GPU 0] Fitting StandardScaler on Train split...
+6113.5s 262 [GPU 1]   Attack types analyzed: 3
+6113.6s 263 [GPU 1]
+6113.6s 264 [GPU 1] [2/12] Running experiment...
+6113.6s 265 [GPU 1]
+6113.6s 266 [GPU 1] ======================================================================
+6113.6s 267 [GPU 1]   Dataset: CICIDS2017 | Model: LSTM | Seed: 789
+6113.6s 268 [GPU 1] ======================================================================
+6113.6s 269 [GPU 1] [Reproducibility] Setting all random seeds to 789
+6113.6s 270 [GPU 1] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+6113.6s 271 [GPU 1] [1/5] Loading CICIDS2017 dataset...
+6113.6s 272 [GPU 1] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+6113.7s 273 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+6113.7s 274 [GPU 0] [OK] Will generate 863165 windows lazily during training
+6113.7s 275 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+6113.8s 276 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+6113.8s 277 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+6113.8s 278 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+6113.9s 279 [GPU 0] [OK] Will generate 123267 windows lazily during training
+6113.9s 280 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+6114.2s 281 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+6114.2s 282 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+6114.2s 283 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+6114.3s 284 [GPU 0] [OK] Will generate 246584 windows lazily during training
+6114.3s 285 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+6114.3s 286 [GPU 0] [2/5] Initializing LSTM (d_model=128, n_layers=2)...
+6114.4s 287 [GPU 0]   Parameters: 423,169
+6114.4s 288 [GPU 0] [3/5] Training LSTM...
+6114.4s 289 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+6114.7s 290 [GPU 1]   Cached shape: (863214, 77), labels: 863214
+6114.7s 291 [GPU 1] [TRAIN] Raw shape (before windowing): (863214, 77)
+6114.7s 292 [GPU 1] Fitting StandardScaler on Train split...
+6115.7s 293 [GPU 1] Saved scaler to outputs/scaler_cicids.pkl
+6115.7s 294 [GPU 1] [OK] Will generate 863165 windows lazily during training
+6115.7s 295 [GPU 1] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+6115.7s 296 [GPU 1]   Cached shape: (123316, 77), labels: 123316
+6115.7s 297 [GPU 1] [VAL] Raw shape (before windowing): (123316, 77)
+6115.7s 298 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+6115.8s 299 [GPU 1] [OK] Will generate 123267 windows lazily during training
+6115.8s 300 [GPU 1] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+6116.1s 301 [GPU 1]   Cached shape: (246633, 77), labels: 246633
+6116.1s 302 [GPU 1] [TEST] Raw shape (before windowing): (246633, 77)
+6116.1s 303 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+6116.2s 304 [GPU 1] [OK] Will generate 246584 windows lazily during training
+6116.2s 305 [GPU 1]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+6116.2s 306 [GPU 1] [2/5] Initializing LSTM (d_model=128, n_layers=2)...
+6116.2s 307 [GPU 1]   Parameters: 423,169
+6116.3s 308 [GPU 1] [3/5] Training LSTM...
+6116.3s 309 [GPU 1]   Using class-weighted loss (pos_weight=1.00)
+6199.9s 310 [GPU 0]   Epoch   1/30 | TrLoss: 0.1729 | VlLoss: 0.1867 | VlAcc: 0.9642 | VlF1: 0.9818 *
+6201.2s 311 [GPU 1]   Epoch   1/30 | TrLoss: 0.0509 | VlLoss: 0.1827 | VlAcc: 0.9642 | VlF1: 0.9818 *
+6285.2s 312 [GPU 0]   Epoch   2/30 | TrLoss: 0.0347 | VlLoss: 0.1805 | VlAcc: 0.9642 | VlF1: 0.9818
+6285.7s 313 [GPU 1]   Epoch   2/30 | TrLoss: 0.0345 | VlLoss: 0.1805 | VlAcc: 0.9642 | VlF1: 0.9818
+6370.2s 314 [GPU 0]   Epoch   3/30 | TrLoss: 0.0398 | VlLoss: 0.1834 | VlAcc: 0.9642 | VlF1: 0.9818
+6370.2s 315 [GPU 1]   Epoch   3/30 | TrLoss: 0.0336 | VlLoss: 0.1782 | VlAcc: 0.9642 | VlF1: 0.9818
+6455.0s 316 [GPU 1]   Epoch   4/30 | TrLoss: 0.0418 | VlLoss: 0.1709 | VlAcc: 0.9642 | VlF1: 0.9818
+6455.3s 317 [GPU 0]   Epoch   4/30 | TrLoss: 0.0391 | VlLoss: 0.1789 | VlAcc: 0.9642 | VlF1: 0.9818
+6539.4s 318 [GPU 1]   Epoch   5/30 | TrLoss: 0.0290 | VlLoss: 0.1869 | VlAcc: 0.9642 | VlF1: 0.9818
+6540.1s 319 [GPU 0]   Epoch   5/30 | TrLoss: 0.0375 | VlLoss: 0.0728 | VlAcc: 0.9831 | VlF1: 0.9913 *
+6623.8s 320 [GPU 1]   Epoch   6/30 | TrLoss: 0.0243 | VlLoss: 0.0575 | VlAcc: 0.9886 | VlF1: 0.9941 *
+6624.9s 321 [GPU 0]   Epoch   6/30 | TrLoss: 0.0082 | VlLoss: 0.0321 | VlAcc: 0.9932 | VlF1: 0.9965 *
+6708.2s 322 [GPU 1]   Epoch   7/30 | TrLoss: 0.0053 | VlLoss: 0.0221 | VlAcc: 0.9957 | VlF1: 0.9978 *
+6709.9s 323 [GPU 0]   Epoch   7/30 | TrLoss: 0.0045 | VlLoss: 0.0210 | VlAcc: 0.9956 | VlF1: 0.9977 *
+6792.8s 324 [GPU 1]   Epoch   8/30 | TrLoss: 0.0020 | VlLoss: 0.0191 | VlAcc: 0.9965 | VlF1: 0.9982 *
+6795.2s 325 [GPU 0]   Epoch   8/30 | TrLoss: 0.0026 | VlLoss: 0.0155 | VlAcc: 0.9969 | VlF1: 0.9984 *
+6877.4s 326 [GPU 1]   Epoch   9/30 | TrLoss: 0.0014 | VlLoss: 0.0158 | VlAcc: 0.9967 | VlF1: 0.9983 *
+6880.0s 327 [GPU 0]   Epoch   9/30 | TrLoss: 0.0017 | VlLoss: 0.0181 | VlAcc: 0.9963 | VlF1: 0.9981
+6961.9s 328 [GPU 1]   Epoch  10/30 | TrLoss: 0.0013 | VlLoss: 0.0170 | VlAcc: 0.9960 | VlF1: 0.9979
+6964.8s 329 [GPU 0]   Epoch  10/30 | TrLoss: 0.0014 | VlLoss: 0.0193 | VlAcc: 0.9952 | VlF1: 0.9975
+7046.3s 330 [GPU 1]   Epoch  11/30 | TrLoss: 0.0011 | VlLoss: 0.0190 | VlAcc: 0.9961 | VlF1: 0.9980
+7049.7s 331 [GPU 0]   Epoch  11/30 | TrLoss: 0.0012 | VlLoss: 0.0200 | VlAcc: 0.9963 | VlF1: 0.9981
+7130.8s 332 [GPU 1]   Epoch  12/30 | TrLoss: 0.0012 | VlLoss: 0.0197 | VlAcc: 0.9961 | VlF1: 0.9980
+7134.6s 333 [GPU 0]   Epoch  12/30 | TrLoss: 0.0010 | VlLoss: 0.0235 | VlAcc: 0.9957 | VlF1: 0.9978
+7216.0s 334 [GPU 1]   Epoch  13/30 | TrLoss: 0.0008 | VlLoss: 0.0252 | VlAcc: 0.9951 | VlF1: 0.9975
+7220.2s 335 [GPU 0]   Epoch  13/30 | TrLoss: 0.0009 | VlLoss: 0.0248 | VlAcc: 0.9950 | VlF1: 0.9974
+7220.2s 336 [GPU 0]   Early stopping at epoch 13 (patience=5)
+7220.2s 337 [GPU 0]   Best Val F1: 0.9984 (13 epochs, 1105.7s)
+7220.2s 338 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_LSTM_seed42.pt
+7220.2s 339 [GPU 0] [4/5] Evaluating on test set...
+7232.7s 340 [GPU 0]   Test Acc: 0.9913 | Prec: 0.9903 | Rec: 0.9119 | F1: 0.9495 | AUC: 0.9873
+7232.7s 341 [GPU 0] [5/5] Measuring efficiency...
+7232.9s 342 [GPU 0]   Latency: 0.77ms | Throughput: 30418/s | Memory: 1.61MB
+7245.3s 343 [GPU 0]   Attack types analyzed: 3
+7245.3s 344 [GPU 0]
+7245.3s 345 [GPU 0] [3/18] Running experiment...
+7245.3s 346 [GPU 0]
+7245.3s 347 [GPU 0] ======================================================================
+7245.3s 348 [GPU 0]   Dataset: CICIDS2017 | Model: GRU | Seed: 42
+7245.3s 349 [GPU 0] ======================================================================
+7245.3s 350 [GPU 0] [Reproducibility] Setting all random seeds to 42
+7245.3s 351 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+7245.3s 352 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+7245.3s 353 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+7246.5s 354 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+7246.5s 355 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+7246.5s 356 [GPU 0] Fitting StandardScaler on Train split...
+7247.4s 357 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+7247.4s 358 [GPU 0] [OK] Will generate 863165 windows lazily during training
+7247.4s 359 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+7247.5s 360 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+7247.5s 361 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+7247.5s 362 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+7247.5s 363 [GPU 0] [OK] Will generate 123267 windows lazily during training
+7247.5s 364 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+7247.9s 365 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+7247.9s 366 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+7247.9s 367 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+7248.0s 368 [GPU 0] [OK] Will generate 246584 windows lazily during training
+7248.0s 369 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+7248.0s 370 [GPU 0] [2/5] Initializing GRU (d_model=128, n_layers=2)...
+7248.0s 371 [GPU 0]   Parameters: 373,505
+7248.1s 372 [GPU 0] [3/5] Training GRU...
+7248.1s 373 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+7300.2s 374 [GPU 1]   Epoch  14/30 | TrLoss: 0.0006 | VlLoss: 0.0236 | VlAcc: 0.9965 | VlF1: 0.9982
+7300.2s 375 [GPU 1]   Early stopping at epoch 14 (patience=5)
+7300.2s 376 [GPU 1]   Best Val F1: 0.9983 (14 epochs, 1183.9s)
+7300.2s 377 [GPU 1]   💾 Model saved to: outputs/checkpoints/CICIDS2017_LSTM_seed789.pt
+7300.2s 378 [GPU 1] [4/5] Evaluating on test set...
+7312.8s 379 [GPU 1]   Test Acc: 0.9912 | Prec: 0.9974 | Rec: 0.9044 | F1: 0.9486 | AUC: 0.9949
+7312.8s 380 [GPU 1] [5/5] Measuring efficiency...
+7313.0s 381 [GPU 1]   Latency: 0.76ms | Throughput: 30970/s | Memory: 1.61MB
+7318.0s 382 [GPU 0]   Epoch   1/30 | TrLoss: 0.2477 | VlLoss: 0.1839 | VlAcc: 0.9642 | VlF1: 0.9818 *
+7325.3s 383 [GPU 1]   Attack types analyzed: 3
+7325.3s 384 [GPU 1]
+7325.3s 385 [GPU 1] [3/12] Running experiment...
+7325.3s 386 [GPU 1]
+7325.3s 387 [GPU 1] ======================================================================
+7325.3s 388 [GPU 1]   Dataset: CICIDS2017 | Model: GRU | Seed: 789
+7325.3s 389 [GPU 1] ======================================================================
+7325.3s 390 [GPU 1] [Reproducibility] Setting all random seeds to 789
+7325.3s 391 [GPU 1] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+7325.3s 392 [GPU 1] [1/5] Loading CICIDS2017 dataset...
+7325.3s 393 [GPU 1] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+7326.5s 394 [GPU 1]   Cached shape: (863214, 77), labels: 863214
+7326.5s 395 [GPU 1] [TRAIN] Raw shape (before windowing): (863214, 77)
+7326.5s 396 [GPU 1] Fitting StandardScaler on Train split...
+7327.4s 397 [GPU 1] Saved scaler to outputs/scaler_cicids.pkl
+7327.4s 398 [GPU 1] [OK] Will generate 863165 windows lazily during training
+7327.4s 399 [GPU 1] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+7327.5s 400 [GPU 1]   Cached shape: (123316, 77), labels: 123316
+7327.5s 401 [GPU 1] [VAL] Raw shape (before windowing): (123316, 77)
+7327.5s 402 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+7327.5s 403 [GPU 1] [OK] Will generate 123267 windows lazily during training
+7327.5s 404 [GPU 1] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+7327.8s 405 [GPU 1]   Cached shape: (246633, 77), labels: 246633
+7327.8s 406 [GPU 1] [TEST] Raw shape (before windowing): (246633, 77)
+7327.8s 407 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+7327.9s 408 [GPU 1] [OK] Will generate 246584 windows lazily during training
+7327.9s 409 [GPU 1]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+7327.9s 410 [GPU 1] [2/5] Initializing GRU (d_model=128, n_layers=2)...
+7327.9s 411 [GPU 1]   Parameters: 373,505
+7328.0s 412 [GPU 1] [3/5] Training GRU...
+7328.0s 413 [GPU 1]   Using class-weighted loss (pos_weight=1.00)
+7388.3s 414 [GPU 0]   Epoch   2/30 | TrLoss: 0.0350 | VlLoss: 0.1779 | VlAcc: 0.9642 | VlF1: 0.9818
+7397.9s 415 [GPU 1]   Epoch   1/30 | TrLoss: 0.0441 | VlLoss: 0.1823 | VlAcc: 0.9642 | VlF1: 0.9818 *
+7458.1s 416 [GPU 0]   Epoch   3/30 | TrLoss: 0.0304 | VlLoss: 0.0960 | VlAcc: 0.9853 | VlF1: 0.9924 *
+7467.6s 417 [GPU 1]   Epoch   2/30 | TrLoss: 0.0425 | VlLoss: 0.1799 | VlAcc: 0.9642 | VlF1: 0.9818
+7528.2s 418 [GPU 0]   Epoch   4/30 | TrLoss: 0.0253 | VlLoss: 0.1789 | VlAcc: 0.9642 | VlF1: 0.9818
+7537.4s 419 [GPU 1]   Epoch   3/30 | TrLoss: 0.0437 | VlLoss: 0.1814 | VlAcc: 0.9642 | VlF1: 0.9818
+7597.8s 420 [GPU 0]   Epoch   5/30 | TrLoss: 0.0321 | VlLoss: 0.1799 | VlAcc: 0.9642 | VlF1: 0.9818
+7607.0s 421 [GPU 1]   Epoch   4/30 | TrLoss: 0.0335 | VlLoss: 0.1821 | VlAcc: 0.9642 | VlF1: 0.9818
+7667.7s 422 [GPU 0]   Epoch   6/30 | TrLoss: 0.0225 | VlLoss: 0.1419 | VlAcc: 0.9642 | VlF1: 0.9818
+7676.7s 423 [GPU 1]   Epoch   5/30 | TrLoss: 0.0408 | VlLoss: 0.1838 | VlAcc: 0.9642 | VlF1: 0.9818
+7737.6s 424 [GPU 0]   Epoch   7/30 | TrLoss: 0.0101 | VlLoss: 0.0434 | VlAcc: 0.9870 | VlF1: 0.9933 *
+7746.4s 425 [GPU 1]   Epoch   6/30 | TrLoss: 0.0222 | VlLoss: 0.1312 | VlAcc: 0.9729 | VlF1: 0.9861 *
+7807.8s 426 [GPU 0]   Epoch   8/30 | TrLoss: 0.0043 | VlLoss: 0.0270 | VlAcc: 0.9910 | VlF1: 0.9953 *
+7816.2s 427 [GPU 1]   Epoch   7/30 | TrLoss: 0.0090 | VlLoss: 0.1191 | VlAcc: 0.9733 | VlF1: 0.9863 *
+7877.3s 428 [GPU 0]   Epoch   9/30 | TrLoss: 0.0028 | VlLoss: 0.0129 | VlAcc: 0.9969 | VlF1: 0.9984 *
+7885.8s 429 [GPU 1]   Epoch   8/30 | TrLoss: 0.0038 | VlLoss: 0.0199 | VlAcc: 0.9963 | VlF1: 0.9981 *
+7947.5s 430 [GPU 0]   Epoch  10/30 | TrLoss: 0.0027 | VlLoss: 0.0143 | VlAcc: 0.9969 | VlF1: 0.9984 *
+7955.7s 431 [GPU 1]   Epoch   9/30 | TrLoss: 0.0022 | VlLoss: 0.0239 | VlAcc: 0.9945 | VlF1: 0.9972
+8017.6s 432 [GPU 0]   Epoch  11/30 | TrLoss: 0.0016 | VlLoss: 0.0175 | VlAcc: 0.9968 | VlF1: 0.9983
+8025.7s 433 [GPU 1]   Epoch  10/30 | TrLoss: 0.0016 | VlLoss: 0.0233 | VlAcc: 0.9950 | VlF1: 0.9974
+8087.5s 434 [GPU 0]   Epoch  12/30 | TrLoss: 0.0013 | VlLoss: 0.0147 | VlAcc: 0.9971 | VlF1: 0.9985 *
+8095.4s 435 [GPU 1]   Epoch  11/30 | TrLoss: 0.0015 | VlLoss: 0.0261 | VlAcc: 0.9921 | VlF1: 0.9959
+8157.5s 436 [GPU 0]   Epoch  13/30 | TrLoss: 0.0014 | VlLoss: 0.0121 | VlAcc: 0.9971 | VlF1: 0.9985 *
+8165.1s 437 [GPU 1]   Epoch  12/30 | TrLoss: 0.0013 | VlLoss: 0.0900 | VlAcc: 0.9681 | VlF1: 0.9832
+8227.3s 438 [GPU 0]   Epoch  14/30 | TrLoss: 0.0009 | VlLoss: 0.0158 | VlAcc: 0.9968 | VlF1: 0.9983
+8234.6s 439 [GPU 1]   Epoch  13/30 | TrLoss: 0.0008 | VlLoss: 0.1089 | VlAcc: 0.9680 | VlF1: 0.9831
+8234.6s 440 [GPU 1]   Early stopping at epoch 13 (patience=5)
+8234.6s 441 [GPU 1]   Best Val F1: 0.9981 (13 epochs, 906.5s)
+8234.6s 442 [GPU 1]   💾 Model saved to: outputs/checkpoints/CICIDS2017_GRU_seed789.pt
+8234.6s 443 [GPU 1] [4/5] Evaluating on test set...
+8245.3s 444 [GPU 1]   Test Acc: 0.9906 | Prec: 0.9709 | Rec: 0.9225 | F1: 0.9461 | AUC: 0.9796
+8245.3s 445 [GPU 1] [5/5] Measuring efficiency...
+8245.4s 446 [GPU 1]   Latency: 0.50ms | Throughput: 43815/s | Memory: 1.42MB
+8256.1s 447 [GPU 1]   Attack types analyzed: 3
+8256.1s 448 [GPU 1]
+8256.1s 449 [GPU 1] [4/12] Running experiment...
+8256.1s 450 [GPU 1]
+8256.1s 451 [GPU 1] ======================================================================
+8256.1s 452 [GPU 1]   Dataset: CICIDS2017 | Model: Transformer | Seed: 789
+8256.1s 453 [GPU 1] ======================================================================
+8256.1s 454 [GPU 1] [Reproducibility] Setting all random seeds to 789
+8256.1s 455 [GPU 1] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+8256.1s 456 [GPU 1] [1/5] Loading CICIDS2017 dataset...
+8256.1s 457 [GPU 1] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+8257.2s 458 [GPU 1]   Cached shape: (863214, 77), labels: 863214
+8257.2s 459 [GPU 1] [TRAIN] Raw shape (before windowing): (863214, 77)
+8257.2s 460 [GPU 1] Fitting StandardScaler on Train split...
+8258.2s 461 [GPU 1] Saved scaler to outputs/scaler_cicids.pkl
+8258.2s 462 [GPU 1] [OK] Will generate 863165 windows lazily during training
+8258.2s 463 [GPU 1] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+8258.3s 464 [GPU 1]   Cached shape: (123316, 77), labels: 123316
+8258.3s 465 [GPU 1] [VAL] Raw shape (before windowing): (123316, 77)
+8258.3s 466 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+8258.3s 467 [GPU 1] [OK] Will generate 123267 windows lazily during training
+8258.3s 468 [GPU 1] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+8258.6s 469 [GPU 1]   Cached shape: (246633, 77), labels: 246633
+8258.6s 470 [GPU 1] [TEST] Raw shape (before windowing): (246633, 77)
+8258.6s 471 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+8258.7s 472 [GPU 1] [OK] Will generate 246584 windows lazily during training
+8258.7s 473 [GPU 1]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+8258.7s 474 [GPU 1] [2/5] Initializing Transformer (d_model=128, n_layers=2)...
+8258.7s 475 [GPU 1]   Parameters: 406,913
+8258.8s 476 [GPU 1] [3/5] Training Transformer...
+8258.8s 477 [GPU 1]   Using class-weighted loss (pos_weight=1.00)
+8299.0s 478 [GPU 0]   Epoch  15/30 | TrLoss: 0.0007 | VlLoss: 0.0244 | VlAcc: 0.9951 | VlF1: 0.9974
+8361.0s 479 [GPU 1]   Epoch   1/30 | TrLoss: 0.2164 | VlLoss: 0.1817 | VlAcc: 0.9642 | VlF1: 0.9818 *
+8372.4s 480 [GPU 0]   Epoch  16/30 | TrLoss: 0.0006 | VlLoss: 0.0324 | VlAcc: 0.9936 | VlF1: 0.9967
+8445.8s 481 [GPU 0]   Epoch  17/30 | TrLoss: 0.0004 | VlLoss: 0.0333 | VlAcc: 0.9945 | VlF1: 0.9971
+8463.1s 482 [GPU 1]   Epoch   2/30 | TrLoss: 0.0993 | VlLoss: 0.1826 | VlAcc: 0.9642 | VlF1: 0.9818
+8519.1s 483 [GPU 0]   Epoch  18/30 | TrLoss: 0.0004 | VlLoss: 0.0554 | VlAcc: 0.9901 | VlF1: 0.9948
+8519.1s 484 [GPU 0]   Early stopping at epoch 18 (patience=5)
+8519.1s 485 [GPU 0]   Best Val F1: 0.9985 (18 epochs, 1271.0s)
+8519.1s 486 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_GRU_seed42.pt
+8519.1s 487 [GPU 0] [4/5] Evaluating on test set...
+8530.9s 488 [GPU 0]   Test Acc: 0.9915 | Prec: 0.9923 | Rec: 0.9125 | F1: 0.9507 | AUC: 0.9851
+8530.9s 489 [GPU 0] [5/5] Measuring efficiency...
+8531.1s 490 [GPU 0]   Latency: 0.89ms | Throughput: 42320/s | Memory: 1.42MB
+8543.0s 491 [GPU 0]   Attack types analyzed: 3
+8543.0s 492 [GPU 0]
+8543.0s 493 [GPU 0] [4/18] Running experiment...
+8543.0s 494 [GPU 0]
+8543.0s 495 [GPU 0] ======================================================================
+8543.0s 496 [GPU 0]   Dataset: CICIDS2017 | Model: Transformer | Seed: 42
+8543.0s 497 [GPU 0] ======================================================================
+8543.0s 498 [GPU 0] [Reproducibility] Setting all random seeds to 42
+8543.0s 499 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+8543.0s 500 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+8543.0s 501 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+8544.2s 502 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+8544.2s 503 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+8544.2s 504 [GPU 0] Fitting StandardScaler on Train split...
+8545.2s 505 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+8545.2s 506 [GPU 0] [OK] Will generate 863165 windows lazily during training
+8545.2s 507 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+8545.3s 508 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+8545.3s 509 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+8545.3s 510 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+8545.4s 511 [GPU 0] [OK] Will generate 123267 windows lazily during training
+8545.4s 512 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+8545.7s 513 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+8545.7s 514 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+8545.7s 515 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+8545.8s 516 [GPU 0] [OK] Will generate 246584 windows lazily during training
+8545.8s 517 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+8545.8s 518 [GPU 0] [2/5] Initializing Transformer (d_model=128, n_layers=2)...
+8545.8s 519 [GPU 0]   Parameters: 406,913
+8545.9s 520 [GPU 0] [3/5] Training Transformer...
+8545.9s 521 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+8565.7s 522 [GPU 1]   Epoch   3/30 | TrLoss: 0.0888 | VlLoss: 0.5361 | VlAcc: 0.8718 | VlF1: 0.9299
+8648.9s 523 [GPU 0]   Epoch   1/30 | TrLoss: 0.2346 | VlLoss: 0.1852 | VlAcc: 0.9642 | VlF1: 0.9818 *
+8667.5s 524 [GPU 1]   Epoch   4/30 | TrLoss: 0.0789 | VlLoss: 0.4441 | VlAcc: 0.8817 | VlF1: 0.9357
+8752.2s 525 [GPU 0]   Epoch   2/30 | TrLoss: 0.1278 | VlLoss: 0.1746 | VlAcc: 0.9642 | VlF1: 0.9818
+8769.8s 526 [GPU 1]   Epoch   5/30 | TrLoss: 0.0549 | VlLoss: 0.4976 | VlAcc: 0.8962 | VlF1: 0.9440
+8854.3s 527 [GPU 0]   Epoch   3/30 | TrLoss: 0.0580 | VlLoss: 0.1907 | VlAcc: 0.9643 | VlF1: 0.9818 *
+8871.1s 528 [GPU 1]   Epoch   6/30 | TrLoss: 0.0268 | VlLoss: 0.5746 | VlAcc: 0.8650 | VlF1: 0.9257
+8871.1s 529 [GPU 1]   Early stopping at epoch 6 (patience=5)
+8871.1s 530 [GPU 1]   Best Val F1: 0.9818 (6 epochs, 612.3s)
+8871.1s 531 [GPU 1]   💾 Model saved to: outputs/checkpoints/CICIDS2017_Transformer_seed789.pt
+8871.1s 532 [GPU 1] [4/5] Evaluating on test set...
+8883.3s 533 [GPU 1]   Test Acc: 0.0893 | Prec: 0.0893 | Rec: 1.0000 | F1: 0.1640 | AUC: 0.7667
+8883.3s 534 [GPU 1] [5/5] Measuring efficiency...
+8883.7s 535 [GPU 1]   Latency: 2.01ms | Throughput: 16815/s | Memory: 1.55MB
+8896.1s 536 [GPU 1]   Attack types analyzed: 3
+8896.1s 537 [GPU 1]
+8896.1s 538 [GPU 1] [5/12] Running experiment...
+8896.1s 539 [GPU 1]
+8896.1s 540 [GPU 1] ======================================================================
+8896.1s 541 [GPU 1]   Dataset: CICIDS2017 | Model: CNN-LSTM | Seed: 789
+8896.1s 542 [GPU 1] ======================================================================
+8896.1s 543 [GPU 1] [Reproducibility] Setting all random seeds to 789
+8896.1s 544 [GPU 1] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+8896.1s 545 [GPU 1] [1/5] Loading CICIDS2017 dataset...
+8896.1s 546 [GPU 1] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+8897.3s 547 [GPU 1]   Cached shape: (863214, 77), labels: 863214
+8897.3s 548 [GPU 1] [TRAIN] Raw shape (before windowing): (863214, 77)
+8897.3s 549 [GPU 1] Fitting StandardScaler on Train split...
+8898.3s 550 [GPU 1] Saved scaler to outputs/scaler_cicids.pkl
+8898.3s 551 [GPU 1] [OK] Will generate 863165 windows lazily during training
+8898.3s 552 [GPU 1] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+8898.4s 553 [GPU 1]   Cached shape: (123316, 77), labels: 123316
+8898.4s 554 [GPU 1] [VAL] Raw shape (before windowing): (123316, 77)
+8898.4s 555 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+8898.4s 556 [GPU 1] [OK] Will generate 123267 windows lazily during training
+8898.4s 557 [GPU 1] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+8898.8s 558 [GPU 1]   Cached shape: (246633, 77), labels: 246633
+8898.8s 559 [GPU 1] [TEST] Raw shape (before windowing): (246633, 77)
+8898.8s 560 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+8898.9s 561 [GPU 1] [OK] Will generate 246584 windows lazily during training
+8898.9s 562 [GPU 1]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+8898.9s 563 [GPU 1] [2/5] Initializing CNN-LSTM (d_model=128, n_layers=2)...
+8898.9s 564 [GPU 1]   Parameters: 409,601
+8899.0s 565 [GPU 1] [3/5] Training CNN-LSTM...
+8899.0s 566 [GPU 1]   Using class-weighted loss (pos_weight=1.00)
+8957.1s 567 [GPU 0]   Epoch   4/30 | TrLoss: 0.0648 | VlLoss: 0.1882 | VlAcc: 0.9642 | VlF1: 0.9818
+8988.2s 568 [GPU 1]   Epoch   1/30 | TrLoss: 0.2512 | VlLoss: 0.1844 | VlAcc: 0.9642 | VlF1: 0.9818 *
+9059.8s 569 [GPU 0]   Epoch   5/30 | TrLoss: 0.0754 | VlLoss: 0.1859 | VlAcc: 0.9642 | VlF1: 0.9818
+9077.2s 570 [GPU 1]   Epoch   2/30 | TrLoss: 0.0550 | VlLoss: 0.1817 | VlAcc: 0.9642 | VlF1: 0.9818
+9161.9s 571 [GPU 0]   Epoch   6/30 | TrLoss: 0.0531 | VlLoss: 0.1858 | VlAcc: 0.9642 | VlF1: 0.9818
+9166.3s 572 [GPU 1]   Epoch   3/30 | TrLoss: 0.0338 | VlLoss: 0.2927 | VlAcc: 0.9642 | VlF1: 0.9818
+9255.5s 573 [GPU 1]   Epoch   4/30 | TrLoss: 0.0247 | VlLoss: 0.1568 | VlAcc: 0.9642 | VlF1: 0.9818
+9264.8s 574 [GPU 0]   Epoch   7/30 | TrLoss: 0.0480 | VlLoss: 0.1878 | VlAcc: 0.9642 | VlF1: 0.9818
+9344.8s 575 [GPU 1]   Epoch   5/30 | TrLoss: 0.0334 | VlLoss: 0.1902 | VlAcc: 0.9672 | VlF1: 0.9832 *
+9367.3s 576 [GPU 0]   Epoch   8/30 | TrLoss: 0.0668 | VlLoss: 0.1718 | VlAcc: 0.9642 | VlF1: 0.9818
+9367.3s 577 [GPU 0]   Early stopping at epoch 8 (patience=5)
+9367.3s 578 [GPU 0]   Best Val F1: 0.9818 (8 epochs, 821.4s)
+9367.3s 579 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_Transformer_seed42.pt
+9367.3s 580 [GPU 0] [4/5] Evaluating on test set...
+9379.6s 581 [GPU 0]   Test Acc: 0.0976 | Prec: 0.0900 | Rec: 0.9985 | F1: 0.1651 | AUC: 0.5754
+9379.6s 582 [GPU 0] [5/5] Measuring efficiency...
+9379.9s 583 [GPU 0]   Latency: 1.65ms | Throughput: 20345/s | Memory: 1.55MB
+9392.2s 584 [GPU 0]   Attack types analyzed: 3
+9392.2s 585 [GPU 0]
+9392.2s 586 [GPU 0] [5/18] Running experiment...
+9392.2s 587 [GPU 0]
+9392.2s 588 [GPU 0] ======================================================================
+9392.2s 589 [GPU 0]   Dataset: CICIDS2017 | Model: CNN-LSTM | Seed: 42
+9392.2s 590 [GPU 0] ======================================================================
+9392.2s 591 [GPU 0] [Reproducibility] Setting all random seeds to 42
+9392.2s 592 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+9392.2s 593 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+9392.2s 594 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+9393.4s 595 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+9393.4s 596 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+9393.4s 597 [GPU 0] Fitting StandardScaler on Train split...
+9394.4s 598 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+9394.4s 599 [GPU 0] [OK] Will generate 863165 windows lazily during training
+9394.4s 600 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+9394.5s 601 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+9394.5s 602 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+9394.5s 603 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+9394.6s 604 [GPU 0] [OK] Will generate 123267 windows lazily during training
+9394.6s 605 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+9394.9s 606 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+9394.9s 607 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+9394.9s 608 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+9395.0s 609 [GPU 0] [OK] Will generate 246584 windows lazily during training
+9395.0s 610 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+9395.0s 611 [GPU 0] [2/5] Initializing CNN-LSTM (d_model=128, n_layers=2)...
+9395.0s 612 [GPU 0]   Parameters: 409,601
+9395.1s 613 [GPU 0] [3/5] Training CNN-LSTM...
+9395.1s 614 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+9431.9s 615 [GPU 1]   Epoch   6/30 | TrLoss: 0.0273 | VlLoss: 0.1371 | VlAcc: 0.9642 | VlF1: 0.9818
+9481.1s 616 [GPU 0]   Epoch   1/30 | TrLoss: 0.2137 | VlLoss: 0.1841 | VlAcc: 0.9642 | VlF1: 0.9818 *
+9516.8s 617 [GPU 1]   Epoch   7/30 | TrLoss: 0.0171 | VlLoss: 0.0592 | VlAcc: 0.9915 | VlF1: 0.9956 *
+9566.7s 618 [GPU 0]   Epoch   2/30 | TrLoss: 0.0393 | VlLoss: 0.1790 | VlAcc: 0.9642 | VlF1: 0.9818
+9602.5s 619 [GPU 1]   Epoch   8/30 | TrLoss: 0.0061 | VlLoss: 0.7121 | VlAcc: 0.6124 | VlF1: 0.7487
+9652.2s 620 [GPU 0]   Epoch   3/30 | TrLoss: 0.0385 | VlLoss: 0.1787 | VlAcc: 0.9642 | VlF1: 0.9818
+9687.8s 621 [GPU 1]   Epoch   9/30 | TrLoss: 0.0021 | VlLoss: 0.3361 | VlAcc: 0.8325 | VlF1: 0.9049
+9737.6s 622 [GPU 0]   Epoch   4/30 | TrLoss: 0.0344 | VlLoss: 0.1717 | VlAcc: 0.9642 | VlF1: 0.9818
+9772.8s 623 [GPU 1]   Epoch  10/30 | TrLoss: 0.0017 | VlLoss: 0.0814 | VlAcc: 0.9850 | VlF1: 0.9921
+9822.7s 624 [GPU 0]   Epoch   5/30 | TrLoss: 0.0363 | VlLoss: 0.1803 | VlAcc: 0.9642 | VlF1: 0.9818
+9858.0s 625 [GPU 1]   Epoch  11/30 | TrLoss: 0.0013 | VlLoss: 0.2067 | VlAcc: 0.9770 | VlF1: 0.9879
+9908.1s 626 [GPU 0]   Epoch   6/30 | TrLoss: 0.0319 | VlLoss: 0.1618 | VlAcc: 0.9642 | VlF1: 0.9818
+9908.1s 627 [GPU 0]   Early stopping at epoch 6 (patience=5)
+9908.1s 628 [GPU 0]   Best Val F1: 0.9818 (6 epochs, 512.9s)
+9908.1s 629 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_CNN-LSTM_seed42.pt
+9908.1s 630 [GPU 0] [4/5] Evaluating on test set...
+9919.3s 631 [GPU 0]   Test Acc: 0.0893 | Prec: 0.0893 | Rec: 1.0000 | F1: 0.1640 | AUC: 0.1980
+9919.3s 632 [GPU 0] [5/5] Measuring efficiency...
+9919.6s 633 [GPU 0]   Latency: 0.94ms | Throughput: 33708/s | Memory: 1.56MB
+9930.9s 634 [GPU 0]   Attack types analyzed: 3
+9930.9s 635 [GPU 0]
+9930.9s 636 [GPU 0] [6/18] Running experiment...
+9930.9s 637 [GPU 0]
+9930.9s 638 [GPU 0] ======================================================================
+9930.9s 639 [GPU 0]   Dataset: CICIDS2017 | Model: TCN | Seed: 42
+9930.9s 640 [GPU 0] ======================================================================
+9930.9s 641 [GPU 0] [Reproducibility] Setting all random seeds to 42
+9930.9s 642 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+9930.9s 643 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+9930.9s 644 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+9932.0s 645 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+9932.0s 646 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+9932.0s 647 [GPU 0] Fitting StandardScaler on Train split...
+9933.0s 648 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+9933.0s 649 [GPU 0] [OK] Will generate 863165 windows lazily during training
+9933.0s 650 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+9933.1s 651 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+9933.1s 652 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+9933.1s 653 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+9933.2s 654 [GPU 0] [OK] Will generate 123267 windows lazily during training
+9933.2s 655 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+9933.5s 656 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+9933.5s 657 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+9933.5s 658 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+9933.6s 659 [GPU 0] [OK] Will generate 246584 windows lazily during training
+9933.6s 660 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+9933.6s 661 [GPU 0] [2/5] Initializing TCN (d_model=128, n_layers=2)...
+9933.6s 662 [GPU 0]   Parameters: 423,169
+9933.7s 663 [GPU 0] [3/5] Training TCN...
+9933.7s 664 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+9942.9s 665 [GPU 1]   Epoch  12/30 | TrLoss: 0.0011 | VlLoss: 0.1090 | VlAcc: 0.9903 | VlF1: 0.9949
+9942.9s 666 [GPU 1]   Early stopping at epoch 12 (patience=5)
+9942.9s 667 [GPU 1]   Best Val F1: 0.9956 (12 epochs, 1043.9s)
+9942.9s 668 [GPU 1]   💾 Model saved to: outputs/checkpoints/CICIDS2017_CNN-LSTM_seed789.pt
+9942.9s 669 [GPU 1] [4/5] Evaluating on test set...
+9954.6s 670 [GPU 1]   Test Acc: 0.8786 | Prec: 0.4211 | Rec: 0.9567 | F1: 0.5848 | AUC: 0.9692
+9954.6s 671 [GPU 1] [5/5] Measuring efficiency...
+9954.8s 672 [GPU 1]   Latency: 0.89ms | Throughput: 33565/s | Memory: 1.56MB
+9966.2s 673 [GPU 1]   Attack types analyzed: 3
+9966.2s 674 [GPU 1]
+9966.2s 675 [GPU 1] [6/12] Running experiment...
+9966.2s 676 [GPU 1]
+9966.2s 677 [GPU 1] ======================================================================
+9966.2s 678 [GPU 1]   Dataset: CICIDS2017 | Model: TCN | Seed: 789
+9966.2s 679 [GPU 1] ======================================================================
+9966.2s 680 [GPU 1] [Reproducibility] Setting all random seeds to 789
+9966.2s 681 [GPU 1] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+9966.2s 682 [GPU 1] [1/5] Loading CICIDS2017 dataset...
+9966.2s 683 [GPU 1] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+9967.3s 684 [GPU 1]   Cached shape: (863214, 77), labels: 863214
+9967.3s 685 [GPU 1] [TRAIN] Raw shape (before windowing): (863214, 77)
+9967.3s 686 [GPU 1] Fitting StandardScaler on Train split...
+9968.3s 687 [GPU 1] Saved scaler to outputs/scaler_cicids.pkl
+9968.3s 688 [GPU 1] [OK] Will generate 863165 windows lazily during training
+9968.3s 689 [GPU 1] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+9968.4s 690 [GPU 1]   Cached shape: (123316, 77), labels: 123316
+9968.4s 691 [GPU 1] [VAL] Raw shape (before windowing): (123316, 77)
+9968.4s 692 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+9968.4s 693 [GPU 1] [OK] Will generate 123267 windows lazily during training
+9968.4s 694 [GPU 1] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+9968.8s 695 [GPU 1]   Cached shape: (246633, 77), labels: 246633
+9968.8s 696 [GPU 1] [TEST] Raw shape (before windowing): (246633, 77)
+9968.8s 697 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+9968.9s 698 [GPU 1] [OK] Will generate 246584 windows lazily during training
+9968.9s 699 [GPU 1]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+9968.9s 700 [GPU 1] [2/5] Initializing TCN (d_model=128, n_layers=2)...
+9968.9s 701 [GPU 1]   Parameters: 423,169
+9968.9s 702 [GPU 1] [3/5] Training TCN...
+9968.9s 703 [GPU 1]   Using class-weighted loss (pos_weight=1.00)
+10043.0s 704 [GPU 0]   Epoch   1/30 | TrLoss: 0.0377 | VlLoss: 0.1176 | VlAcc: 0.9695 | VlF1: 0.9844 *
+10077.8s 705 [GPU 1]   Epoch   1/30 | TrLoss: 0.0340 | VlLoss: 0.0519 | VlAcc: 0.9848 | VlF1: 0.9921 *
+10152.6s 706 [GPU 0]   Epoch   2/30 | TrLoss: 0.0153 | VlLoss: 0.0438 | VlAcc: 0.9859 | VlF1: 0.9927 *
+10187.1s 707 [GPU 1]   Epoch   2/30 | TrLoss: 0.0115 | VlLoss: 0.0352 | VlAcc: 0.9896 | VlF1: 0.9946 *
+10261.8s 708 [GPU 0]   Epoch   3/30 | TrLoss: 0.0061 | VlLoss: 0.0316 | VlAcc: 0.9909 | VlF1: 0.9953 *
+10295.9s 709 [GPU 1]   Epoch   3/30 | TrLoss: 0.0062 | VlLoss: 0.0389 | VlAcc: 0.9882 | VlF1: 0.9939
+10371.7s 710 [GPU 0]   Epoch   4/30 | TrLoss: 0.0031 | VlLoss: 0.0281 | VlAcc: 0.9917 | VlF1: 0.9957 *
+10405.1s 711 [GPU 1]   Epoch   4/30 | TrLoss: 0.0033 | VlLoss: 0.0482 | VlAcc: 0.9816 | VlF1: 0.9905
+10482.3s 712 [GPU 0]   Epoch   5/30 | TrLoss: 0.0026 | VlLoss: 0.0318 | VlAcc: 0.9922 | VlF1: 0.9960 *
+10514.7s 713 [GPU 1]   Epoch   5/30 | TrLoss: 0.0025 | VlLoss: 0.0487 | VlAcc: 0.9886 | VlF1: 0.9941
+10591.7s 714 [GPU 0]   Epoch   6/30 | TrLoss: 0.0022 | VlLoss: 0.0454 | VlAcc: 0.9931 | VlF1: 0.9964 *
+10624.1s 715 [GPU 1]   Epoch   6/30 | TrLoss: 0.0021 | VlLoss: 0.0849 | VlAcc: 0.9863 | VlF1: 0.9929
+10701.7s 716 [GPU 0]   Epoch   7/30 | TrLoss: 0.0018 | VlLoss: 0.0366 | VlAcc: 0.9936 | VlF1: 0.9967 *
+10733.0s 717 [GPU 1]   Epoch   7/30 | TrLoss: 0.0016 | VlLoss: 0.2133 | VlAcc: 0.9839 | VlF1: 0.9917
+10733.0s 718 [GPU 1]   Early stopping at epoch 7 (patience=5)
+10733.0s 719 [GPU 1]   Best Val F1: 0.9946 (7 epochs, 764.1s)
+10733.0s 720 [GPU 1]   💾 Model saved to: outputs/checkpoints/CICIDS2017_TCN_seed789.pt
+10733.0s 721 [GPU 1] [4/5] Evaluating on test set...
+10744.1s 722 [GPU 1]   Test Acc: 0.9770 | Prec: 0.8336 | Rec: 0.9283 | F1: 0.8784 | AUC: 0.9773
+10744.1s 723 [GPU 1] [5/5] Measuring efficiency...
+10744.5s 724 [GPU 1]   Latency: 1.91ms | Throughput: 15873/s | Memory: 1.61MB
+10755.6s 725 [GPU 1]   Attack types analyzed: 3
+10755.6s 726 [GPU 1]
+10755.6s 727 [GPU 1] [7/12] Running experiment...
+10755.6s 728 [GPU 1]
+10755.6s 729 [GPU 1] ======================================================================
+10755.6s 730 [GPU 1]   Dataset: CICIDS2017 | Model: Mamba | Seed: 1024
+10755.6s 731 [GPU 1] ======================================================================
+10755.6s 732 [GPU 1] [Reproducibility] Setting all random seeds to 1024
+10755.6s 733 [GPU 1] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+10755.6s 734 [GPU 1] [1/5] Loading CICIDS2017 dataset...
+10755.6s 735 [GPU 1] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+10756.8s 736 [GPU 1]   Cached shape: (863214, 77), labels: 863214
+10756.8s 737 [GPU 1] [TRAIN] Raw shape (before windowing): (863214, 77)
+10756.8s 738 [GPU 1] Fitting StandardScaler on Train split...
+10757.8s 739 [GPU 1] Saved scaler to outputs/scaler_cicids.pkl
+10757.8s 740 [GPU 1] [OK] Will generate 863165 windows lazily during training
+10757.8s 741 [GPU 1] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+10757.9s 742 [GPU 1]   Cached shape: (123316, 77), labels: 123316
+10757.9s 743 [GPU 1] [VAL] Raw shape (before windowing): (123316, 77)
+10757.9s 744 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+10758.0s 745 [GPU 1] [OK] Will generate 123267 windows lazily during training
+10758.0s 746 [GPU 1] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+10758.3s 747 [GPU 1]   Cached shape: (246633, 77), labels: 246633
+10758.3s 748 [GPU 1] [TEST] Raw shape (before windowing): (246633, 77)
+10758.3s 749 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+10758.4s 750 [GPU 1] [OK] Will generate 246584 windows lazily during training
+10758.4s 751 [GPU 1]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+10758.4s 752 [GPU 1] [2/5] Initializing Mamba (d_model=128, n_layers=2)...
+10758.4s 753 [GPU 1]   Parameters: 387,073
+10758.5s 754 [GPU 1] [3/5] Training Mamba...
+10758.5s 755 [GPU 1]   Using class-weighted loss (pos_weight=1.00)
+10810.7s 756 [GPU 0]   Epoch   8/30 | TrLoss: 0.0016 | VlLoss: 0.0351 | VlAcc: 0.9935 | VlF1: 0.9966
+10919.3s 757 [GPU 0]   Epoch   9/30 | TrLoss: 0.0016 | VlLoss: 0.0388 | VlAcc: 0.9901 | VlF1: 0.9949
+11028.4s 758 [GPU 0]   Epoch  10/30 | TrLoss: 0.0013 | VlLoss: 0.0498 | VlAcc: 0.9918 | VlF1: 0.9957
+11137.6s 759 [GPU 0]   Epoch  11/30 | TrLoss: 0.0012 | VlLoss: 0.0666 | VlAcc: 0.9923 | VlF1: 0.9960
+11245.7s 760 [GPU 0]   Epoch  12/30 | TrLoss: 0.0009 | VlLoss: 0.0695 | VlAcc: 0.9892 | VlF1: 0.9944
+11245.7s 761 [GPU 0]   Early stopping at epoch 12 (patience=5)
+11245.7s 762 [GPU 0]   Best Val F1: 0.9967 (12 epochs, 1312.0s)
+11245.7s 763 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_TCN_seed42.pt
+11245.7s 764 [GPU 0] [4/5] Evaluating on test set...
+11256.5s 765 [GPU 0]   Test Acc: 0.8782 | Prec: 0.4203 | Rec: 0.9587 | F1: 0.5844 | AUC: 0.9729
+11256.5s 766 [GPU 0] [5/5] Measuring efficiency...
+11256.9s 767 [GPU 0]   Latency: 1.89ms | Throughput: 15120/s | Memory: 1.61MB
+11267.6s 768 [GPU 0]   Attack types analyzed: 3
+11267.6s 769 [GPU 0]
+11267.6s 770 [GPU 0] [7/18] Running experiment...
+11267.6s 771 [GPU 0]
+11267.6s 772 [GPU 0] ======================================================================
+11267.6s 773 [GPU 0]   Dataset: CICIDS2017 | Model: Mamba | Seed: 123
+11267.6s 774 [GPU 0] ======================================================================
+11267.6s 775 [GPU 0] [Reproducibility] Setting all random seeds to 123
+11267.6s 776 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+11267.6s 777 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+11267.6s 778 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+11268.8s 779 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+11268.8s 780 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+11268.8s 781 [GPU 0] Fitting StandardScaler on Train split...
+11269.7s 782 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+11269.7s 783 [GPU 0] [OK] Will generate 863165 windows lazily during training
+11269.7s 784 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+11269.8s 785 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+11269.8s 786 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+11269.8s 787 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+11269.9s 788 [GPU 0] [OK] Will generate 123267 windows lazily during training
+11269.9s 789 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+11270.2s 790 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+11270.2s 791 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+11270.2s 792 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+11270.3s 793 [GPU 0] [OK] Will generate 246584 windows lazily during training
+11270.3s 794 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+11270.3s 795 [GPU 0] [2/5] Initializing Mamba (d_model=128, n_layers=2)...
+11270.3s 796 [GPU 0]   Parameters: 387,073
+11270.4s 797 [GPU 0] [3/5] Training Mamba...
+11270.4s 798 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+11434.1s 799 [GPU 1]   Epoch   1/30 | TrLoss: 0.1775 | VlLoss: 0.1708 | VlAcc: 0.9650 | VlF1: 0.9822 *
+11940.4s 800 [GPU 0]   Epoch   1/30 | TrLoss: 0.0852 | VlLoss: 0.1173 | VlAcc: 0.9766 | VlF1: 0.9880 *
+12100.0s 801 [GPU 1]   Epoch   2/30 | TrLoss: 0.1125 | VlLoss: 0.1522 | VlAcc: 0.9642 | VlF1: 0.9818
+12606.4s 802 [GPU 0]   Epoch   2/30 | TrLoss: 0.0322 | VlLoss: 0.1538 | VlAcc: 0.9633 | VlF1: 0.9813
+12765.8s 803 [GPU 1]   Epoch   3/30 | TrLoss: 0.0381 | VlLoss: 0.1335 | VlAcc: 0.9642 | VlF1: 0.9818
+13280.6s 804 [GPU 0]   Epoch   3/30 | TrLoss: 0.0344 | VlLoss: 0.1747 | VlAcc: 0.9642 | VlF1: 0.9818
+13435.8s 805 [GPU 1]   Epoch   4/30 | TrLoss: 0.0352 | VlLoss: 0.1829 | VlAcc: 0.9642 | VlF1: 0.9818
+13949.1s 806 [GPU 0]   Epoch   4/30 | TrLoss: 0.0342 | VlLoss: 0.1601 | VlAcc: 0.9604 | VlF1: 0.9796
+14101.6s 807 [GPU 1]   Epoch   5/30 | TrLoss: 0.0506 | VlLoss: 0.1878 | VlAcc: 0.9642 | VlF1: 0.9818
+14612.0s 808 [GPU 0]   Epoch   5/30 | TrLoss: 0.0394 | VlLoss: 0.1689 | VlAcc: 0.9670 | VlF1: 0.9832
+14760.5s 809 [GPU 1]   Epoch   6/30 | TrLoss: 0.0379 | VlLoss: 0.1870 | VlAcc: 0.9642 | VlF1: 0.9818
+14760.5s 810 [GPU 1]   Early stopping at epoch 6 (patience=5)
+14760.5s 811 [GPU 1]   Best Val F1: 0.9822 (6 epochs, 4002.0s)
+14760.5s 812 [GPU 1]   💾 Model saved to: outputs/checkpoints/CICIDS2017_Mamba_seed1024.pt
+14760.5s 813 [GPU 1] [4/5] Evaluating on test set...
+14803.2s 814 [GPU 1]   Test Acc: 0.1432 | Prec: 0.0940 | Rec: 0.9938 | F1: 0.1717 | AUC: 0.8742
+14803.2s 815 [GPU 1] [5/5] Measuring efficiency...
+14806.4s 816 [GPU 1]   Latency: 15.13ms | Throughput: 2059/s | Memory: 1.48MB
+14849.0s 817 [GPU 1]   Attack types analyzed: 3
+14849.0s 818 [GPU 1]
+14849.0s 819 [GPU 1] [8/12] Running experiment...
+14849.0s 820 [GPU 1]
+14849.0s 821 [GPU 1] ======================================================================
+14849.0s 822 [GPU 1]   Dataset: CICIDS2017 | Model: LSTM | Seed: 1024
+14849.0s 823 [GPU 1] ======================================================================
+14849.0s 824 [GPU 1] [Reproducibility] Setting all random seeds to 1024
+14849.0s 825 [GPU 1] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+14849.0s 826 [GPU 1] [1/5] Loading CICIDS2017 dataset...
+14849.0s 827 [GPU 1] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+14850.1s 828 [GPU 1]   Cached shape: (863214, 77), labels: 863214
+14850.1s 829 [GPU 1] [TRAIN] Raw shape (before windowing): (863214, 77)
+14850.1s 830 [GPU 1] Fitting StandardScaler on Train split...
+14851.1s 831 [GPU 1] Saved scaler to outputs/scaler_cicids.pkl
+14851.1s 832 [GPU 1] [OK] Will generate 863165 windows lazily during training
+14851.1s 833 [GPU 1] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+14851.2s 834 [GPU 1]   Cached shape: (123316, 77), labels: 123316
+14851.2s 835 [GPU 1] [VAL] Raw shape (before windowing): (123316, 77)
+14851.2s 836 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+14851.3s 837 [GPU 1] [OK] Will generate 123267 windows lazily during training
+14851.3s 838 [GPU 1] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+14851.6s 839 [GPU 1]   Cached shape: (246633, 77), labels: 246633
+14851.6s 840 [GPU 1] [TEST] Raw shape (before windowing): (246633, 77)
+14851.6s 841 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+14851.7s 842 [GPU 1] [OK] Will generate 246584 windows lazily during training
+14851.7s 843 [GPU 1]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+14851.7s 844 [GPU 1] [2/5] Initializing LSTM (d_model=128, n_layers=2)...
+14851.7s 845 [GPU 1]   Parameters: 423,169
+14851.7s 846 [GPU 1] [3/5] Training LSTM...
+14851.7s 847 [GPU 1]   Using class-weighted loss (pos_weight=1.00)
+14936.8s 848 [GPU 1]   Epoch   1/30 | TrLoss: 0.0677 | VlLoss: 0.1813 | VlAcc: 0.9642 | VlF1: 0.9818 *
+15021.5s 849 [GPU 1]   Epoch   2/30 | TrLoss: 0.0354 | VlLoss: 0.1747 | VlAcc: 0.9642 | VlF1: 0.9818
+15106.5s 850 [GPU 1]   Epoch   3/30 | TrLoss: 0.0338 | VlLoss: 0.1793 | VlAcc: 0.9642 | VlF1: 0.9818
+15191.2s 851 [GPU 1]   Epoch   4/30 | TrLoss: 0.0314 | VlLoss: 0.1794 | VlAcc: 0.9642 | VlF1: 0.9818
+15272.2s 852 [GPU 0]   Epoch   6/30 | TrLoss: 0.0153 | VlLoss: 0.0673 | VlAcc: 0.9866 | VlF1: 0.9931 *
+15276.1s 853 [GPU 1]   Epoch   5/30 | TrLoss: 0.0321 | VlLoss: 0.1577 | VlAcc: 0.9642 | VlF1: 0.9818
+15361.3s 854 [GPU 1]   Epoch   6/30 | TrLoss: 0.0196 | VlLoss: 0.0489 | VlAcc: 0.9794 | VlF1: 0.9894 *
+15446.2s 855 [GPU 1]   Epoch   7/30 | TrLoss: 0.0061 | VlLoss: 0.0171 | VlAcc: 0.9973 | VlF1: 0.9986 *
+15531.1s 856 [GPU 1]   Epoch   8/30 | TrLoss: 0.0021 | VlLoss: 0.0137 | VlAcc: 0.9969 | VlF1: 0.9984
+15616.2s 857 [GPU 1]   Epoch   9/30 | TrLoss: 0.0014 | VlLoss: 0.5581 | VlAcc: 0.6921 | VlF1: 0.8100
+15701.3s 858 [GPU 1]   Epoch  10/30 | TrLoss: 0.0014 | VlLoss: 0.0214 | VlAcc: 0.9946 | VlF1: 0.9972
+15786.2s 859 [GPU 1]   Epoch  11/30 | TrLoss: 0.0010 | VlLoss: 0.1521 | VlAcc: 0.9291 | VlF1: 0.9618
+15871.3s 860 [GPU 1]   Epoch  12/30 | TrLoss: 0.0009 | VlLoss: 0.0207 | VlAcc: 0.9944 | VlF1: 0.9971
+15871.3s 861 [GPU 1]   Early stopping at epoch 12 (patience=5)
+15871.3s 862 [GPU 1]   Best Val F1: 0.9986 (12 epochs, 1019.6s)
+15871.3s 863 [GPU 1]   💾 Model saved to: outputs/checkpoints/CICIDS2017_LSTM_seed1024.pt
+15871.3s 864 [GPU 1] [4/5] Evaluating on test set...
+15883.8s 865 [GPU 1]   Test Acc: 0.9843 | Prec: 0.8767 | Rec: 0.9590 | F1: 0.9160 | AUC: 0.9925
+15883.8s 866 [GPU 1] [5/5] Measuring efficiency...
+15884.0s 867 [GPU 1]   Latency: 0.77ms | Throughput: 30802/s | Memory: 1.61MB
+15896.9s 868 [GPU 1]   Attack types analyzed: 3
+15896.9s 869 [GPU 1]
+15896.9s 870 [GPU 1] [9/12] Running experiment...
+15896.9s 871 [GPU 1]
+15896.9s 872 [GPU 1] ======================================================================
+15896.9s 873 [GPU 1]   Dataset: CICIDS2017 | Model: GRU | Seed: 1024
+15896.9s 874 [GPU 1] ======================================================================
+15896.9s 875 [GPU 1] [Reproducibility] Setting all random seeds to 1024
+15896.9s 876 [GPU 1] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+15896.9s 877 [GPU 1] [1/5] Loading CICIDS2017 dataset...
+15896.9s 878 [GPU 1] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+15897.9s 879 [GPU 1]   Cached shape: (863214, 77), labels: 863214
+15897.9s 880 [GPU 1] [TRAIN] Raw shape (before windowing): (863214, 77)
+15897.9s 881 [GPU 1] Fitting StandardScaler on Train split...
+15898.8s 882 [GPU 1] Saved scaler to outputs/scaler_cicids.pkl
+15898.8s 883 [GPU 1] [OK] Will generate 863165 windows lazily during training
+15898.8s 884 [GPU 1] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+15898.9s 885 [GPU 1]   Cached shape: (123316, 77), labels: 123316
+15898.9s 886 [GPU 1] [VAL] Raw shape (before windowing): (123316, 77)
+15898.9s 887 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+15899.0s 888 [GPU 1] [OK] Will generate 123267 windows lazily during training
+15899.0s 889 [GPU 1] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+15899.3s 890 [GPU 1]   Cached shape: (246633, 77), labels: 246633
+15899.3s 891 [GPU 1] [TEST] Raw shape (before windowing): (246633, 77)
+15899.3s 892 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+15899.4s 893 [GPU 1] [OK] Will generate 246584 windows lazily during training
+15899.4s 894 [GPU 1]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+15899.4s 895 [GPU 1] [2/5] Initializing GRU (d_model=128, n_layers=2)...
+15899.4s 896 [GPU 1]   Parameters: 373,505
+15899.5s 897 [GPU 1] [3/5] Training GRU...
+15899.5s 898 [GPU 1]   Using class-weighted loss (pos_weight=1.00)
+15934.8s 899 [GPU 0]   Epoch   7/30 | TrLoss: 0.0050 | VlLoss: 0.0160 | VlAcc: 0.9958 | VlF1: 0.9978 *
+15970.2s 900 [GPU 1]   Epoch   1/30 | TrLoss: 0.0443 | VlLoss: 0.1831 | VlAcc: 0.9642 | VlF1: 0.9818 *
+16040.6s 901 [GPU 1]   Epoch   2/30 | TrLoss: 0.0356 | VlLoss: 0.1806 | VlAcc: 0.9642 | VlF1: 0.9818
+16111.4s 902 [GPU 1]   Epoch   3/30 | TrLoss: 0.0380 | VlLoss: 0.1817 | VlAcc: 0.9642 | VlF1: 0.9818
+16182.6s 903 [GPU 1]   Epoch   4/30 | TrLoss: 0.0300 | VlLoss: 0.1805 | VlAcc: 0.9642 | VlF1: 0.9818
+16253.9s 904 [GPU 1]   Epoch   5/30 | TrLoss: 0.0310 | VlLoss: 0.1746 | VlAcc: 0.9642 | VlF1: 0.9818
+16324.6s 905 [GPU 1]   Epoch   6/30 | TrLoss: 0.0115 | VlLoss: 0.0902 | VlAcc: 0.9745 | VlF1: 0.9868 *
+16396.1s 906 [GPU 1]   Epoch   7/30 | TrLoss: 0.0036 | VlLoss: 0.0214 | VlAcc: 0.9940 | VlF1: 0.9969 *
+16467.5s 907 [GPU 1]   Epoch   8/30 | TrLoss: 0.0019 | VlLoss: 0.0202 | VlAcc: 0.9963 | VlF1: 0.9981 *
+16538.4s 908 [GPU 1]   Epoch   9/30 | TrLoss: 0.0019 | VlLoss: 0.0191 | VlAcc: 0.9966 | VlF1: 0.9982 *
+16609.3s 909 [GPU 1]   Epoch  10/30 | TrLoss: 0.0013 | VlLoss: 0.0201 | VlAcc: 0.9971 | VlF1: 0.9985 *
+16610.6s 910 [GPU 0]   Epoch   8/30 | TrLoss: 0.0035 | VlLoss: 0.0244 | VlAcc: 0.9933 | VlF1: 0.9965
+16680.5s 911 [GPU 1]   Epoch  11/30 | TrLoss: 0.0010 | VlLoss: 0.0193 | VlAcc: 0.9969 | VlF1: 0.9984
+16752.0s 912 [GPU 1]   Epoch  12/30 | TrLoss: 0.0009 | VlLoss: 0.0242 | VlAcc: 0.9966 | VlF1: 0.9982
+16823.7s 913 [GPU 1]   Epoch  13/30 | TrLoss: 0.0009 | VlLoss: 0.0343 | VlAcc: 0.9928 | VlF1: 0.9963
+16895.2s 914 [GPU 1]   Epoch  14/30 | TrLoss: 0.0006 | VlLoss: 0.0648 | VlAcc: 0.9853 | VlF1: 0.9923
+16966.8s 915 [GPU 1]   Epoch  15/30 | TrLoss: 0.0005 | VlLoss: 0.0455 | VlAcc: 0.9925 | VlF1: 0.9961
+16966.8s 916 [GPU 1]   Early stopping at epoch 15 (patience=5)
+16966.8s 917 [GPU 1]   Best Val F1: 0.9985 (15 epochs, 1067.3s)
+16966.8s 918 [GPU 1]   💾 Model saved to: outputs/checkpoints/CICIDS2017_GRU_seed1024.pt
+16966.8s 919 [GPU 1] [4/5] Evaluating on test set...
+16978.7s 920 [GPU 1]   Test Acc: 0.9914 | Prec: 0.9925 | Rec: 0.9104 | F1: 0.9497 | AUC: 0.9824
+16978.7s 921 [GPU 1] [5/5] Measuring efficiency...
+16978.8s 922 [GPU 1]   Latency: 0.57ms | Throughput: 44392/s | Memory: 1.42MB
+16989.7s 923 [GPU 1]   Attack types analyzed: 3
+16989.8s 924 [GPU 1]
+16989.8s 925 [GPU 1] [10/12] Running experiment...
+16989.8s 926 [GPU 1]
+16989.8s 927 [GPU 1] ======================================================================
+16989.8s 928 [GPU 1]   Dataset: CICIDS2017 | Model: Transformer | Seed: 1024
+16989.8s 929 [GPU 1] ======================================================================
+16989.8s 930 [GPU 1] [Reproducibility] Setting all random seeds to 1024
+16989.8s 931 [GPU 1] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+16989.8s 932 [GPU 1] [1/5] Loading CICIDS2017 dataset...
+16989.8s 933 [GPU 1] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+16990.9s 934 [GPU 1]   Cached shape: (863214, 77), labels: 863214
+16990.9s 935 [GPU 1] [TRAIN] Raw shape (before windowing): (863214, 77)
+16990.9s 936 [GPU 1] Fitting StandardScaler on Train split...
+16991.9s 937 [GPU 1] Saved scaler to outputs/scaler_cicids.pkl
+16991.9s 938 [GPU 1] [OK] Will generate 863165 windows lazily during training
+16991.9s 939 [GPU 1] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+16992.0s 940 [GPU 1]   Cached shape: (123316, 77), labels: 123316
+16992.0s 941 [GPU 1] [VAL] Raw shape (before windowing): (123316, 77)
+16992.0s 942 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+16992.0s 943 [GPU 1] [OK] Will generate 123267 windows lazily during training
+16992.0s 944 [GPU 1] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+16992.4s 945 [GPU 1]   Cached shape: (246633, 77), labels: 246633
+16992.4s 946 [GPU 1] [TEST] Raw shape (before windowing): (246633, 77)
+16992.4s 947 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+16992.5s 948 [GPU 1] [OK] Will generate 246584 windows lazily during training
+16992.5s 949 [GPU 1]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+16992.5s 950 [GPU 1] [2/5] Initializing Transformer (d_model=128, n_layers=2)...
+16992.5s 951 [GPU 1]   Parameters: 406,913
+16992.5s 952 [GPU 1] [3/5] Training Transformer...
+16992.5s 953 [GPU 1]   Using class-weighted loss (pos_weight=1.00)
+17098.4s 954 [GPU 1]   Epoch   1/30 | TrLoss: 0.2511 | VlLoss: 0.1916 | VlAcc: 0.9642 | VlF1: 0.9818 *
+17203.4s 955 [GPU 1]   Epoch   2/30 | TrLoss: 0.2428 | VlLoss: 0.1869 | VlAcc: 0.9642 | VlF1: 0.9818
+17309.2s 956 [GPU 1]   Epoch   3/30 | TrLoss: 0.1907 | VlLoss: 0.1890 | VlAcc: 0.9642 | VlF1: 0.9818
+17335.3s 957 [GPU 0]   Epoch   9/30 | TrLoss: nan | VlLoss: nan | VlAcc: 0.0358 | VlF1: 0.0000
+17414.9s 958 [GPU 1]   Epoch   4/30 | TrLoss: 0.0585 | VlLoss: 0.1894 | VlAcc: 0.9642 | VlF1: 0.9818
+17520.5s 959 [GPU 1]   Epoch   5/30 | TrLoss: 0.0792 | VlLoss: 0.1469 | VlAcc: 0.9642 | VlF1: 0.9818
+17625.3s 960 [GPU 1]   Epoch   6/30 | TrLoss: 0.0325 | VlLoss: 0.2084 | VlAcc: 0.9139 | VlF1: 0.9547
+17625.3s 961 [GPU 1]   Early stopping at epoch 6 (patience=5)
+17625.3s 962 [GPU 1]   Best Val F1: 0.9818 (6 epochs, 632.7s)
+17625.3s 963 [GPU 1]   💾 Model saved to: outputs/checkpoints/CICIDS2017_Transformer_seed1024.pt
+17625.3s 964 [GPU 1] [4/5] Evaluating on test set...
+17638.2s 965 [GPU 1]   Test Acc: 0.0893 | Prec: 0.0893 | Rec: 1.0000 | F1: 0.1640 | AUC: 0.5496
+17638.2s 966 [GPU 1] [5/5] Measuring efficiency...
+17638.6s 967 [GPU 1]   Latency: 1.81ms | Throughput: 17896/s | Memory: 1.55MB
+17652.1s 968 [GPU 1]   Attack types analyzed: 3
+17652.1s 969 [GPU 1]
+17652.1s 970 [GPU 1] [11/12] Running experiment...
+17652.1s 971 [GPU 1]
+17652.1s 972 [GPU 1] ======================================================================
+17652.1s 973 [GPU 1]   Dataset: CICIDS2017 | Model: CNN-LSTM | Seed: 1024
+17652.1s 974 [GPU 1] ======================================================================
+17652.1s 975 [GPU 1] [Reproducibility] Setting all random seeds to 1024
+17652.1s 976 [GPU 1] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+17652.1s 977 [GPU 1] [1/5] Loading CICIDS2017 dataset...
+17652.1s 978 [GPU 1] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+17653.3s 979 [GPU 1]   Cached shape: (863214, 77), labels: 863214
+17653.3s 980 [GPU 1] [TRAIN] Raw shape (before windowing): (863214, 77)
+17653.3s 981 [GPU 1] Fitting StandardScaler on Train split...
+17654.2s 982 [GPU 1] Saved scaler to outputs/scaler_cicids.pkl
+17654.2s 983 [GPU 1] [OK] Will generate 863165 windows lazily during training
+17654.2s 984 [GPU 1] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+17654.3s 985 [GPU 1]   Cached shape: (123316, 77), labels: 123316
+17654.3s 986 [GPU 1] [VAL] Raw shape (before windowing): (123316, 77)
+17654.3s 987 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+17654.4s 988 [GPU 1] [OK] Will generate 123267 windows lazily during training
+17654.4s 989 [GPU 1] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+17654.7s 990 [GPU 1]   Cached shape: (246633, 77), labels: 246633
+17654.7s 991 [GPU 1] [TEST] Raw shape (before windowing): (246633, 77)
+17654.7s 992 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+17654.8s 993 [GPU 1] [OK] Will generate 246584 windows lazily during training
+17654.8s 994 [GPU 1]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+17654.8s 995 [GPU 1] [2/5] Initializing CNN-LSTM (d_model=128, n_layers=2)...
+17654.8s 996 [GPU 1]   Parameters: 409,601
+17654.9s 997 [GPU 1] [3/5] Training CNN-LSTM...
+17654.9s 998 [GPU 1]   Using class-weighted loss (pos_weight=1.00)
+17740.4s 999 [GPU 1]   Epoch   1/30 | TrLoss: 0.1353 | VlLoss: 0.1161 | VlAcc: 0.9762 | VlF1: 0.9877 *
+17825.4s 1000 [GPU 1]   Epoch   2/30 | TrLoss: 0.0450 | VlLoss: 0.1375 | VlAcc: 0.9806 | VlF1: 0.9900 *
+17910.2s 1001 [GPU 1]   Epoch   3/30 | TrLoss: 0.0298 | VlLoss: 0.1625 | VlAcc: 0.9642 | VlF1: 0.9818
+17995.3s 1002 [GPU 1]   Epoch   4/30 | TrLoss: 0.0295 | VlLoss: 0.0938 | VlAcc: 0.9643 | VlF1: 0.9818
+18051.1s 1003 [GPU 0]   Epoch  10/30 | TrLoss: nan | VlLoss: nan | VlAcc: 0.0358 | VlF1: 0.0000
+18080.1s 1004 [GPU 1]   Epoch   5/30 | TrLoss: 0.0068 | VlLoss: 0.3852 | VlAcc: 0.9801 | VlF1: 0.9896
+18164.9s 1005 [GPU 1]   Epoch   6/30 | TrLoss: 0.0036 | VlLoss: 0.0564 | VlAcc: 0.9943 | VlF1: 0.9971 *
+18250.3s 1006 [GPU 1]   Epoch   7/30 | TrLoss: 0.0026 | VlLoss: 0.0380 | VlAcc: 0.9964 | VlF1: 0.9981 *
+18335.5s 1007 [GPU 1]   Epoch   8/30 | TrLoss: 0.0021 | VlLoss: 0.0424 | VlAcc: 0.9956 | VlF1: 0.9977
+18420.9s 1008 [GPU 1]   Epoch   9/30 | TrLoss: 0.0018 | VlLoss: 0.0320 | VlAcc: 0.9918 | VlF1: 0.9958
+18505.9s 1009 [GPU 1]   Epoch  10/30 | TrLoss: 0.0014 | VlLoss: 0.0271 | VlAcc: 0.9949 | VlF1: 0.9974
+18591.5s 1010 [GPU 1]   Epoch  11/30 | TrLoss: 0.0013 | VlLoss: 0.0260 | VlAcc: 0.9947 | VlF1: 0.9972
+18676.8s 1011 [GPU 1]   Epoch  12/30 | TrLoss: 0.0010 | VlLoss: 0.0259 | VlAcc: 0.9964 | VlF1: 0.9981 *
+18715.9s 1012 [GPU 0]   Epoch  11/30 | TrLoss: nan | VlLoss: nan | VlAcc: 0.0358 | VlF1: 0.0000
+18761.5s 1013 [GPU 1]   Epoch  13/30 | TrLoss: 0.0009 | VlLoss: 0.0303 | VlAcc: 0.9949 | VlF1: 0.9974
+18847.5s 1014 [GPU 1]   Epoch  14/30 | TrLoss: 0.0009 | VlLoss: 0.0296 | VlAcc: 0.9956 | VlF1: 0.9977
+18933.5s 1015 [GPU 1]   Epoch  15/30 | TrLoss: 0.0008 | VlLoss: 0.0337 | VlAcc: 0.9944 | VlF1: 0.9971
+19018.7s 1016 [GPU 1]   Epoch  16/30 | TrLoss: 0.0007 | VlLoss: 0.0369 | VlAcc: 0.9941 | VlF1: 0.9969
+19103.7s 1017 [GPU 1]   Epoch  17/30 | TrLoss: 0.0007 | VlLoss: 0.0372 | VlAcc: 0.9936 | VlF1: 0.9967
+19103.7s 1018 [GPU 1]   Early stopping at epoch 17 (patience=5)
+19103.7s 1019 [GPU 1]   Best Val F1: 0.9981 (17 epochs, 1448.8s)
+19103.7s 1020 [GPU 1]   💾 Model saved to: outputs/checkpoints/CICIDS2017_CNN-LSTM_seed1024.pt
+19103.7s 1021 [GPU 1] [4/5] Evaluating on test set...
+19114.9s 1022 [GPU 1]   Test Acc: 0.9609 | Prec: 0.7100 | Rec: 0.9510 | F1: 0.8130 | AUC: 0.9689
+19114.9s 1023 [GPU 1] [5/5] Measuring efficiency...
+19115.1s 1024 [GPU 1]   Latency: 0.98ms | Throughput: 33761/s | Memory: 1.56MB
+19126.3s 1025 [GPU 1]   Attack types analyzed: 3
+19126.3s 1026 [GPU 1]
+19126.3s 1027 [GPU 1] [12/12] Running experiment...
+19126.3s 1028 [GPU 1]
+19126.3s 1029 [GPU 1] ======================================================================
+19126.3s 1030 [GPU 1]   Dataset: CICIDS2017 | Model: TCN | Seed: 1024
+19126.3s 1031 [GPU 1] ======================================================================
+19126.3s 1032 [GPU 1] [Reproducibility] Setting all random seeds to 1024
+19126.3s 1033 [GPU 1] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+19126.3s 1034 [GPU 1] [1/5] Loading CICIDS2017 dataset...
+19126.3s 1035 [GPU 1] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+19127.4s 1036 [GPU 1]   Cached shape: (863214, 77), labels: 863214
+19127.4s 1037 [GPU 1] [TRAIN] Raw shape (before windowing): (863214, 77)
+19127.4s 1038 [GPU 1] Fitting StandardScaler on Train split...
+19128.3s 1039 [GPU 1] Saved scaler to outputs/scaler_cicids.pkl
+19128.3s 1040 [GPU 1] [OK] Will generate 863165 windows lazily during training
+19128.3s 1041 [GPU 1] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+19128.4s 1042 [GPU 1]   Cached shape: (123316, 77), labels: 123316
+19128.4s 1043 [GPU 1] [VAL] Raw shape (before windowing): (123316, 77)
+19128.4s 1044 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+19128.4s 1045 [GPU 1] [OK] Will generate 123267 windows lazily during training
+19128.4s 1046 [GPU 1] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+19128.8s 1047 [GPU 1]   Cached shape: (246633, 77), labels: 246633
+19128.8s 1048 [GPU 1] [TEST] Raw shape (before windowing): (246633, 77)
+19128.8s 1049 [GPU 1] Loading scaler from outputs/scaler_cicids.pkl...
+19128.9s 1050 [GPU 1] [OK] Will generate 246584 windows lazily during training
+19128.9s 1051 [GPU 1]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+19128.9s 1052 [GPU 1] [2/5] Initializing TCN (d_model=128, n_layers=2)...
+19128.9s 1053 [GPU 1]   Parameters: 423,169
+19128.9s 1054 [GPU 1] [3/5] Training TCN...
+19128.9s 1055 [GPU 1]   Using class-weighted loss (pos_weight=1.00)
+19235.9s 1056 [GPU 1]   Epoch   1/30 | TrLoss: 0.0319 | VlLoss: 0.0504 | VlAcc: 0.9781 | VlF1: 0.9888 *
+19343.5s 1057 [GPU 1]   Epoch   2/30 | TrLoss: 0.0173 | VlLoss: 0.0359 | VlAcc: 0.9894 | VlF1: 0.9945 *
+19380.1s 1058 [GPU 0]   Epoch  12/30 | TrLoss: nan | VlLoss: nan | VlAcc: 0.0358 | VlF1: 0.0000
+19380.1s 1059 [GPU 0]   Early stopping at epoch 12 (patience=5)
+19380.1s 1060 [GPU 0]   Best Val F1: 0.9978 (12 epochs, 8109.7s)
+19380.1s 1061 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_Mamba_seed123.pt
+19380.1s 1062 [GPU 0] [4/5] Evaluating on test set...
+19423.1s 1063 [GPU 0]   Test Acc: 0.9666 | Prec: 0.7447 | Rec: 0.9535 | F1: 0.8362 | AUC: 0.9865
+19423.1s 1064 [GPU 0] [5/5] Measuring efficiency...
+19426.4s 1065 [GPU 0]   Latency: 16.66ms | Throughput: 2094/s | Memory: 1.48MB
+19450.4s 1066 [GPU 1]   Epoch   3/30 | TrLoss: 0.0078 | VlLoss: 0.0384 | VlAcc: 0.9901 | VlF1: 0.9949 *
+19469.8s 1067 [GPU 0]   Attack types analyzed: 3
+19469.8s 1068 [GPU 0]
+19469.8s 1069 [GPU 0] [8/18] Running experiment...
+19469.8s 1070 [GPU 0]
+19469.8s 1071 [GPU 0] ======================================================================
+19469.8s 1072 [GPU 0]   Dataset: CICIDS2017 | Model: LSTM | Seed: 123
+19469.8s 1073 [GPU 0] ======================================================================
+19469.8s 1074 [GPU 0] [Reproducibility] Setting all random seeds to 123
+19469.8s 1075 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+19469.8s 1076 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+19469.8s 1077 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+19471.1s 1078 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+19471.1s 1079 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+19471.1s 1080 [GPU 0] Fitting StandardScaler on Train split...
+19472.0s 1081 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+19472.0s 1082 [GPU 0] [OK] Will generate 863165 windows lazily during training
+19472.0s 1083 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+19472.1s 1084 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+19472.1s 1085 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+19472.1s 1086 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+19472.1s 1087 [GPU 0] [OK] Will generate 123267 windows lazily during training
+19472.1s 1088 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+19472.5s 1089 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+19472.5s 1090 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+19472.5s 1091 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+19472.6s 1092 [GPU 0] [OK] Will generate 246584 windows lazily during training
+19472.6s 1093 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+19472.6s 1094 [GPU 0] [2/5] Initializing LSTM (d_model=128, n_layers=2)...
+19472.6s 1095 [GPU 0]   Parameters: 423,169
+19472.7s 1096 [GPU 0] [3/5] Training LSTM...
+19472.7s 1097 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+19558.7s 1098 [GPU 1]   Epoch   4/30 | TrLoss: 0.0031 | VlLoss: 0.0569 | VlAcc: 0.9915 | VlF1: 0.9956 *
+19559.1s 1099 [GPU 0]   Epoch   1/30 | TrLoss: 0.2577 | VlLoss: 0.1845 | VlAcc: 0.9642 | VlF1: 0.9818 *
+19644.9s 1100 [GPU 0]   Epoch   2/30 | TrLoss: 0.1524 | VlLoss: 0.1843 | VlAcc: 0.9642 | VlF1: 0.9818
+19666.7s 1101 [GPU 1]   Epoch   5/30 | TrLoss: 0.0025 | VlLoss: 0.0632 | VlAcc: 0.9886 | VlF1: 0.9941
+19730.7s 1102 [GPU 0]   Epoch   3/30 | TrLoss: 0.0369 | VlLoss: 0.1726 | VlAcc: 0.9642 | VlF1: 0.9818
+19774.5s 1103 [GPU 1]   Epoch   6/30 | TrLoss: 0.0022 | VlLoss: 0.0616 | VlAcc: 0.9897 | VlF1: 0.9947
+19816.9s 1104 [GPU 0]   Epoch   4/30 | TrLoss: 0.0297 | VlLoss: 0.0244 | VlAcc: 0.9945 | VlF1: 0.9971 *
+19882.9s 1105 [GPU 1]   Epoch   7/30 | TrLoss: 0.0018 | VlLoss: 0.0656 | VlAcc: 0.9814 | VlF1: 0.9904
+19902.9s 1106 [GPU 0]   Epoch   5/30 | TrLoss: 0.0047 | VlLoss: 0.0167 | VlAcc: 0.9960 | VlF1: 0.9979 *
+19988.9s 1107 [GPU 0]   Epoch   6/30 | TrLoss: 0.0026 | VlLoss: 0.0148 | VlAcc: 0.9963 | VlF1: 0.9981 *
+19991.2s 1108 [GPU 1]   Epoch   8/30 | TrLoss: 0.0016 | VlLoss: 0.0835 | VlAcc: 0.9764 | VlF1: 0.9879
+20075.2s 1109 [GPU 0]   Epoch   7/30 | TrLoss: 0.0020 | VlLoss: 0.0139 | VlAcc: 0.9971 | VlF1: 0.9985 *
+20100.0s 1110 [GPU 1]   Epoch   9/30 | TrLoss: 0.0013 | VlLoss: 0.0887 | VlAcc: 0.9765 | VlF1: 0.9879
+20100.0s 1111 [GPU 1]   Early stopping at epoch 9 (patience=5)
+20100.0s 1112 [GPU 1]   Best Val F1: 0.9956 (9 epochs, 971.0s)
+20100.0s 1113 [GPU 1]   💾 Model saved to: outputs/checkpoints/CICIDS2017_TCN_seed1024.pt
+20100.0s 1114 [GPU 1] [4/5] Evaluating on test set...
+20111.0s 1115 [GPU 1]   Test Acc: 0.8693 | Prec: 0.4023 | Rec: 0.9525 | F1: 0.5657 | AUC: 0.9665
+20111.0s 1116 [GPU 1] [5/5] Measuring efficiency...
+20111.4s 1117 [GPU 1]   Latency: 1.87ms | Throughput: 15679/s | Memory: 1.61MB
+20122.3s 1118 [GPU 1]   Attack types analyzed: 3
+20122.3s 1119 [GPU 1]
+20122.3s 1120 [GPU 1]
+20122.3s 1121 [GPU 1] ======================================================================
+20122.3s 1122 [GPU 1] BENCHMARK SUMMARY
+20122.3s 1123 [GPU 1] ======================================================================
+20122.3s 1124 [GPU 1]
+20122.3s 1125 [GPU 1] 📊 CICIDS2017
+20122.3s 1126 [GPU 1] Model                Acc     Prec      Rec       F1      AUC  Lat(ms)     Params
+20122.3s 1127 [GPU 1] -----------------------------------------------------------------------------------
+20122.3s 1128 [GPU 1] Mamba           0.1571  0.0954  0.9946  0.1742  0.6267   14.95     387,073
+20122.3s 1129 [GPU 1] LSTM            0.9878  0.9371  0.9317  0.9323  0.9937    0.76     423,169
+20122.3s 1130 [GPU 1] GRU             0.9910  0.9817  0.9165  0.9479  0.9810    0.53     373,505
+20122.3s 1131 [GPU 1] Transformer     0.0893  0.0893  1.0000  0.1640  0.6582    1.91     406,913
+20122.3s 1132 [GPU 1] CNN-LSTM        0.9198  0.5655  0.9538  0.6989  0.9691    0.93     409,601
+20122.3s 1133 [GPU 1] TCN             0.9232  0.6180  0.9404  0.7221  0.9719    1.89     423,169
+20122.3s 1134 [GPU 1]
+20122.3s 1135 [GPU 1] ✅ Results saved to: outputs/benchmark_results/
+20122.3s 1136 [GPU 1]    Run 'python generate_tables.py' to generate publication tables.
+20161.2s 1137 [GPU 0]   Epoch   8/30 | TrLoss: 0.0018 | VlLoss: 0.0138 | VlAcc: 0.9971 | VlF1: 0.9985 *
+20246.9s 1138 [GPU 0]   Epoch   9/30 | TrLoss: 0.0013 | VlLoss: 0.0172 | VlAcc: 0.9963 | VlF1: 0.9981
+20332.2s 1139 [GPU 0]   Epoch  10/30 | TrLoss: 0.0023 | VlLoss: 0.0143 | VlAcc: 0.9965 | VlF1: 0.9982
+20417.9s 1140 [GPU 0]   Epoch  11/30 | TrLoss: 0.0012 | VlLoss: 0.0207 | VlAcc: 0.9944 | VlF1: 0.9971
+20503.3s 1141 [GPU 0]   Epoch  12/30 | TrLoss: 0.0008 | VlLoss: 0.0205 | VlAcc: 0.9959 | VlF1: 0.9979
+20588.8s 1142 [GPU 0]   Epoch  13/30 | TrLoss: 0.0007 | VlLoss: 0.0233 | VlAcc: 0.9953 | VlF1: 0.9976
+20588.8s 1143 [GPU 0]   Early stopping at epoch 13 (patience=5)
+20588.8s 1144 [GPU 0]   Best Val F1: 0.9985 (13 epochs, 1116.1s)
+20588.8s 1145 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_LSTM_seed123.pt
+20588.8s 1146 [GPU 0] [4/5] Evaluating on test set...
+20601.6s 1147 [GPU 0]   Test Acc: 0.9912 | Prec: 0.9975 | Rec: 0.9034 | F1: 0.9481 | AUC: 0.9876
+20601.6s 1148 [GPU 0] [5/5] Measuring efficiency...
+20601.7s 1149 [GPU 0]   Latency: 0.76ms | Throughput: 30490/s | Memory: 1.61MB
+20614.4s 1150 [GPU 0]   Attack types analyzed: 3
+20614.4s 1151 [GPU 0]
+20614.4s 1152 [GPU 0] [9/18] Running experiment...
+20614.4s 1153 [GPU 0]
+20614.4s 1154 [GPU 0] ======================================================================
+20614.4s 1155 [GPU 0]   Dataset: CICIDS2017 | Model: GRU | Seed: 123
+20614.4s 1156 [GPU 0] ======================================================================
+20614.4s 1157 [GPU 0] [Reproducibility] Setting all random seeds to 123
+20614.4s 1158 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+20614.4s 1159 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+20614.4s 1160 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+20615.5s 1161 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+20615.5s 1162 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+20615.5s 1163 [GPU 0] Fitting StandardScaler on Train split...
+20616.5s 1164 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+20616.5s 1165 [GPU 0] [OK] Will generate 863165 windows lazily during training
+20616.5s 1166 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+20616.6s 1167 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+20616.6s 1168 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+20616.6s 1169 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+20616.6s 1170 [GPU 0] [OK] Will generate 123267 windows lazily during training
+20616.6s 1171 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+20616.9s 1172 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+20616.9s 1173 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+20616.9s 1174 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+20617.0s 1175 [GPU 0] [OK] Will generate 246584 windows lazily during training
+20617.0s 1176 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+20617.0s 1177 [GPU 0] [2/5] Initializing GRU (d_model=128, n_layers=2)...
+20617.0s 1178 [GPU 0]   Parameters: 373,505
+20617.1s 1179 [GPU 0] [3/5] Training GRU...
+20617.1s 1180 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+20688.6s 1181 [GPU 0]   Epoch   1/30 | TrLoss: 0.1590 | VlLoss: 0.1841 | VlAcc: 0.9642 | VlF1: 0.9818 *
+20759.4s 1182 [GPU 0]   Epoch   2/30 | TrLoss: 0.0367 | VlLoss: 0.1782 | VlAcc: 0.9642 | VlF1: 0.9818
+20830.1s 1183 [GPU 0]   Epoch   3/30 | TrLoss: 0.0409 | VlLoss: 0.1837 | VlAcc: 0.9642 | VlF1: 0.9818
+20900.7s 1184 [GPU 0]   Epoch   4/30 | TrLoss: 0.0306 | VlLoss: 0.1764 | VlAcc: 0.9642 | VlF1: 0.9818
+20971.3s 1185 [GPU 0]   Epoch   5/30 | TrLoss: 0.0237 | VlLoss: 0.1623 | VlAcc: 0.9642 | VlF1: 0.9818
+21041.3s 1186 [GPU 0]   Epoch   6/30 | TrLoss: 0.0201 | VlLoss: 0.1585 | VlAcc: 0.9642 | VlF1: 0.9818
+21041.3s 1187 [GPU 0]   Early stopping at epoch 6 (patience=5)
+21041.3s 1188 [GPU 0]   Best Val F1: 0.9818 (6 epochs, 424.2s)
+21041.3s 1189 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_GRU_seed123.pt
+21041.3s 1190 [GPU 0] [4/5] Evaluating on test set...
+21052.2s 1191 [GPU 0]   Test Acc: 0.0893 | Prec: 0.0893 | Rec: 1.0000 | F1: 0.1640 | AUC: 0.8053
+21052.2s 1192 [GPU 0] [5/5] Measuring efficiency...
+21052.3s 1193 [GPU 0]   Latency: 0.52ms | Throughput: 43904/s | Memory: 1.42MB
+21063.1s 1194 [GPU 0]   Attack types analyzed: 3
+21063.1s 1195 [GPU 0]
+21063.1s 1196 [GPU 0] [10/18] Running experiment...
+21063.1s 1197 [GPU 0]
+21063.1s 1198 [GPU 0] ======================================================================
+21063.1s 1199 [GPU 0]   Dataset: CICIDS2017 | Model: Transformer | Seed: 123
+21063.1s 1200 [GPU 0] ======================================================================
+21063.1s 1201 [GPU 0] [Reproducibility] Setting all random seeds to 123
+21063.1s 1202 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+21063.1s 1203 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+21063.1s 1204 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+21064.3s 1205 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+21064.3s 1206 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+21064.3s 1207 [GPU 0] Fitting StandardScaler on Train split...
+21065.2s 1208 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+21065.2s 1209 [GPU 0] [OK] Will generate 863165 windows lazily during training
+21065.2s 1210 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+21065.2s 1211 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+21065.2s 1212 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+21065.2s 1213 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+21065.3s 1214 [GPU 0] [OK] Will generate 123267 windows lazily during training
+21065.3s 1215 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+21065.6s 1216 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+21065.6s 1217 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+21065.6s 1218 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+21065.7s 1219 [GPU 0] [OK] Will generate 246584 windows lazily during training
+21065.7s 1220 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+21065.7s 1221 [GPU 0] [2/5] Initializing Transformer (d_model=128, n_layers=2)...
+21065.7s 1222 [GPU 0]   Parameters: 406,913
+21065.8s 1223 [GPU 0] [3/5] Training Transformer...
+21065.8s 1224 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+21165.5s 1225 [GPU 0]   Epoch   1/30 | TrLoss: 0.2592 | VlLoss: 0.1903 | VlAcc: 0.9642 | VlF1: 0.9818 *
+21265.1s 1226 [GPU 0]   Epoch   2/30 | TrLoss: 0.2730 | VlLoss: 0.1623 | VlAcc: 0.9642 | VlF1: 0.9818
+21364.5s 1227 [GPU 0]   Epoch   3/30 | TrLoss: 0.1319 | VlLoss: 0.1898 | VlAcc: 0.9642 | VlF1: 0.9818
+21463.9s 1228 [GPU 0]   Epoch   4/30 | TrLoss: 0.1210 | VlLoss: 0.1843 | VlAcc: 0.9642 | VlF1: 0.9818
+21562.7s 1229 [GPU 0]   Epoch   5/30 | TrLoss: 0.0592 | VlLoss: 0.1880 | VlAcc: 0.9642 | VlF1: 0.9818
+21661.5s 1230 [GPU 0]   Epoch   6/30 | TrLoss: 0.0491 | VlLoss: 0.1842 | VlAcc: 0.9642 | VlF1: 0.9818
+21661.5s 1231 [GPU 0]   Early stopping at epoch 6 (patience=5)
+21661.5s 1232 [GPU 0]   Best Val F1: 0.9818 (6 epochs, 595.7s)
+21661.5s 1233 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_Transformer_seed123.pt
+21661.5s 1234 [GPU 0] [4/5] Evaluating on test set...
+21672.8s 1235 [GPU 0]   Test Acc: 0.0893 | Prec: 0.0893 | Rec: 1.0000 | F1: 0.1640 | AUC: 0.7332
+21672.8s 1236 [GPU 0] [5/5] Measuring efficiency...
+21673.1s 1237 [GPU 0]   Latency: 1.30ms | Throughput: 26810/s | Memory: 1.55MB
+21684.3s 1238 [GPU 0]   Attack types analyzed: 3
+21684.3s 1239 [GPU 0]
+21684.3s 1240 [GPU 0] [11/18] Running experiment...
+21684.3s 1241 [GPU 0]
+21684.3s 1242 [GPU 0] ======================================================================
+21684.3s 1243 [GPU 0]   Dataset: CICIDS2017 | Model: CNN-LSTM | Seed: 123
+21684.3s 1244 [GPU 0] ======================================================================
+21684.3s 1245 [GPU 0] [Reproducibility] Setting all random seeds to 123
+21684.3s 1246 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+21684.3s 1247 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+21684.3s 1248 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+21685.4s 1249 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+21685.4s 1250 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+21685.4s 1251 [GPU 0] Fitting StandardScaler on Train split...
+21686.3s 1252 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+21686.3s 1253 [GPU 0] [OK] Will generate 863165 windows lazily during training
+21686.3s 1254 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+21686.4s 1255 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+21686.4s 1256 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+21686.4s 1257 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+21686.4s 1258 [GPU 0] [OK] Will generate 123267 windows lazily during training
+21686.4s 1259 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+21686.7s 1260 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+21686.7s 1261 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+21686.7s 1262 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+21686.8s 1263 [GPU 0] [OK] Will generate 246584 windows lazily during training
+21686.8s 1264 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+21686.8s 1265 [GPU 0] [2/5] Initializing CNN-LSTM (d_model=128, n_layers=2)...
+21686.8s 1266 [GPU 0]   Parameters: 409,601
+21686.9s 1267 [GPU 0] [3/5] Training CNN-LSTM...
+21686.9s 1268 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+21771.6s 1269 [GPU 0]   Epoch   1/30 | TrLoss: 0.2616 | VlLoss: 0.1844 | VlAcc: 0.9642 | VlF1: 0.9818 *
+21855.7s 1270 [GPU 0]   Epoch   2/30 | TrLoss: 0.1113 | VlLoss: 0.1820 | VlAcc: 0.9642 | VlF1: 0.9818
+21940.6s 1271 [GPU 0]   Epoch   3/30 | TrLoss: 0.0387 | VlLoss: 0.1300 | VlAcc: 0.9642 | VlF1: 0.9818
+22025.2s 1272 [GPU 0]   Epoch   4/30 | TrLoss: 0.0184 | VlLoss: 0.0877 | VlAcc: 0.9696 | VlF1: 0.9845 *
+22110.3s 1273 [GPU 0]   Epoch   5/30 | TrLoss: 0.0102 | VlLoss: 0.0322 | VlAcc: 0.9910 | VlF1: 0.9953 *
+22196.8s 1274 [GPU 0]   Epoch   6/30 | TrLoss: 0.0102 | VlLoss: 0.0230 | VlAcc: 0.9949 | VlF1: 0.9973 *
+22282.5s 1275 [GPU 0]   Epoch   7/30 | TrLoss: 0.0068 | VlLoss: 0.0277 | VlAcc: 0.9924 | VlF1: 0.9960
+22372.8s 1276 [GPU 0]   Epoch   8/30 | TrLoss: 0.0078 | VlLoss: 0.0228 | VlAcc: 0.9938 | VlF1: 0.9968
+22463.8s 1277 [GPU 0]   Epoch   9/30 | TrLoss: 0.0031 | VlLoss: 0.0323 | VlAcc: 0.9940 | VlF1: 0.9969
+22554.3s 1278 [GPU 0]   Epoch  10/30 | TrLoss: 0.0019 | VlLoss: 0.0405 | VlAcc: 0.9866 | VlF1: 0.9930
+22645.1s 1279 [GPU 0]   Epoch  11/30 | TrLoss: 0.0016 | VlLoss: 0.0410 | VlAcc: 0.9928 | VlF1: 0.9963
+22645.1s 1280 [GPU 0]   Early stopping at epoch 11 (patience=5)
+22645.2s 1281 [GPU 0]   Best Val F1: 0.9973 (11 epochs, 958.2s)
+22645.2s 1282 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_CNN-LSTM_seed123.pt
+22645.2s 1283 [GPU 0] [4/5] Evaluating on test set...
+22657.9s 1284 [GPU 0]   Test Acc: 0.9737 | Prec: 0.7967 | Rec: 0.9466 | F1: 0.8652 | AUC: 0.9751
+22657.9s 1285 [GPU 0] [5/5] Measuring efficiency...
+22658.1s 1286 [GPU 0]   Latency: 0.99ms | Throughput: 32869/s | Memory: 1.56MB
+22671.1s 1287 [GPU 0]   Attack types analyzed: 3
+22671.1s 1288 [GPU 0]
+22671.1s 1289 [GPU 0] [12/18] Running experiment...
+22671.1s 1290 [GPU 0]
+22671.1s 1291 [GPU 0] ======================================================================
+22671.1s 1292 [GPU 0]   Dataset: CICIDS2017 | Model: TCN | Seed: 123
+22671.1s 1293 [GPU 0] ======================================================================
+22671.1s 1294 [GPU 0] [Reproducibility] Setting all random seeds to 123
+22671.1s 1295 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+22671.1s 1296 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+22671.1s 1297 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+22672.4s 1298 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+22672.4s 1299 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+22672.4s 1300 [GPU 0] Fitting StandardScaler on Train split...
+22673.4s 1301 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+22673.4s 1302 [GPU 0] [OK] Will generate 863165 windows lazily during training
+22673.4s 1303 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+22673.5s 1304 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+22673.5s 1305 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+22673.5s 1306 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+22673.6s 1307 [GPU 0] [OK] Will generate 123267 windows lazily during training
+22673.6s 1308 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+22674.0s 1309 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+22674.0s 1310 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+22674.0s 1311 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+22674.1s 1312 [GPU 0] [OK] Will generate 246584 windows lazily during training
+22674.1s 1313 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+22674.1s 1314 [GPU 0] [2/5] Initializing TCN (d_model=128, n_layers=2)...
+22674.1s 1315 [GPU 0]   Parameters: 423,169
+22674.2s 1316 [GPU 0] [3/5] Training TCN...
+22674.2s 1317 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+22792.9s 1318 [GPU 0]   Epoch   1/30 | TrLoss: 0.0292 | VlLoss: 0.0520 | VlAcc: 0.9810 | VlF1: 0.9901 *
+22908.8s 1319 [GPU 0]   Epoch   2/30 | TrLoss: 0.0156 | VlLoss: 0.0374 | VlAcc: 0.9903 | VlF1: 0.9950 *
+23016.6s 1320 [GPU 0]   Epoch   3/30 | TrLoss: 0.0050 | VlLoss: 0.0641 | VlAcc: 0.9839 | VlF1: 0.9916
+23124.3s 1321 [GPU 0]   Epoch   4/30 | TrLoss: 0.0031 | VlLoss: 0.0549 | VlAcc: 0.9859 | VlF1: 0.9927
+23231.7s 1322 [GPU 0]   Epoch   5/30 | TrLoss: 0.0022 | VlLoss: 0.0611 | VlAcc: 0.9880 | VlF1: 0.9938
+23338.9s 1323 [GPU 0]   Epoch   6/30 | TrLoss: 0.0021 | VlLoss: 0.0765 | VlAcc: 0.9882 | VlF1: 0.9938
+23446.4s 1324 [GPU 0]   Epoch   7/30 | TrLoss: 0.0018 | VlLoss: 0.0739 | VlAcc: 0.9894 | VlF1: 0.9945
+23446.4s 1325 [GPU 0]   Early stopping at epoch 7 (patience=5)
+23446.4s 1326 [GPU 0]   Best Val F1: 0.9950 (7 epochs, 772.2s)
+23446.4s 1327 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_TCN_seed123.pt
+23446.4s 1328 [GPU 0] [4/5] Evaluating on test set...
+23457.2s 1329 [GPU 0]   Test Acc: 0.8959 | Prec: 0.4598 | Rec: 0.9448 | F1: 0.6185 | AUC: 0.9700
+23457.2s 1330 [GPU 0] [5/5] Measuring efficiency...
+23457.6s 1331 [GPU 0]   Latency: 1.79ms | Throughput: 15978/s | Memory: 1.61MB
+23468.3s 1332 [GPU 0]   Attack types analyzed: 3
+23468.3s 1333 [GPU 0]
+23468.3s 1334 [GPU 0] [13/18] Running experiment...
+23468.3s 1335 [GPU 0]
+23468.3s 1336 [GPU 0] ======================================================================
+23468.3s 1337 [GPU 0]   Dataset: CICIDS2017 | Model: Mamba | Seed: 456
+23468.3s 1338 [GPU 0] ======================================================================
+23468.3s 1339 [GPU 0] [Reproducibility] Setting all random seeds to 456
+23468.3s 1340 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+23468.3s 1341 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+23468.3s 1342 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+23469.4s 1343 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+23469.4s 1344 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+23469.4s 1345 [GPU 0] Fitting StandardScaler on Train split...
+23470.4s 1346 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+23470.4s 1347 [GPU 0] [OK] Will generate 863165 windows lazily during training
+23470.4s 1348 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+23470.4s 1349 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+23470.4s 1350 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+23470.4s 1351 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+23470.5s 1352 [GPU 0] [OK] Will generate 123267 windows lazily during training
+23470.5s 1353 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+23470.8s 1354 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+23470.8s 1355 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+23470.8s 1356 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+23470.9s 1357 [GPU 0] [OK] Will generate 246584 windows lazily during training
+23470.9s 1358 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+23470.9s 1359 [GPU 0] [2/5] Initializing Mamba (d_model=128, n_layers=2)...
+23470.9s 1360 [GPU 0]   Parameters: 387,073
+23471.0s 1361 [GPU 0] [3/5] Training Mamba...
+23471.0s 1362 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+24127.8s 1363 [GPU 0]   Epoch   1/30 | TrLoss: 0.1830 | VlLoss: 0.1433 | VlAcc: 0.9694 | VlF1: 0.9844 *
+24783.1s 1364 [GPU 0]   Epoch   2/30 | TrLoss: 0.0710 | VlLoss: 0.0289 | VlAcc: 0.9936 | VlF1: 0.9967 *
+25437.3s 1365 [GPU 0]   Epoch   3/30 | TrLoss: 0.0424 | VlLoss: 0.0775 | VlAcc: 0.9767 | VlF1: 0.9881
+26089.6s 1366 [GPU 0]   Epoch   4/30 | TrLoss: 0.0309 | VlLoss: 0.1800 | VlAcc: 0.9642 | VlF1: 0.9818
+26745.9s 1367 [GPU 0]   Epoch   5/30 | TrLoss: 0.0443 | VlLoss: 0.0944 | VlAcc: 0.9822 | VlF1: 0.9908
+27417.5s 1368 [GPU 0]   Epoch   6/30 | TrLoss: 0.0184 | VlLoss: 0.0293 | VlAcc: 0.9927 | VlF1: 0.9962
+28085.2s 1369 [GPU 0]   Epoch   7/30 | TrLoss: 0.0047 | VlLoss: 0.6711 | VlAcc: 0.4894 | VlF1: 0.6399
+28085.2s 1370 [GPU 0]   Early stopping at epoch 7 (patience=5)
+28085.2s 1371 [GPU 0]   Best Val F1: 0.9967 (7 epochs, 4614.1s)
+28085.2s 1372 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_Mamba_seed456.pt
+28085.2s 1373 [GPU 0] [4/5] Evaluating on test set...
+28128.0s 1374 [GPU 0]   Test Acc: 0.9257 | Prec: 0.5484 | Rec: 0.9522 | F1: 0.6960 | AUC: 0.9766
+28128.0s 1375 [GPU 0] [5/5] Measuring efficiency...
+28131.1s 1376 [GPU 0]   Latency: 14.77ms | Throughput: 2122/s | Memory: 1.48MB
+28174.3s 1377 [GPU 0]   Attack types analyzed: 3
+28174.3s 1378 [GPU 0]
+28174.3s 1379 [GPU 0] [14/18] Running experiment...
+28174.3s 1380 [GPU 0]
+28174.3s 1381 [GPU 0] ======================================================================
+28174.3s 1382 [GPU 0]   Dataset: CICIDS2017 | Model: LSTM | Seed: 456
+28174.3s 1383 [GPU 0] ======================================================================
+28174.3s 1384 [GPU 0] [Reproducibility] Setting all random seeds to 456
+28174.3s 1385 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+28174.3s 1386 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+28174.3s 1387 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+28175.4s 1388 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+28175.4s 1389 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+28175.4s 1390 [GPU 0] Fitting StandardScaler on Train split...
+28176.5s 1391 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+28176.5s 1392 [GPU 0] [OK] Will generate 863165 windows lazily during training
+28176.5s 1393 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+28176.6s 1394 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+28176.6s 1395 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+28176.6s 1396 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+28176.6s 1397 [GPU 0] [OK] Will generate 123267 windows lazily during training
+28176.6s 1398 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+28177.0s 1399 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+28177.0s 1400 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+28177.0s 1401 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+28177.1s 1402 [GPU 0] [OK] Will generate 246584 windows lazily during training
+28177.1s 1403 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+28177.1s 1404 [GPU 0] [2/5] Initializing LSTM (d_model=128, n_layers=2)...
+28177.1s 1405 [GPU 0]   Parameters: 423,169
+28177.1s 1406 [GPU 0] [3/5] Training LSTM...
+28177.1s 1407 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+28264.0s 1408 [GPU 0]   Epoch   1/30 | TrLoss: 0.2353 | VlLoss: 0.1810 | VlAcc: 0.9642 | VlF1: 0.9818 *
+28350.5s 1409 [GPU 0]   Epoch   2/30 | TrLoss: 0.0355 | VlLoss: 0.1796 | VlAcc: 0.9642 | VlF1: 0.9818
+28436.8s 1410 [GPU 0]   Epoch   3/30 | TrLoss: 0.0361 | VlLoss: 0.1801 | VlAcc: 0.9642 | VlF1: 0.9818
+28522.9s 1411 [GPU 0]   Epoch   4/30 | TrLoss: 0.0199 | VlLoss: 0.1279 | VlAcc: 0.9688 | VlF1: 0.9841 *
+28608.7s 1412 [GPU 0]   Epoch   5/30 | TrLoss: 0.0213 | VlLoss: 0.1822 | VlAcc: 0.9642 | VlF1: 0.9818
+28694.8s 1413 [GPU 0]   Epoch   6/30 | TrLoss: 0.0193 | VlLoss: 0.0262 | VlAcc: 0.9936 | VlF1: 0.9967 *
+28780.2s 1414 [GPU 0]   Epoch   7/30 | TrLoss: 0.0050 | VlLoss: 0.0242 | VlAcc: 0.9959 | VlF1: 0.9979 *
+28866.2s 1415 [GPU 0]   Epoch   8/30 | TrLoss: 0.0027 | VlLoss: 0.0194 | VlAcc: 0.9971 | VlF1: 0.9985 *
+28951.4s 1416 [GPU 0]   Epoch   9/30 | TrLoss: 0.0023 | VlLoss: 0.0171 | VlAcc: 0.9969 | VlF1: 0.9984
+29036.3s 1417 [GPU 0]   Epoch  10/30 | TrLoss: 0.0021 | VlLoss: 0.0185 | VlAcc: 0.9969 | VlF1: 0.9984
+29121.2s 1418 [GPU 0]   Epoch  11/30 | TrLoss: 0.0019 | VlLoss: 0.0310 | VlAcc: 0.9947 | VlF1: 0.9973
+29206.3s 1419 [GPU 0]   Epoch  12/30 | TrLoss: 0.0012 | VlLoss: 0.0445 | VlAcc: 0.9864 | VlF1: 0.9929
+29291.5s 1420 [GPU 0]   Epoch  13/30 | TrLoss: 0.0011 | VlLoss: 0.0216 | VlAcc: 0.9947 | VlF1: 0.9973
+29291.5s 1421 [GPU 0]   Early stopping at epoch 13 (patience=5)
+29291.6s 1422 [GPU 0]   Best Val F1: 0.9985 (13 epochs, 1114.4s)
+29291.6s 1423 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_LSTM_seed456.pt
+29291.6s 1424 [GPU 0] [4/5] Evaluating on test set...
+29304.3s 1425 [GPU 0]   Test Acc: 0.9912 | Prec: 0.9865 | Rec: 0.9138 | F1: 0.9487 | AUC: 0.9878
+29304.3s 1426 [GPU 0] [5/5] Measuring efficiency...
+29304.5s 1427 [GPU 0]   Latency: 0.77ms | Throughput: 30474/s | Memory: 1.61MB
+29317.1s 1428 [GPU 0]   Attack types analyzed: 3
+29317.1s 1429 [GPU 0]
+29317.1s 1430 [GPU 0] [15/18] Running experiment...
+29317.1s 1431 [GPU 0]
+29317.1s 1432 [GPU 0] ======================================================================
+29317.1s 1433 [GPU 0]   Dataset: CICIDS2017 | Model: GRU | Seed: 456
+29317.1s 1434 [GPU 0] ======================================================================
+29317.1s 1435 [GPU 0] [Reproducibility] Setting all random seeds to 456
+29317.1s 1436 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+29317.1s 1437 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+29317.1s 1438 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+29318.2s 1439 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+29318.2s 1440 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+29318.2s 1441 [GPU 0] Fitting StandardScaler on Train split...
+29319.1s 1442 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+29319.1s 1443 [GPU 0] [OK] Will generate 863165 windows lazily during training
+29319.1s 1444 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+29319.2s 1445 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+29319.2s 1446 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+29319.2s 1447 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+29319.3s 1448 [GPU 0] [OK] Will generate 123267 windows lazily during training
+29319.3s 1449 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+29319.6s 1450 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+29319.6s 1451 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+29319.6s 1452 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+29319.7s 1453 [GPU 0] [OK] Will generate 246584 windows lazily during training
+29319.7s 1454 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+29319.7s 1455 [GPU 0] [2/5] Initializing GRU (d_model=128, n_layers=2)...
+29319.7s 1456 [GPU 0]   Parameters: 373,505
+29319.8s 1457 [GPU 0] [3/5] Training GRU...
+29319.8s 1458 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+29390.5s 1459 [GPU 0]   Epoch   1/30 | TrLoss: 0.0538 | VlLoss: 0.1752 | VlAcc: 0.9642 | VlF1: 0.9818 *
+29461.2s 1460 [GPU 0]   Epoch   2/30 | TrLoss: 0.0440 | VlLoss: 0.1813 | VlAcc: 0.9642 | VlF1: 0.9818
+29531.8s 1461 [GPU 0]   Epoch   3/30 | TrLoss: 0.0355 | VlLoss: 0.1798 | VlAcc: 0.9642 | VlF1: 0.9818
+29602.0s 1462 [GPU 0]   Epoch   4/30 | TrLoss: 0.0295 | VlLoss: 0.1799 | VlAcc: 0.9642 | VlF1: 0.9818
+29672.0s 1463 [GPU 0]   Epoch   5/30 | TrLoss: 0.0431 | VlLoss: 0.1810 | VlAcc: 0.9642 | VlF1: 0.9818
+29742.1s 1464 [GPU 0]   Epoch   6/30 | TrLoss: 0.0282 | VlLoss: 0.1817 | VlAcc: 0.9642 | VlF1: 0.9818
+29742.1s 1465 [GPU 0]   Early stopping at epoch 6 (patience=5)
+29742.1s 1466 [GPU 0]   Best Val F1: 0.9818 (6 epochs, 422.3s)
+29742.1s 1467 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_GRU_seed456.pt
+29742.1s 1468 [GPU 0] [4/5] Evaluating on test set...
+29752.9s 1469 [GPU 0]   Test Acc: 0.0894 | Prec: 0.0893 | Rec: 1.0000 | F1: 0.1640 | AUC: 0.0914
+29752.9s 1470 [GPU 0] [5/5] Measuring efficiency...
+29753.0s 1471 [GPU 0]   Latency: 0.51ms | Throughput: 44000/s | Memory: 1.42MB
+29763.8s 1472 [GPU 0]   Attack types analyzed: 3
+29763.9s 1473 [GPU 0]
+29763.9s 1474 [GPU 0] [16/18] Running experiment...
+29763.9s 1475 [GPU 0]
+29763.9s 1476 [GPU 0] ======================================================================
+29763.9s 1477 [GPU 0]   Dataset: CICIDS2017 | Model: Transformer | Seed: 456
+29763.9s 1478 [GPU 0] ======================================================================
+29763.9s 1479 [GPU 0] [Reproducibility] Setting all random seeds to 456
+29763.9s 1480 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+29763.9s 1481 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+29763.9s 1482 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+29765.0s 1483 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+29765.0s 1484 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+29765.0s 1485 [GPU 0] Fitting StandardScaler on Train split...
+29765.9s 1486 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+29765.9s 1487 [GPU 0] [OK] Will generate 863165 windows lazily during training
+29765.9s 1488 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+29766.0s 1489 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+29766.0s 1490 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+29766.0s 1491 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+29766.0s 1492 [GPU 0] [OK] Will generate 123267 windows lazily during training
+29766.0s 1493 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+29766.4s 1494 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+29766.4s 1495 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+29766.4s 1496 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+29766.5s 1497 [GPU 0] [OK] Will generate 246584 windows lazily during training
+29766.5s 1498 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+29766.5s 1499 [GPU 0] [2/5] Initializing Transformer (d_model=128, n_layers=2)...
+29766.5s 1500 [GPU 0]   Parameters: 406,913
+29766.5s 1501 [GPU 0] [3/5] Training Transformer...
+29766.5s 1502 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+29866.2s 1503 [GPU 0]   Epoch   1/30 | TrLoss: 0.1211 | VlLoss: 0.1927 | VlAcc: 0.9642 | VlF1: 0.9818 *
+29965.9s 1504 [GPU 0]   Epoch   2/30 | TrLoss: 0.0439 | VlLoss: 0.1473 | VlAcc: 0.9728 | VlF1: 0.9860 *
+30065.4s 1505 [GPU 0]   Epoch   3/30 | TrLoss: 0.0616 | VlLoss: 0.1436 | VlAcc: 0.9642 | VlF1: 0.9818
+30164.6s 1506 [GPU 0]   Epoch   4/30 | TrLoss: 0.0366 | VlLoss: 0.2879 | VlAcc: 0.9188 | VlF1: 0.9570
+30263.9s 1507 [GPU 0]   Epoch   5/30 | TrLoss: 0.0337 | VlLoss: 0.3617 | VlAcc: 0.9294 | VlF1: 0.9627
+30363.4s 1508 [GPU 0]   Epoch   6/30 | TrLoss: 0.0212 | VlLoss: 0.1347 | VlAcc: 0.9705 | VlF1: 0.9849
+30462.7s 1509 [GPU 0]   Epoch   7/30 | TrLoss: 0.0167 | VlLoss: 0.2355 | VlAcc: 0.8851 | VlF1: 0.9374
+30462.7s 1510 [GPU 0]   Early stopping at epoch 7 (patience=5)
+30462.7s 1511 [GPU 0]   Best Val F1: 0.9860 (7 epochs, 696.1s)
+30462.7s 1512 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_Transformer_seed456.pt
+30462.7s 1513 [GPU 0] [4/5] Evaluating on test set...
+30473.9s 1514 [GPU 0]   Test Acc: 0.4633 | Prec: 0.1424 | Rec: 0.9966 | F1: 0.2492 | AUC: 0.5369
+30473.9s 1515 [GPU 0] [5/5] Measuring efficiency...
+30474.2s 1516 [GPU 0]   Latency: 1.46ms | Throughput: 26556/s | Memory: 1.55MB
+30485.5s 1517 [GPU 0]   Attack types analyzed: 3
+30485.5s 1518 [GPU 0]
+30485.5s 1519 [GPU 0] [17/18] Running experiment...
+30485.5s 1520 [GPU 0]
+30485.5s 1521 [GPU 0] ======================================================================
+30485.5s 1522 [GPU 0]   Dataset: CICIDS2017 | Model: CNN-LSTM | Seed: 456
+30485.5s 1523 [GPU 0] ======================================================================
+30485.5s 1524 [GPU 0] [Reproducibility] Setting all random seeds to 456
+30485.5s 1525 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+30485.5s 1526 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+30485.5s 1527 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+30486.6s 1528 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+30486.6s 1529 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+30486.6s 1530 [GPU 0] Fitting StandardScaler on Train split...
+30487.5s 1531 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+30487.5s 1532 [GPU 0] [OK] Will generate 863165 windows lazily during training
+30487.5s 1533 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+30487.5s 1534 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+30487.5s 1535 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+30487.5s 1536 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+30487.6s 1537 [GPU 0] [OK] Will generate 123267 windows lazily during training
+30487.6s 1538 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+30487.9s 1539 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+30487.9s 1540 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+30487.9s 1541 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+30488.0s 1542 [GPU 0] [OK] Will generate 246584 windows lazily during training
+30488.0s 1543 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+30488.0s 1544 [GPU 0] [2/5] Initializing CNN-LSTM (d_model=128, n_layers=2)...
+30488.0s 1545 [GPU 0]   Parameters: 409,601
+30488.1s 1546 [GPU 0] [3/5] Training CNN-LSTM...
+30488.1s 1547 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+30573.2s 1548 [GPU 0]   Epoch   1/30 | TrLoss: 0.2727 | VlLoss: 0.1851 | VlAcc: 0.9642 | VlF1: 0.9818 *
+30657.8s 1549 [GPU 0]   Epoch   2/30 | TrLoss: 0.1166 | VlLoss: 0.1836 | VlAcc: 0.9642 | VlF1: 0.9818
+30742.5s 1550 [GPU 0]   Epoch   3/30 | TrLoss: 0.0377 | VlLoss: 0.1818 | VlAcc: 0.9642 | VlF1: 0.9818
+30827.1s 1551 [GPU 0]   Epoch   4/30 | TrLoss: 0.0441 | VlLoss: 0.1806 | VlAcc: 0.9642 | VlF1: 0.9818
+30911.6s 1552 [GPU 0]   Epoch   5/30 | TrLoss: 0.0350 | VlLoss: 0.1642 | VlAcc: 0.9642 | VlF1: 0.9818
+30996.6s 1553 [GPU 0]   Epoch   6/30 | TrLoss: 0.0171 | VlLoss: 0.1341 | VlAcc: 0.9649 | VlF1: 0.9821 *
+31081.2s 1554 [GPU 0]   Epoch   7/30 | TrLoss: 0.0086 | VlLoss: 0.3340 | VlAcc: 0.9734 | VlF1: 0.9862 *
+31165.7s 1555 [GPU 0]   Epoch   8/30 | TrLoss: 0.0103 | VlLoss: 0.2288 | VlAcc: 0.9723 | VlF1: 0.9858
+31250.1s 1556 [GPU 0]   Epoch   9/30 | TrLoss: 0.0168 | VlLoss: 0.1622 | VlAcc: 0.9803 | VlF1: 0.9899 *
+31334.6s 1557 [GPU 0]   Epoch  10/30 | TrLoss: 0.0048 | VlLoss: 0.7153 | VlAcc: 0.6607 | VlF1: 0.7876
+31419.3s 1558 [GPU 0]   Epoch  11/30 | TrLoss: 0.0033 | VlLoss: 0.9422 | VlAcc: 0.4945 | VlF1: 0.6450
+31503.8s 1559 [GPU 0]   Epoch  12/30 | TrLoss: 0.0027 | VlLoss: 0.0275 | VlAcc: 0.9935 | VlF1: 0.9966 *
+31588.6s 1560 [GPU 0]   Epoch  13/30 | TrLoss: 0.0021 | VlLoss: 0.0202 | VlAcc: 0.9948 | VlF1: 0.9973 *
+31673.1s 1561 [GPU 0]   Epoch  14/30 | TrLoss: 0.0018 | VlLoss: 0.0231 | VlAcc: 0.9951 | VlF1: 0.9975 *
+31757.8s 1562 [GPU 0]   Epoch  15/30 | TrLoss: 0.0014 | VlLoss: 0.0350 | VlAcc: 0.9942 | VlF1: 0.9970
+31842.4s 1563 [GPU 0]   Epoch  16/30 | TrLoss: 0.0011 | VlLoss: 0.0552 | VlAcc: 0.9944 | VlF1: 0.9971
+31926.9s 1564 [GPU 0]   Epoch  17/30 | TrLoss: 0.0012 | VlLoss: 0.0414 | VlAcc: 0.9948 | VlF1: 0.9973
+32011.4s 1565 [GPU 0]   Epoch  18/30 | TrLoss: 0.0009 | VlLoss: 0.0617 | VlAcc: 0.9961 | VlF1: 0.9980 *
+32095.9s 1566 [GPU 0]   Epoch  19/30 | TrLoss: 0.0006 | VlLoss: 0.0532 | VlAcc: 0.9954 | VlF1: 0.9976
+32180.4s 1567 [GPU 0]   Epoch  20/30 | TrLoss: 0.0006 | VlLoss: 0.0339 | VlAcc: 0.9963 | VlF1: 0.9981 *
+32264.9s 1568 [GPU 0]   Epoch  21/30 | TrLoss: 0.0005 | VlLoss: 0.0314 | VlAcc: 0.9963 | VlF1: 0.9981 *
+32349.2s 1569 [GPU 0]   Epoch  22/30 | TrLoss: 0.0006 | VlLoss: 0.0382 | VlAcc: 0.9955 | VlF1: 0.9976
+32433.6s 1570 [GPU 0]   Epoch  23/30 | TrLoss: 0.0004 | VlLoss: 0.0348 | VlAcc: 0.9957 | VlF1: 0.9978
+32518.0s 1571 [GPU 0]   Epoch  24/30 | TrLoss: 0.0003 | VlLoss: 0.0303 | VlAcc: 0.9955 | VlF1: 0.9977
+32602.8s 1572 [GPU 0]   Epoch  25/30 | TrLoss: 0.0005 | VlLoss: 0.0328 | VlAcc: 0.9951 | VlF1: 0.9975
+32687.3s 1573 [GPU 0]   Epoch  26/30 | TrLoss: 0.0004 | VlLoss: 0.0320 | VlAcc: 0.9951 | VlF1: 0.9974
+32687.3s 1574 [GPU 0]   Early stopping at epoch 26 (patience=5)
+32687.3s 1575 [GPU 0]   Best Val F1: 0.9981 (26 epochs, 2199.1s)
+32687.3s 1576 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_CNN-LSTM_seed456.pt
+32687.3s 1577 [GPU 0] [4/5] Evaluating on test set...
+32698.4s 1578 [GPU 0]   Test Acc: 0.9638 | Prec: 0.7258 | Rec: 0.9559 | F1: 0.8251 | AUC: 0.9733
+32698.4s 1579 [GPU 0] [5/5] Measuring efficiency...
+32698.6s 1580 [GPU 0]   Latency: 0.87ms | Throughput: 33971/s | Memory: 1.56MB
+32709.7s 1581 [GPU 0]   Attack types analyzed: 3
+32709.7s 1582 [GPU 0]
+32709.7s 1583 [GPU 0] [18/18] Running experiment...
+32709.7s 1584 [GPU 0]
+32709.7s 1585 [GPU 0] ======================================================================
+32709.7s 1586 [GPU 0]   Dataset: CICIDS2017 | Model: TCN | Seed: 456
+32709.7s 1587 [GPU 0] ======================================================================
+32709.7s 1588 [GPU 0] [Reproducibility] Setting all random seeds to 456
+32709.7s 1589 [GPU 0] [Reproducibility] [OK] All seeds set and deterministic mode enabled
+32709.7s 1590 [GPU 0] [1/5] Loading CICIDS2017 dataset...
+32709.7s 1591 [GPU 0] [TRAIN] Loading from cache: outputs/cache/cicids2017_train.npz
+32710.8s 1592 [GPU 0]   Cached shape: (863214, 77), labels: 863214
+32710.8s 1593 [GPU 0] [TRAIN] Raw shape (before windowing): (863214, 77)
+32710.8s 1594 [GPU 0] Fitting StandardScaler on Train split...
+32711.7s 1595 [GPU 0] Saved scaler to outputs/scaler_cicids.pkl
+32711.7s 1596 [GPU 0] [OK] Will generate 863165 windows lazily during training
+32711.7s 1597 [GPU 0] [VAL] Loading from cache: outputs/cache/cicids2017_val.npz
+32711.8s 1598 [GPU 0]   Cached shape: (123316, 77), labels: 123316
+32711.8s 1599 [GPU 0] [VAL] Raw shape (before windowing): (123316, 77)
+32711.8s 1600 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+32711.8s 1601 [GPU 0] [OK] Will generate 123267 windows lazily during training
+32711.8s 1602 [GPU 0] [TEST] Loading from cache: outputs/cache/cicids2017_test.npz
+32712.2s 1603 [GPU 0]   Cached shape: (246633, 77), labels: 246633
+32712.2s 1604 [GPU 0] [TEST] Raw shape (before windowing): (246633, 77)
+32712.2s 1605 [GPU 0] Loading scaler from outputs/scaler_cicids.pkl...
+32712.3s 1606 [GPU 0] [OK] Will generate 246584 windows lazily during training
+32712.3s 1607 [GPU 0]   Features: 77, Train: 863165, Val: 123267, Test: 246584
+32712.3s 1608 [GPU 0] [2/5] Initializing TCN (d_model=128, n_layers=2)...
+32712.3s 1609 [GPU 0]   Parameters: 423,169
+32712.3s 1610 [GPU 0] [3/5] Training TCN...
+32712.3s 1611 [GPU 0]   Using class-weighted loss (pos_weight=1.00)
+32819.3s 1612 [GPU 0]   Epoch   1/30 | TrLoss: 0.0315 | VlLoss: 0.0679 | VlAcc: 0.9739 | VlF1: 0.9866 *
+32925.9s 1613 [GPU 0]   Epoch   2/30 | TrLoss: 0.0184 | VlLoss: 0.0360 | VlAcc: 0.9888 | VlF1: 0.9942 *
+33033.1s 1614 [GPU 0]   Epoch   3/30 | TrLoss: 0.0054 | VlLoss: 0.0316 | VlAcc: 0.9911 | VlF1: 0.9954 *
+33139.8s 1615 [GPU 0]   Epoch   4/30 | TrLoss: 0.0031 | VlLoss: 0.0422 | VlAcc: 0.9881 | VlF1: 0.9939
+33246.8s 1616 [GPU 0]   Epoch   5/30 | TrLoss: 0.0024 | VlLoss: 0.0343 | VlAcc: 0.9904 | VlF1: 0.9950
+33353.7s 1617 [GPU 0]   Epoch   6/30 | TrLoss: 0.0021 | VlLoss: 0.0349 | VlAcc: 0.9910 | VlF1: 0.9953
+33460.7s 1618 [GPU 0]   Epoch   7/30 | TrLoss: 0.0019 | VlLoss: 0.0417 | VlAcc: 0.9888 | VlF1: 0.9942
+33567.3s 1619 [GPU 0]   Epoch   8/30 | TrLoss: 0.0015 | VlLoss: 0.0448 | VlAcc: 0.9892 | VlF1: 0.9944
+33567.3s 1620 [GPU 0]   Early stopping at epoch 8 (patience=5)
+33567.3s 1621 [GPU 0]   Best Val F1: 0.9954 (8 epochs, 855.0s)
+33567.3s 1622 [GPU 0]   💾 Model saved to: outputs/checkpoints/CICIDS2017_TCN_seed456.pt
+33567.3s 1623 [GPU 0] [4/5] Evaluating on test set...
+33578.0s 1624 [GPU 0]   Test Acc: 0.7967 | Prec: 0.3002 | Rec: 0.9584 | F1: 0.4572 | AUC: 0.9687
+33578.0s 1625 [GPU 0] [5/5] Measuring efficiency...
+33578.4s 1626 [GPU 0]   Latency: 1.76ms | Throughput: 16367/s | Memory: 1.61MB
+33589.0s 1627 [GPU 0]   Attack types analyzed: 3
+33589.0s 1628 [GPU 0]
+33589.0s 1629 [GPU 0]
+33589.0s 1630 [GPU 0] ======================================================================
+33589.0s 1631 [GPU 0] BENCHMARK SUMMARY
+33589.0s 1632 [GPU 0] ======================================================================
+33589.0s 1633 [GPU 0]
+33589.0s 1634 [GPU 0] 📊 CICIDS2017
+33589.0s 1635 [GPU 0] Model                Acc     Prec      Rec       F1      AUC  Lat(ms)     Params
+33589.0s 1636 [GPU 0] -----------------------------------------------------------------------------------
+33589.0s 1637 [GPU 0] Mamba           0.9600  0.7467  0.9398  0.8208  0.9818   15.14     387,073
+33589.0s 1638 [GPU 0] LSTM            0.9912  0.9914  0.9097  0.9488  0.9876    0.77     423,169
+33589.0s 1639 [GPU 0] GRU             0.3901  0.3903  0.9708  0.4263  0.6273    0.64     373,505
+33589.0s 1640 [GPU 0] Transformer     0.2168  0.1072  0.9984  0.1928  0.6152    1.47     406,913
+33589.0s 1641 [GPU 0] CNN-LSTM        0.6756  0.5373  0.9675  0.6181  0.7155    0.94     409,601
+33589.0s 1642 [GPU 0] TCN             0.8569  0.3934  0.9540  0.5534  0.9705    1.81     423,169
+33589.0s 1643 [GPU 0]
+33589.0s 1644 [GPU 0] ✅ Results saved to: outputs/benchmark_results/
+33589.0s 1645 [GPU 0]    Run 'python generate_tables.py' to generate publication tables.
+33589.9s 1646 
+33589.9s 1647 ✅ GPU 0 finished (exit=0)
+33589.9s 1648 ✅ GPU 1 finished (exit=0)
+33589.9s 1649 ⏱️  Total time: 9h 19m
+33589.9s 1650 
+33589.9s 1651 ============================================================
+33589.9s 1652 🏁 All done! Total time: 9h 19m
+33589.9s 1653 ============================================================
+33589.9s 1654 
+33589.9s 1655 📊 Merging results from both GPUs...
+33589.9s 1656 ⚠ No results file found — check gpu0_log.txt and gpu1_log.txt for errors
+33589.9s 1657 📋 Generating publication tables...
+33592.6s 1658 Loaded 18 experiment results.
+33592.6s 1659 
+33592.6s 1660 ## Table 1: Classification Results — CICIDS2017
+33592.6s 1661 *Mean ± std across 3 seeds*
+33592.6s 1662 
+33592.6s 1663 | Model | Accuracy | Precision | Recall | F1-Score | AUC-ROC |
+33592.6s 1664 |-------|----------|-----------|--------|----------|---------|
+33592.6s 1665 | LSTM | 99.12 ± 0.01 | 99.14 ± 0.46 | 90.97 ± 0.45 | 94.88 ± 0.06 | 98.76 ± 0.02 |
+33592.6s 1666 | Mamba | 96.00 ± 2.58 | 74.67 ± 16.28 | 93.98 ± 1.85 | 82.08 ± 9.62 | 98.18 ± 0.40 |
+33592.6s 1667 | CNN-LSTM | 67.56 ± 41.46 | 53.73 ± 31.81 | 96.75 ± 2.33 | 61.81 ± 32.15 | 71.55 ± 36.59 |
+33592.6s 1668 | TCN | 85.69 ± 4.32 | 39.34 ± 6.78 | 95.40 ± 0.65 | 55.34 ± 6.94 | 97.05 ± 0.17 |
+33592.6s 1669 | GRU | 39.01 ± 42.53 | 39.03 ± 42.56 | 97.08 ± 4.12 | 42.63 ± 37.08 | 62.73 ± 38.59 |
+33592.6s 1670 | Transformer | 21.68 ± 17.44 | 10.72 ± 2.49 | 99.84 ± 0.14 | 19.28 ± 3.99 | 61.52 ± 8.49 |
+33592.6s 1671 
+33592.6s 1672 ## Table 2: Efficiency Comparison — CICIDS2017
+33592.6s 1673 
+33592.6s 1674 | Model | Params | Memory (MB) | Latency (ms) | Throughput (/s) | Train Time (s) |
+33592.6s 1675 |-------|--------|-------------|--------------|-----------------|----------------|
+33592.6s 1676 | GRU | 373,505 | 1.42 | 0.64 ± 0.18 | 43408 | 705.9 |
+33592.6s 1677 | LSTM | 423,169 | 1.61 | 0.77 ± 0.01 | 30460 | 1112.1 |
+33592.6s 1678 | CNN-LSTM | 409,601 | 1.56 | 0.94 ± 0.05 | 33516 | 1223.4 |
+33592.6s 1679 | Transformer | 406,913 | 1.55 | 1.47 ± 0.14 | 24570 | 704.4 |
+33592.6s 1680 | TCN | 423,169 | 1.61 | 1.81 ± 0.06 | 15822 | 979.7 |
+33592.6s 1681 | Mamba | 387,073 | 1.48 | 15.14 ± 1.12 | 2154 | 6220.6 |
+33592.6s 1682 
+33592.6s 1683 ## Table 3: Per-Attack-Type F1 (%) — CICIDS2017
+33592.6s 1684 
+33592.6s 1685 | Model | BENIGN | Bot | PortScan |
+33592.6s 1686 |-------|--------|-----|----------|
+33592.6s 1687 | Mamba | 98.0 | 55.0 | 99.6 |
+33592.6s 1688 | LSTM | 100.0 | 13.4 | 99.6 |
+33592.6s 1689 | GRU | 33.3 | 71.3 | 99.9 |
+33592.6s 1690 | Transformer | 20.0 | 99.5 | 100.0 |
+33592.6s 1691 | CNN-LSTM | 65.7 | 79.3 | 99.8 |
+33592.6s 1692 | TCN | 91.7 | 69.8 | 99.7 |
+33592.6s 1693 
+33592.6s 1694 ## Table 4: Statistical Significance (Wilcoxon) — CICIDS2017
+33592.6s 1695 
+33592.6s 1696 | Model A | Model B | p-value | Significant (p<0.05) |
+33592.6s 1697 |---------|---------|---------|----------------------|
+33592.6s 1698 | Mamba | LSTM | N/A | N/A |
+33592.6s 1699 | Mamba | GRU | N/A | N/A |
+33592.6s 1700 | Mamba | Transformer | N/A | N/A |
+33592.6s 1701 | Mamba | CNN-LSTM | N/A | N/A |
+33592.6s 1702 | Mamba | TCN | N/A | N/A |
+33592.6s 1703 | LSTM | GRU | N/A | N/A |
+33592.6s 1704 | LSTM | Transformer | N/A | N/A |
+33592.6s 1705 | LSTM | CNN-LSTM | N/A | N/A |
+33592.6s 1706 | LSTM | TCN | N/A | N/A |
+33592.6s 1707 | GRU | Transformer | N/A | N/A |
+33592.6s 1708 | GRU | CNN-LSTM | N/A | N/A |
+33592.6s 1709 | GRU | TCN | N/A | N/A |
+33592.6s 1710 | Transformer | CNN-LSTM | N/A | N/A |
+33592.6s 1711 | Transformer | TCN | N/A | N/A |
+33592.6s 1712 | CNN-LSTM | TCN | N/A | N/A |
+33592.6s 1713 
+33592.6s 1714 
+33592.6s 1715 ✅ Tables saved to outputs/benchmark_results/benchmark_tables.md
+33593.0s 1716 
+33593.0s 1717 ✅ Results saved to outputs/benchmark_results/
+33595.9s 1718 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+33595.9s 1719 cells[i][c] = re.sub('\\\\\|', '|', cell)
+33596.0s 1720 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+33596.0s 1721 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+33596.6s 1722 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+33596.6s 1723 warn(
+33596.6s 1724 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+33597.0s 1725 [NbConvertApp] Writing 130054 bytes to __notebook__.ipynb
+33599.3s 1726 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+33599.3s 1727 warn(
+33599.3s 1728 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+33600.1s 1729 [NbConvertApp] Writing 382006 bytes to __results__.html

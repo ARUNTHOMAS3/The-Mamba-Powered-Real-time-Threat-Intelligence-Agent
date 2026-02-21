@@ -38,19 +38,49 @@ from utils.config_loader import load_config
 from utils.reproducibility import set_seeds
 
 
-def train_model(model, train_loader, val_loader, config, device, pos_weight=None):
+# Per-model learning rate multipliers — sensitive architectures need lower LR
+MODEL_LR_SCALE = {
+    'Mamba': 0.3,        # SSM is sensitive to large updates
+    'Transformer': 0.3,  # Self-attention gradients can explode
+    'CNN-LSTM': 0.5,     # Hybrid arch needs moderate LR
+    'TCN': 0.5,          # Dilated convs can be unstable
+    'LSTM': 1.0,
+    'GRU': 1.0,
+}
+
+GRAD_CLIP_NORM = {
+    'Mamba': 0.5,
+    'Transformer': 0.5,
+    'CNN-LSTM': 0.5,
+    'TCN': 1.0,
+    'LSTM': 1.0,
+    'GRU': 1.0,
+}
+
+WARMUP_EPOCHS = 3  # Linear warmup for first N epochs
+
+
+def train_model(model, train_loader, val_loader, config, device, pos_weight=None, model_name='Unknown'):
     """
-    Train a model with early stopping and class-weighted loss.
+    Train a model with early stopping, class-weighted loss, NaN protection,
+    per-model learning rate, and linear warmup.
     
     Args:
         pos_weight: weight for positive (attack) class. If None, equal weighting.
+        model_name: name of the model (for per-model LR/clipping settings).
     
     Returns:
         dict with best_val_f1, training_history, train_time_sec
     """
     epochs = config['training']['epochs']
-    lr = config['training']['learning_rate']
+    base_lr = config['training']['learning_rate']
     patience = config['training']['early_stopping']['patience']
+    
+    # Apply per-model LR scaling
+    lr_scale = MODEL_LR_SCALE.get(model_name, 1.0)
+    lr = base_lr * lr_scale
+    clip_norm = GRAD_CLIP_NORM.get(model_name, 1.0)
+    print(f"  LR: {lr:.6f} (base={base_lr} × {lr_scale} for {model_name}), grad_clip={clip_norm}")
     
     optimizer = optim.Adam(model.parameters(), lr=lr)
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=2)
@@ -71,22 +101,42 @@ def train_model(model, train_loader, val_loader, config, device, pos_weight=None
     t_start = time.time()
     
     for epoch in range(epochs):
+        # === Linear warmup ===
+        if epoch < WARMUP_EPOCHS:
+            warmup_factor = (epoch + 1) / WARMUP_EPOCHS
+            for pg in optimizer.param_groups:
+                pg['lr'] = lr * warmup_factor
+        
         # === Training ===
         model.train()
         train_loss = 0
         n_batches = 0
+        nan_batches = 0
         
         for x, y in train_loader:
             x, y = x.to(device), y.to(device)
             optimizer.zero_grad()
             logits = model(x).squeeze()
             loss = criterion(logits, y)
+            
+            # NaN protection: skip bad batches
+            if torch.isnan(loss) or torch.isinf(loss):
+                nan_batches += 1
+                if nan_batches > 10:
+                    print(f"  ⚠ Too many NaN batches ({nan_batches}), reducing LR by 10x")
+                    for pg in optimizer.param_groups:
+                        pg['lr'] *= 0.1
+                    nan_batches = 0  # Reset counter after LR reduction
+                continue
+            
             loss.backward()
-            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=clip_norm)
             optimizer.step()
             train_loss += loss.item()
             n_batches += 1
         
+        if nan_batches > 0:
+            print(f"  ⚠ {nan_batches} NaN batches skipped in epoch {epoch+1}")
         avg_train_loss = train_loss / max(n_batches, 1)
         
         # === Validation ===
@@ -251,7 +301,7 @@ def run_single_experiment(dataset_name, model_name, seed, config, device):
     
     # Train
     print(f"[3/5] Training {model_name}...")
-    train_result = train_model(model, train_loader, val_loader, config, device, pos_weight=pos_weight)
+    train_result = train_model(model, train_loader, val_loader, config, device, pos_weight=pos_weight, model_name=model_name)
     print(f"  Best Val F1: {train_result['best_val_f1']:.4f} "
           f"({train_result['epochs_trained']} epochs, {train_result['train_time_sec']:.1f}s)")
     
