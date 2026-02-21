@@ -26,13 +26,13 @@ def main():
     if n_gpus < 2:
         print("\n⚠ Only 1 GPU detected. Running normally on GPU 0...")
         os.execv(sys.executable, [sys.executable, "-u", "run_benchmark.py",
-                                   "--datasets", "CICIDS2017",
+                                   "--datasets", "CICIDS2017", "UNSW-NB15",
                                    "--seeds", "42", "123", "456", "789", "1024"])
         return
     
     print(f"\n🚀 Running on {n_gpus} GPUs in parallel!")
-    print("   GPU 0: Seeds [42, 123, 456]")
-    print("   GPU 1: Seeds [789, 1024]")
+    print("   GPU 0: Seeds [42, 123, 456] — CICIDS2017 + UNSW-NB15")
+    print("   GPU 1: Seeds [789, 1024]    — CICIDS2017 + UNSW-NB15")
     print("=" * 60)
     
     import threading
@@ -53,7 +53,7 @@ def main():
     # Start both processes with live output
     p0 = subprocess.Popen(
         [sys.executable, "-u", "run_benchmark.py",
-         "--datasets", "CICIDS2017",
+         "--datasets", "CICIDS2017", "UNSW-NB15",
          "--seeds", "42", "123", "456"],
         env=env0,
         stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
@@ -63,7 +63,7 @@ def main():
     
     p1 = subprocess.Popen(
         [sys.executable, "-u", "run_benchmark.py",
-         "--datasets", "CICIDS2017",
+         "--datasets", "CICIDS2017", "UNSW-NB15",
          "--seeds", "789", "1024"],
         env=env1,
         stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
