@@ -76,39 +76,25 @@ class PureMambaBlock(nn.Module):
         
         dt = F.softplus(self.dt_proj(dt))  # (B, L, d_inner)
         
-        # Scanning
-        # This is a simplified "slow" scan loop in pure PyTorch
-        # A_log corresponds to -A in some implementations, we take standard approximation
-        A = -torch.exp(self.A_log) # (d_inner, d_state)
+        # Selective scan — vectorized for GPU efficiency
+        A = -torch.exp(self.A_log)  # (d_inner, d_state)
         
-        # Prepare hidden state
-        h = torch.zeros(b, self.d_inner, self.d_state, device=x.device)
-        y = []
+        # Pre-compute all discretized params as full tensors
+        # dt: (B, L, d_inner), B: (B, L, d_state), C: (B, L, d_state)
+        dA = torch.exp(A.unsqueeze(0).unsqueeze(0) * dt.unsqueeze(-1))  # (B, L, d_inner, d_state)
+        dB = dt.unsqueeze(-1) * B.unsqueeze(2)  # (B, L, d_inner, d_state)
+        dBx = dB * x_branch.unsqueeze(-1)       # (B, L, d_inner, d_state)
         
+        # Sequential scan (required for correctness of recurrence)
+        # but with minimal Python overhead — operate on pre-computed tensors
+        h = torch.zeros(b, self.d_inner, self.d_state, device=x.device, dtype=x.dtype)
+        ys = []
         for t in range(l):
-            # Current inputs
-            xt = x_branch[:, t, :] # (B, d_inner)
-            dt_t = dt[:, t, :]     # (B, d_inner)
-            bt = B[:, t, :]        # (B, d_state)
-            ct = C[:, t, :]        # (B, d_state)
-            
-            # Discretize A -> dA, B -> dB
-            # exp(A * dt)
-            # A broadcast: (1, d_inner, d_state) * (B, d_inner, 1)
-            dA = torch.exp(A * dt_t.unsqueeze(-1)) # (B, d_inner, d_state)
-            dB = dt_t.unsqueeze(-1) * bt.unsqueeze(1) # (B, d_inner, d_state)
-            
-            # State update
-            # h_t = dA * h_{t-1} + dB * x_t
-            h = dA * h + dB * xt.unsqueeze(-1)
-            
-            # Output
-            # y_t = C_t * h_t + D * x_t
-            # C broadcast: (B, 1, d_state) * (B, d_inner, d_state) -> sum dim -1
-            y_t = torch.sum(h * ct.unsqueeze(1), dim=-1) + self.D * xt
-            y.append(y_t)
-            
-        y = torch.stack(y, dim=1) # (B, L, d_inner)
+            h = dA[:, t] * h + dBx[:, t]
+            y_t = torch.sum(h * C[:, t].unsqueeze(1), dim=-1) + self.D * x_branch[:, t]
+            ys.append(y_t)
+        
+        y = torch.stack(ys, dim=1)  # (B, L, d_inner)
         
         # 4. Gating
         y = y * self.act(z_branch)

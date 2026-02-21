@@ -44,8 +44,8 @@ MODEL_LR_SCALE = {
     'Transformer': 0.3,  # Self-attention gradients can explode
     'CNN-LSTM': 0.5,     # Hybrid arch needs moderate LR
     'TCN': 0.5,          # Dilated convs can be unstable
-    'LSTM': 1.0,
-    'GRU': 1.0,
+    'LSTM': 1.0,         # Stable at full LR
+    'GRU': 1.0,          # Stable at full LR
 }
 
 GRAD_CLIP_NORM = {
@@ -54,10 +54,12 @@ GRAD_CLIP_NORM = {
     'CNN-LSTM': 0.5,
     'TCN': 1.0,
     'LSTM': 1.0,
-    'GRU': 1.0,
+    'GRU': 0.5,          # GRU was unstable, tighter clipping
 }
 
-WARMUP_EPOCHS = 3  # Linear warmup for first N epochs
+# Only models that need warmup get it (LSTM/GRU are stable without it)
+WARMUP_MODELS = {'Mamba', 'Transformer'}
+WARMUP_EPOCHS = 3
 
 
 def train_model(model, train_loader, val_loader, config, device, pos_weight=None, model_name='Unknown'):
@@ -101,8 +103,9 @@ def train_model(model, train_loader, val_loader, config, device, pos_weight=None
     t_start = time.time()
     
     for epoch in range(epochs):
-        # === Linear warmup ===
-        if epoch < WARMUP_EPOCHS:
+        # === Linear warmup (only for sensitive models) ===
+        use_warmup = model_name in WARMUP_MODELS
+        if use_warmup and epoch < WARMUP_EPOCHS:
             warmup_factor = (epoch + 1) / WARMUP_EPOCHS
             for pg in optimizer.param_groups:
                 pg['lr'] = lr * warmup_factor
